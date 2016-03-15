@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/legendary_play_pager"
+    >
+
+    <!-- Legendary Plays-->
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:id="@+id/legendary_play_name"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/legendary_play_name"
+        android:layout_alignLeft="@+id/legendary_play_name"
+        android:layout_width="wrap_content"
+        android:id="@+id/legendary_play_description"/>
+
+
+
+
+
+</RelativeLayout>

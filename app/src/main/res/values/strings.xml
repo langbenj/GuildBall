@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Guild Ball</string>
+    <string name="action_settings">Settings</string>
+    <string name="icy_sponge">Icy Sponge</string>
+    <string name="add_life">&gt;</string>
+    <string name="remove_life">&lt;</string>
+    <string name="model_value">Default</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

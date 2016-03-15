@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name ="TeamList">
+        <item id="team">"Brewers"</item>
+        <item id="team">"Butchers"</item>
+    </array>
+
+    <array name="Brewers">
+        <item id="captain">"Tapper"</item>
+        <item id="captain">"Esters"</item>
+        <item id="mascot">"Scum"</item>
+        <item id="player">"Friday"</item>
+        <item id="player">"Hooper"</item>
+        <item id="player">"Mash"</item>
+        <item id="player">"Spigot"</item>
+        <item id="player">"Stave"</item>
+        <item id="player">"Stoker"</item>
+        <item id="player">"Gutter"</item>
+    </array>
+
+    <array name="Butchers">
+        <item id="captain">"Fillet"</item>
+        <item id="captain">"Ox"</item>
+        <item id="mascot">"Princess"</item>
+        <item id="player">"Boiler"</item>
+        <item id="player">"Brisket"</item>
+        <item id="player">"Meathook"</item>
+        <item id="player">"Shank"</item>
+        <item id="player">"Boar"</item>
+        <item id="player">"Tenderiser"</item>
+        <item id="player">"Gutter"</item>
+    </array>
+
+</resources>

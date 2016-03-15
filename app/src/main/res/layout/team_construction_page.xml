@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:paddingLeft="10dp"
+        android:id="@+id/team_construction_logo_image"
+        android:src="@drawable/brewers_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/team_construction_logo_image"
+        android:text="New List"
+
+        android:id="@+id/team_construction_list_name"
+        android:textStyle="bold"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:layout_toRightOf="@+id/team_construction_logo_image"
+        android:layout_below="@+id/team_construction_list_name"
+        android:layout_alignLeft="@+id/team_construction_list_name"
+        android:text="List Name:"
+        android:id="@+id/team_construction_enter_list_name_prompt"
+        android:textSize="14sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:layout_toRightOf="@+id/team_construction_enter_list_name_prompt"
+        android:layout_below="@+id/team_construction_list_name"
+        android:layout_alignTop="@+id/team_construction_enter_list_name_prompt"
+        android:text="Enter your list name here"
+        android:id="@+id/new_list_name_edit_box"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_height="2dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/team_construction_enter_list_name_prompt"
+        android:background="#FF909090"
+        android:layout_marginTop="5dp"
+        android:id="@+id/team_construction_line_1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/team_construction_line_1"
+        android:text="Players"
+
+        android:id="@+id/team_construction_option_list_title"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_height="2dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/team_construction_option_list_title"
+        android:background="#FF909090"
+        android:id="@+id/team_construction_line_2"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/player_list_recycler"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/team_construction_line_2"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_height="2dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/player_list_recycler"
+        android:background="#FF909090"
+        android:layout_marginTop="5dp"
+        android:id="@+id/team_construction_line_3"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/team_construction_line_3"
+        android:text="Your Team"
+        android:id="@+id/team_construction_built_team_title"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_height="2dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/team_construction_built_team_title"
+        android:background="#FF909090"
+        android:id="@+id/team_construction_line_4"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp" />
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_construction_line_4">
+
+        <TableRow
+           android:layout_marginLeft="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Captain:"
+        android:id="@+id/team_builder_captain_title"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Tapper"
+        android:id="@+id/team_builder_captain"
+        android:textSize="14sp" />
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="10dp" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginRight="5dp"
+    android:text="Mascot:"
+    android:id="@+id/team_builder_mascot_title"
+    android:textStyle="bold"
+    android:textSize="14sp"
+        android:layout_marginLeft="5dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Scum"
+        android:id="@+id/team_builder_mascot"
+        android:textSize="14sp" />
+
+
+
+    </TableRow>
+<TableRow
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+
+        android:text="Player 1:"
+        android:id="@+id/team_builder_player1_title"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="p1"
+        android:id="@+id/team_builder_player1"
+        android:layout_gravity="left"
+
+        android:textSize="14sp"
+        android:layout_marginLeft="5dp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginRight="5dp"
+        android:text="Player 2:"
+        android:id="@+id/team_builder_player2_title"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="p2"
+        android:layout_marginRight="10dp"
+        android:id="@+id/team_builder_player2"
+
+        android:textSize="14sp" />
+
+
+
+</TableRow>
+        <TableRow
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+
+                android:text="Player 3:"
+                android:id="@+id/team_builder_player3_title"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p3"
+                android:id="@+id/team_builder_player3"
+                android:layout_gravity="left"
+
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp"
+                android:text="Player 4:"
+                android:id="@+id/team_builder_player4_title"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p4"
+                android:layout_marginRight="10dp"
+                android:id="@+id/team_builder_player4"
+                android:layout_gravity="left"
+
+                android:textSize="14sp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+
+                android:text="Player 5:"
+                android:id="@+id/team_builder_player5_title"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p5"
+                android:id="@+id/team_builder_player5"
+                android:layout_gravity="left"
+
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp"
+                android:text="Player 6:"
+                android:id="@+id/team_builder_player6_title"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="p6"
+                android:layout_marginRight="10dp"
+                android:id="@+id/team_builder_player6"
+                android:layout_gravity="left"
+
+                android:textSize="14sp" />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
+

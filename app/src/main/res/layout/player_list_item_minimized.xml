@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_height="1dip"
+        android:layout_width="match_parent"
+        android:background="#FF909090"
+        android:id="@+id/player_item_line_1"/>
+    <ImageView
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/player_item_line_1"
+        android:id="@+id/player_list_logo_image"
+        android:src="@drawable/brewers_logo"
+        />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_below="@+id/player_item_line_1"
+        android:layout_toRightOf="@+id/player_list_logo_image"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AWESOME TEXT!"
+
+        android:id="@+id/player_name_field"
+        />
+
+
+    <View
+        android:layout_height="1dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/player_name_field"
+        android:background="#FF909090"
+        android:id="@+id/player_item_line_2"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_player_to_team_button"
+        android:layout_below="@+id/player_item_line_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add_circle_outline_black_36dp"
+        android:layout_marginRight="10dp"
+        android:background="#39ffffff" />
+
+
+</RelativeLayout>

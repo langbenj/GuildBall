@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400dip"
+    android:id="@+id/character_play_pager"
+    >
+
+    <!--Charater Plays-->
+
+
+
+    <!--Titles for Character Plays-->
+
+
+
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Name"
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_name_title"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="100dp"
+
+        android:layout_toRightOf="@+id/character_play_name_title"
+        android:id="@+id/spacer1"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Cost"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+
+        android:layout_toRightOf="@+id/spacer1"
+        android:id="@+id/character_play_cost_title"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dp"
+
+        android:layout_toRightOf="@+id/character_play_cost_title"
+        android:id="@+id/spacer2"
+        />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Range"
+        android:paddingTop="5dp"
+
+        android:layout_toRightOf="@+id/spacer2"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_range_title"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+
+        android:layout_toRightOf="@+id/character_play_range_title"
+        android:id="@+id/spacer3"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Zone"
+        android:paddingTop="5dp"
+
+        android:layout_toRightOf="@+id/spacer3"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_zone_title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_toRightOf="@+id/character_play_zone_title"
+        android:id="@+id/spacer4"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Sustain"
+        android:paddingTop="5dp"
+
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/spacer4"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_sustain_title"
+        />
+
+    <!-- Character Play Values -->
+
+    <View
+        android:layout_height="1dip"
+        android:background="#FF909090"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/character_play_sustain_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/line_break_character_play_pager_2"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:paddingLeft="5dp"
+        android:layout_alignLeft="@id/character_play_name_title"
+        android:textStyle="bold"
+        android:id="@+id/character_play_name_1"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_toRightOf="@+id/character_play_cost_1"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:id="@+id/character_play_1_gb_cost"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:id="@+id/character_play_cost_1"
+
+        android:layout_alignLeft="@+id/character_play_cost_title"
+        android:layout_alignStart="@+id/character_play_cost_title"
+        android:gravity="center_horizontal" />
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_range_1"
+        android:layout_alignRight="@+id/character_play_range_title"
+        android:layout_alignEnd="@+id/character_play_range_title"
+        android:layout_alignLeft="@+id/character_play_range_title"
+        android:layout_alignStart="@+id/character_play_range_title"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_height="wrap_content"
+
+        android:paddingTop="5dp"
+        android:layout_below="@+id/line_break_character_play_pager_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_zone_1"
+        android:layout_alignRight="@+id/character_play_zone_title"
+        android:layout_alignEnd="@+id/character_play_zone_title"
+        android:layout_alignLeft="@+id/character_play_zone_title"
+        android:layout_alignStart="@+id/character_play_zone_title"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_sustain_1"
+        android:layout_alignRight="@+id/character_play_sustain_title"
+        android:layout_alignEnd="@+id/character_play_sustain_title"
+        android:layout_alignLeft="@+id/character_play_sustain_title"
+        android:layout_alignStart="@+id/character_play_sustain_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/character_play_name_1"
+        android:layout_alignLeft="@+id/character_play_name_1"
+        android:id="@+id/character_play_description_1"
+        />
+
+
+
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/character_play_description_1"
+        android:layout_alignLeft="@+id/character_play_description_1"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_name_2"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignLeft="@+id/character_play_cost_title"
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_1"
+        android:textStyle="bold"
+        android:id="@+id/character_play_cost_2"
+        />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_toRightOf="@+id/character_play_cost_2"
+        android:layout_below="@id/character_play_description_1"
+        android:id="@+id/character_play_2_gb_cost"
+         />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_1"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_range_2"
+        android:layout_alignRight="@+id/character_play_range_title"
+        android:layout_alignEnd="@+id/character_play_range_title"
+        android:layout_alignLeft="@+id/character_play_range_title"
+        android:layout_alignStart="@+id/character_play_range_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_1"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_zone_2"
+        android:layout_alignRight="@+id/character_play_zone_title"
+        android:layout_alignEnd="@+id/character_play_zone_title"
+        android:layout_alignLeft="@+id/character_play_zone_title"
+        android:layout_alignStart="@+id/character_play_zone_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_1"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_sustain_2"
+        android:layout_alignRight="@+id/character_play_sustain_title"
+        android:layout_alignEnd="@+id/character_play_sustain_title"
+        android:layout_alignLeft="@+id/character_play_sustain_title"
+        android:layout_alignStart="@+id/character_play_sustain_title"
+        android:gravity="center_horizontal" />
+
+
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_name_2"
+        android:layout_alignLeft="@+id/character_play_name_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_description_2"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/character_play_description_2"
+        android:layout_alignLeft="@+id/character_play_description_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_name_3"
+        />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignLeft="@+id/character_play_cost_title"
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_2"
+        android:textStyle="bold"
+        android:id="@+id/character_play_cost_3"
+        />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_toRightOf="@+id/character_play_cost_3"
+        android:layout_below="@id/character_play_description_2"
+        android:id="@+id/character_play_3_gb_cost"
+
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_range_3"
+        android:layout_alignRight="@+id/character_play_range_title"
+        android:layout_alignEnd="@+id/character_play_range_title"
+        android:layout_alignLeft="@+id/character_play_3_gb_cost"
+        android:layout_alignStart="@+id/character_play_range_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_zone_3"
+        android:layout_alignRight="@+id/character_play_zone_title"
+        android:layout_alignEnd="@+id/character_play_zone_title"
+        android:layout_alignLeft="@+id/character_play_zone_title"
+        android:layout_alignStart="@+id/character_play_zone_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_sustain_3"
+        android:layout_alignRight="@+id/character_play_sustain_title"
+        android:layout_alignEnd="@+id/character_play_sustain_title"
+        android:layout_alignLeft="@+id/character_play_sustain_title"
+        android:layout_alignStart="@+id/character_play_sustain_title"
+        android:gravity="center_horizontal" />
+
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/character_play_name_3"
+        android:layout_alignLeft="@+id/character_play_name_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_description_3"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_below="@id/character_play_description_3"
+        android:layout_alignLeft="@+id/character_play_description_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_name_4"
+        />
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignLeft="@+id/character_play_cost_title"
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_3"
+        android:textStyle="bold"
+        android:id="@+id/character_play_cost_4"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_toRightOf="@+id/character_play_cost_4"
+        android:layout_below="@id/character_play_description_3"
+        android:id="@+id/character_play_4_gb_cost"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_range_4"
+        android:layout_alignRight="@+id/character_play_range_title"
+        android:layout_alignEnd="@+id/character_play_range_title"
+        android:layout_alignLeft="@+id/character_play_range_title"
+        android:layout_alignStart="@+id/character_play_range_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_zone_4"
+        android:layout_alignRight="@+id/character_play_zone_title"
+        android:layout_alignEnd="@+id/character_play_zone_title"
+        android:layout_alignLeft="@+id/character_play_zone_title"
+        android:layout_alignStart="@+id/character_play_zone_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:paddingTop="5dp"
+        android:layout_below="@id/character_play_description_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_sustain_4"
+        android:layout_alignRight="@+id/character_play_sustain_title"
+        android:layout_alignEnd="@+id/character_play_sustain_title"
+        android:layout_alignLeft="@+id/character_play_sustain_title"
+        android:layout_alignStart="@+id/character_play_sustain_title"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/character_play_name_4"
+        android:layout_alignLeft="@+id/character_play_name_4"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_description_4"
+        />
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/start_menu_layout">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:text="Winning Six"
+        android:layout_marginTop="100dp"
+        android:id="@+id/main_menu_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_menu_title"
+        android:textSize="24sp"
+        android:text="Guild Ball Team Manager"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/main_menu_subtitle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guild Info"
+        android:id="@+id/guild_info_button"
+        android:layout_below="@+id/main_menu_subtitle"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team Builder"
+        android:id="@+id/team_builder_button"
+        android:layout_below="@+id/guild_info_button"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

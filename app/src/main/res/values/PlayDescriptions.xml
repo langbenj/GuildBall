@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Character Traits-->
+    <array name="AnatomicalPrecision">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Anatomical Precision"</item>
+        <item id="description">"During an Attack from this model enemy models suffer [-1] ARM."</item>
+    </array>
+
+    <array name="AssistPrincess">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Assist [Princess]"</item>
+        <item id="description">"When making an Attack against an enemy model engaged by the named model, this model gains [+1] TAG and [+1] DMG to Playbook damage results."
+        </item>
+    </array>
+
+    <array name="AttackSupportPrincess">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Attack Support [Princess]"</item>
+        <item id="description">"This model gains [+2] TAC while within [4\"] of the named friendly model."</item>
+    </array>
+
+    <array name="Beserk">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Beserk"</item>
+        <item id="description">"During its activation, if this model damages an enemy model with an Attack, this model may make an additional Attack without spending Influence. This ability cannot generate a further additional Attack from itself."</item>
+    </array>
+
+    <array name="BloodDance">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Blood Dance"</item>
+        <item id="description">"This model may make a [1\"] Dodge after causing damage to an enemy model that is suffering the bleed condition."</item>
+    </array>
+
+    <array name="BurningPassion">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Burning Passion"</item>
+        <item id="description">"This model gains [+1] DMG to Character Plays that cause damage and to Playbook damage results against enemy models suffering the burning condition."</item>
+    </array>
+
+    <array name="CharmedMale">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Charmed [Male]"</item>
+        <item id="description">"This model gains [+1] DEF agains each Attack or Character Play made against it by the named model type."</item>
+    </array>
+
+    <array name="CrucialArtery">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Crucial Artery"</item>
+        <item id="description">"When damaged by this model enemy models suffer the bleed condition."</item>
+    </array>
+
+    <array name="DamagedTarget">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Damaged Target"</item>
+        <item id="description">"When this model declares a Charge against a damaged enemy model it gains [+0\",2\"] MOV"</item>
+    </array>
+
+    <array name="DefenceSupportSpigot">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Defence Support[Spigot]"</item>
+        <item id="description">"While within [4\"] of the named model, this model gains +1 DEF."</item>
+    </array>
+
+    <array name="EmpoweredVoice">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Empowered Voice"</item>
+        <item id="description">"Once per turn during this model\'s activation, choose a friendly guild model within [6\"] to benefit from one of the following Empowered Voice effects. The chosen effect lasts until the end of the turn:\n\nSpeed: gain [+2\"/+2\"] MOV.\nStrength: gain [+1] DMG to Playbook damage results.\nAgility: gain [+1] DEF."</item>
+    </array>
+
+    <array name="Floored">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Floored"</item>
+        <item id="description">"This model gains [+2] TAC against models suffering the knocked-down condition."</item>
+    </array>
+
+    <array name="FootballLegend">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Football Legend [4\" Aura]"</item>
+        <item id="description">"While within this aura, friendly models gain [+1,+1\"] KICK."</item>
+    </array>
+
+    <array name="Furious">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Furious"</item>
+        <item id="description">"This model may Charge without spending Influence."</item>
+    </array>
+
+    <array name="GetOverHereScum">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Get Over Here! [Scum]"</item>
+        <item id="description">"Once during this model's activation, if the named model is within [10\"] of this model, the named model may make a Dodge up to it's base-move towards the model"</item>
+    </array>
+
+    <array name="GoalDefence">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Goal Defence"</item>
+        <item id="description">"Enemy models suffer [+1] TN to Shot attempts while this model is within [4\"] of a friendly goal-token"</item>
+    </array>
+
+    <array name="GluttonousMass">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Gluttonous Mass"</item>
+        <item id="description">"The first time each turn this model is hit by an enemy Attack or Character Play that targets this model, except while advancing, the Attack or Character Play is ignored."</item>
+    </array>
+
+    <array name="Haemophilia">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Haemophilia [6\" Aura]"</item>
+        <item id="description">"While within this aura, enemy models do not remove the bleed condition in the Maintenance Phase"</item>
+    </array>
+
+    <array name="LifeDrinker">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Life Drinker"</item>
+        <item id="description">"When this model damages one or more enemy models with an Attack or Play, it may recover [1] HP "</item>
+    </array>
+
+
+    <array name="LovedCreature">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Loved Creature"</item>
+        <item id="description">"When this model suffers the taken-out condition as the result of an enemy Attack or Play, the friendly team gains [2] MP and for the remainder of the turn friendly models gain [+2] TAC and [+2\"/+2\"] MOV"</item>
+    </array>
+
+    <array name="MagicalBrew">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Magical Brew"</item>
+        <item id="description">"Once per turn, during this models activation, it can remove all conditions currently on it.</item>
+    </array>
+
+    <array name="ProtectedEsters">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Protected [Esters]"</item>
+        <item id="description">"While within [4\"] of the named model, this model gains [+1] ARM."</item>
+    </array>
+
+    <array name="Regenerate">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Regenerate"</item>
+        <item id="description">"At the start of the Maintenance Phase, before conditions are resolved, this model may recover [2] HP."</item>
+    </array>
+
+    <array name="RushKeeper">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Rush Keeper"</item>
+        <item id="description">"While this model is within [4\"] of a friendly goal-token, when an enemy model ends its Advance within [6\"] of this model and this model is not engaged, this model may immediately make a Charge targetting the enemy model."</item>
+    </array>
+
+    <array name="SelectiveBrewersButchersEngineersFishermen">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Selective [Brewers, Butchers, Engineers,Fishermen]"</item>
+        <item id="description">"This model can also play for the named teams."</item>
+    </array>
+
+    <array name="ShadowLike">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Shadow Like"</item>
+        <item id="description">"At the start of this model's activation, it may make a [2\"] Dodge"</item>
+    </array>
+
+    <array name="ShoveTheBootIn">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Shove The Boot In"</item>
+        <item id="description">"This model gains [+1] DMG to Playbook damage results against models suffering the knocked-down condition"</item>
+    </array>
+
+    <array name="SmellBlood">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Smell Blood"</item>
+        <item id="description">"This model gains [+0\"/+2\"] MOV when it performs a Charge against an enemy model suffering the bleed condition. When this model makes an Attack against an enemy model suffering the bleed condition, it gains [+1] DMG to Playbook damage results against that model."</item>
+    </array>
+
+    <array name="TacticalAdviceScum">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Tactical Advice [Scum]"</item>
+        <item id="description">"During the Maintenance Phase, if the named model is within [4\"], this model gains [+1/+1] INF."</item>
+    </array>
+
+    <array name="TacticalAdviceStave">
+        <item id="type">Character Trait</item>
+        <item id="name">Tactical Advice [Stave]</item>
+        <item id="description">During the Maintenance Phase, if the named model is within [4\"], this model gains [+1/+1] INF.</item>
+    </array>
+
+    <array name="TheOwner">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"The Owner [4\" Aura]"</item>
+        <item id="description">"While within this aura, friendly models gain [+1] DMG to Character Plays that cause damage and Playbook damage results"</item>
+    </array>
+
+    <array name="ToughHide">
+        <item id="type">Character Trait</item>
+        <item id="name">Tough Hide</item>
+        <item id="description">Enemy Plays that cause damage to, or Playbook damage results that hit this model are reduced by [-1] DMG.</item>
+    </array>
+
+    <array name="UnpredictableMovement">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Unpredictable Movement"</item>
+        <item id="description">"Once per turn, when an enemy model ends an Advance in this model's melee zone, this model may immediately make a [2\"] Dodge"</item>
+    </array>
+
+    <array name="VolleyThreat">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Volley Threat"</item>
+        <item id="description">"While within [8\"] of the enemy goal-token, this model spends [1] less Momentum to make a Snap Shot!"</item>
+    </array>
+
+
+    <!--Heroic Plays-->
+
+    <array name="ExplosiveBrew">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Explosive Brew"</item>
+        <item id="description">"When this model uses the Lob Barrel Character Play this turn, enemy models hit additionally suffer [2] DMG."</item>
+    </array>
+
+    <array name="HumanBallOfFire">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Human Ball of Fire"</item>
+        <item id="description">"Any model whose base is touched during this model\'s Advance suffer the burning condition. At the end of this model\'s activation it suffers [4] DMG."</item>
+    </array>
+
+    <array name="IShootBetterAfterABeer">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"I Shoot Better After a Beer..."</item>
+        <item id="description">"This model gains [+1/+2] KICK. This model gains [+1] DEF against Parting Blow attacks."</item>
+    </array>
+
+    <array name="OldJakes">
+        <item id="type">Heroic Play</item>
+        <item id="name">Old Jake\'s</item>
+        <item id="description">This model may immediately allocate [2] Influence between friendly guild models within [4\"].</item>
+    </array>
+
+    <array name="SanguinePool">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Sanguine Pool [3\" Pulse]"</item>
+        <item id="description">"Enemy models that are suffering conditions and are within the pulse suffer [-4\"/-4\"] MOV and [1] DMG"</item>
+    </array>
+
+    <array name="SoothingVoice">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Soothing Voice [3\" Pulse]"</item>
+        <item id="description">"Friendly models within the pulse recover [2] HP and remove any conditions currently on them."</item>
+    </array>
+
+    <array name="TimesCalled">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Time\'s Called [6\" Aura]"</item>
+        <item id="description">"Friendly models starting thier Advance within this aura gain [+2\"/+2\"] MOV.</item>
+    </array>
+
+    <array name="TrueGrit">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"True Grit"</item>
+        <item id="description">"Immediately remove all conditions from this model. This model gains [+2] TAC.</item>
+    </array>
+
+
+
+    <!--Legendary Plays-->
+
+    <array name="Exsanguinate">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Exsanguinate"</item>
+        <item id="description">"Enemy models suffering the bleed condition within the pulse immediately suffer bleed damage."</item>
+    </array>
+
+    <array name="ItsNotOverUntil">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"It's not over until..."</item>
+        <item id="description">"This model may use Empowered Voice three times this turn."</item>
+    </array>
+
+    <array name="GetEmLads">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Get \'Em Lads! [6\" Aura]"</item>
+        <item id="description">"While within this aura, friendly models gain [+1] DMG to Character Plays that cause damage and Playbook damage results. Enemy models within this aura suffer [-1] ARM."</item>
+    </array>
+
+
+
+    <!--Character Plays-->
+
+    <array name="BallsGone">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Ball\'s Gone!"</item>
+        <item id="description">"Tackle the target enemy model. The ball-token may then be placed in possession of a friendly model within [4\"]."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="BlastEarth">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Blast Earth"</item>
+        <item id="description">"All models hit suffer [2] DMG. This ongoing-effect AOE is rough-ground."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"10\""</item>
+        <item id="zone">"AOE 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="Blood">
+        <item id="type">"Character Play"</item>
+         <item id="name">"Blood"</item>
+        <item id="description">"Target enemy model suffers the bleed condition"</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="BloodRain">
+        <item id="type">"Character Play"</item>
+        <item id="name">"BloodRain"</item>
+        <item id="description">"Target enemy model suffers [2] DMG. Enemy models within the pulse suffer the bleed condition."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"Pulse 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+
+    <array name="BurnTheFloor">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Burn the Floor"</item>
+        <item id="description">"Choose a terrain piece. All models within the terrain piece automatically suffer the burning condition. All models entering or ending their activation within the terrain piece suffer the burning condition."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="Butchery">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Butchery"</item>
+        <item id="description">"Friendly models gain [+1] DMG to Playbook damage results against the target enemy model."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ChainGrab">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Chain Grab"</item>
+        <item id="description">"Target enemy model suffers a [4\"] Push directly towards this model.</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="CommandingAura">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Commanding Aura"</item>
+        <item id="description">An Attack made against an enemy model within this aura gains [+1]TAC and [+1]DMG to Playbook damage results.</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"Aura 4\""</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="Concussion">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Concussion"</item>
+        <item id="description">"Target enemy model loses [1] Influence"</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="DirtyKnives">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Dirty Knives"</item>
+        <item id="description">"Target enemy model suffers [-1] DEF, [1] DMG and the poison condition"</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="FireBlast">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Fire Blast"</item>
+        <item id="description">"All models hit suffer [2] DMG and the burning condition. Models entering or ending their activation in this ongoing-effect AOE suffer the burning condition. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"8\""</item>
+        <item id="zone">"AOE 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="FlameJet">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Flame Jet"</item>
+        <item id="description">"Target enemy model suffers [3] DMG and the burning condition."</item>
+        <item id="cost">"3"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="GroundPound">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Ground Pound"</item>
+        <item id="description">"All other models within the pulse suffer a [2\"] Push directly away from this model, [2] DMG and the knocked-down condition."</item>
+        <item id="cost">"4"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"Pulse 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="Hamstring">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Hamstring"</item>
+        <item id="description">"Target enemy model suffers [-4\"\/-4\"] MOV."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+
+    </array>
+
+    <array name="LobBarrel">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Lob Barrel"</item>
+        <item id="description">"All models hit suffer a [4\"] Push directly away from the centre of the AOE and the knocked-down condition. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"AOE 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="LongBomb">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Long Bomb"</item>
+        <item id="description">"If this model is in possession of the ball-token, choose a target-spot and scatter the ball from that location using the standard-scatter."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"12\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="Molotov">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Molotov"</item>
+        <item id="description">"Target enemy model suffers the burning condition. This Character Play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+
+    </array>
+
+    <array name="MarkedTarget">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Marked Target"</item>
+        <item id="description">Friendly models who declare a Charge against the affected enemy model gain [+0/+2] MOV. This Character Play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="PainCircle">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Pain Circle"</item>
+        <item id="description">"All mdels hit suffer [1] DMG and the bleed condition. Models entering or ending their activation in this ongoing-effect AOE suffer the bleed condition. This Character Play may only be used once per turn"</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">8\""</item>
+        <item id="zone">"AOE 3\""</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="QuickFoot">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Quick Foot"</item>
+        <item id="description">"Target friendly model gains [+2\"/+2\"] MOV."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="RammingSpeed">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Ramming Speed"</item>
+        <item id="description">"During this model\'s Advance, any enemy model whose base is touched suffers a [2\"] Push directly away. A model can only be affected by this Character Play once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="RabidAnimal">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Rabid Animal"</item>
+        <item id="description">"Target enemy model suffers [-4\"/-4\"] MOV and the poison condition"</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ScythingBlow">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Scything Blow"</item>
+        <item id="description">"All models within this model\'s melee zone suffer [3] DMG."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="SeismicKick">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Seismic Kick"</item>
+        <item id="description">"When this model makes a KICK action it cannont be intercepted. All other models except the receiving model, on the ball-path from this KICK action suffer the knocked-down condition."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="SmashedShins">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Smashed Shins"</item>
+        <item id="description">"Target enemy model suffers [-4/-4\"] KICK."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="SuperShot">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Super Shot"</item>
+        <item id="description">"This model gains [+1/+2\""] KICK."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="SwiftStance">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Swift Stance"</item>
+        <item id="description">"Target friendly model gains [+1] DEF."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="TheyAintTough">
+        <item id="type">"Character Play"</item>
+        <item id="name">"They Ain\'t Tough!"</item>
+        <item id="description">"Target enemy model suffers [-1] ARM."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ThousandCuts">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Thousand Cuts"</item>
+        <item id="description">"Target enemy model suffers [-2] DEF and [1] DMG"</item>
+        <item id="cost">"3"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="TooledUp">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Tooled Up"</item>
+        <item id="description">"Target friendly model gains [+1] DMG to Character Plays that cause damage and Playbook damage results. This Character Play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ToughSkin">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Tough Skin"</item>
+        <item id="description">"Target friendly model gains [+1] ARM. This Character Play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="WheredTheyGo">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Where'd They Go?"</item>
+        <item id="description">"This model may make a [4\"] Dodge. This Character Play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+
+
+</resources>
