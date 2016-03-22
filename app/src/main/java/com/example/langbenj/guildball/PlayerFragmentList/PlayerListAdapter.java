@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.langbenj.guildball.Helpers.AddRemovePlayerBusEvent;
 import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.PlayerListFragmentBusEvent;
 import com.example.langbenj.guildball.DataAssemblers.Player;
@@ -75,10 +77,14 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
                             if (mNotOnTeam) {
                                 target_button.setImageResource(R.drawable.ic_clear_black_36dp);
                                 mNotOnTeam=false;
+                                String [] passed_array = {passed_player, "add"};
+                                App.bus.post(new AddRemovePlayerBusEvent(passed_array));
                             }
                             else {
                                 target_button.setImageResource(R.drawable.ic_add_circle_outline_black_36dp);
+                                String [] passed_array = {passed_player, "remove"};
                                 mNotOnTeam=true;
+                                App.bus.post(new AddRemovePlayerBusEvent(passed_array));
                             }
                             break;
                         default:

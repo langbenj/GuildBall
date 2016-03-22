@@ -134,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+
         android:layout_below="@id/line_break_character_play_pager_2"
         android:paddingLeft="5dp"
         android:layout_alignLeft="@id/character_play_name_title"
@@ -144,7 +144,8 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="3dp"
+        android:textStyle="bold"
         android:layout_toRightOf="@+id/character_play_cost_1"
         android:layout_below="@id/line_break_character_play_pager_2"
         android:id="@+id/character_play_1_gb_cost"
@@ -155,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+
         android:layout_below="@id/line_break_character_play_pager_2"
         android:id="@+id/character_play_cost_1"
 
@@ -168,8 +169,8 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/character_play_cost_1"
 
-        android:paddingTop="5dp"
         android:layout_below="@id/line_break_character_play_pager_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_range_1"
@@ -181,7 +182,7 @@
     <TextView
         android:layout_height="wrap_content"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_cost_1"
         android:layout_below="@+id/line_break_character_play_pager_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_zone_1"
@@ -194,7 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_cost_1"
         android:layout_below="@id/line_break_character_play_pager_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_sustain_1"
@@ -208,6 +209,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textSize="13sp"
 
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
@@ -225,8 +227,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:padding="3dip"
+
         android:textStyle="bold"
         android:layout_below="@id/character_play_description_1"
         android:layout_alignLeft="@+id/character_play_description_1"
@@ -239,10 +241,9 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_alignLeft="@+id/character_play_cost_title"
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_alignTop="@+id/character_play_name_2"
         android:layout_below="@id/character_play_description_1"
-        android:textStyle="bold"
         android:id="@+id/character_play_cost_2"
         />
 
@@ -251,7 +252,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="3dp"
         android:layout_toRightOf="@+id/character_play_cost_2"
         android:layout_below="@id/character_play_description_1"
         android:id="@+id/character_play_2_gb_cost"
@@ -261,7 +262,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_2"
         android:layout_below="@id/character_play_description_1"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_range_2"
@@ -275,7 +276,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_2"
         android:layout_below="@id/character_play_description_1"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_zone_2"
@@ -289,7 +290,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_2"
         android:layout_below="@id/character_play_description_1"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_sustain_2"
@@ -306,9 +307,9 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textSize="13sp"
+        android:paddingLeft="5dp"
 
-        android:padding="5dip"
-        android:paddingTop="5dp"
         android:layout_below="@id/character_play_name_2"
         android:layout_alignLeft="@+id/character_play_name_2"
         android:layout_width="wrap_content"
@@ -318,8 +319,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:padding="3dip"
+
         android:textStyle="bold"
         android:layout_below="@id/character_play_description_2"
         android:layout_alignLeft="@+id/character_play_description_2"
@@ -333,10 +334,10 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_alignLeft="@+id/character_play_cost_title"
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_3"
+
         android:layout_below="@id/character_play_description_2"
-        android:textStyle="bold"
+
         android:id="@+id/character_play_cost_3"
         />
 
@@ -345,7 +346,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="3dp"
         android:layout_toRightOf="@+id/character_play_cost_3"
         android:layout_below="@id/character_play_description_2"
         android:id="@+id/character_play_3_gb_cost"
@@ -356,7 +357,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_3"
         android:layout_below="@id/character_play_description_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_range_3"
@@ -370,7 +371,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_3"
         android:layout_below="@id/character_play_description_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_zone_3"
@@ -384,7 +385,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_3"
         android:layout_below="@id/character_play_description_2"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_sustain_3"
@@ -400,7 +401,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-
+        android:textSize="13sp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:layout_below="@id/character_play_name_3"
@@ -412,8 +413,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:padding="3dip"
+
         android:textStyle="bold"
         android:layout_below="@id/character_play_description_3"
         android:layout_alignLeft="@+id/character_play_description_3"
@@ -428,8 +429,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_alignLeft="@+id/character_play_cost_title"
-        android:padding="5dip"
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_4"
         android:layout_below="@id/character_play_description_3"
         android:textStyle="bold"
         android:id="@+id/character_play_cost_4"
@@ -438,7 +438,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="3dp"
         android:layout_toRightOf="@+id/character_play_cost_4"
         android:layout_below="@id/character_play_description_3"
         android:id="@+id/character_play_4_gb_cost"
@@ -448,7 +448,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_4"
         android:layout_below="@id/character_play_description_3"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_range_4"
@@ -462,7 +462,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_4"
         android:layout_below="@id/character_play_description_3"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_zone_4"
@@ -476,7 +476,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
-        android:paddingTop="5dp"
+        android:layout_alignTop="@+id/character_play_name_4"
         android:layout_below="@id/character_play_description_3"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_sustain_4"
@@ -489,7 +489,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text=""
+        android:textSize="13sp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:layout_below="@id/character_play_name_4"

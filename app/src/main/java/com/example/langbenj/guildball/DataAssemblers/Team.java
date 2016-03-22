@@ -2,6 +2,7 @@ package com.example.langbenj.guildball.DataAssemblers;
 
 
 import android.content.Context;
+import android.util.Log;
 
 import com.example.langbenj.guildball.Helpers.App;
 
@@ -11,6 +12,7 @@ public class Team {
     private String [] mPlayerNameArray;
     private Player[] mTeam;
     private String mTeamName;
+    private String TAG = "Team.java";
 
   public Team(String team_name) {
       //Please reference the App class. This is a workaround to get context outside of the main method
@@ -18,7 +20,9 @@ public class Team {
         mTeamName=team_name;
         int team_id = context.getResources().getIdentifier(team_name, "array", context.getPackageName());
         mPlayerNameArray = context.getResources().getStringArray(team_id);
-        mTeam = buildTeam(mPlayerNameArray);
+
+          mTeam = buildTeam(mPlayerNameArray);
+
     }
 
     private Player[] buildTeam(String[] parseArray) {

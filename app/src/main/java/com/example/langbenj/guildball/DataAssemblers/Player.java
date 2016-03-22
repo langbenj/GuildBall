@@ -1,6 +1,7 @@
 package com.example.langbenj.guildball.DataAssemblers;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.example.langbenj.guildball.Helpers.App;
 
@@ -32,6 +33,7 @@ public class Player {
     private String [] mPlaybookBottom;
     private String mType;
     private String [] mAttributes;
+    private String TAG="Player.java";
 
     //Constructor for creating a player object. Player's name that is passed in ties to the PlayerInformation.xml file
 
@@ -41,37 +43,40 @@ public class Player {
         Context context = App.getContext();
 
         int player_id = context.getResources().getIdentifier(player_name, "array", context.getPackageName());
-        String[] playerArray = context.getResources().getStringArray(player_id);
-        mName=playerArray[0];
-        mTeam=playerArray[1];
-        mDefault_Image=playerArray[2];
-        mCustom_Image=playerArray[3];
-        mJog=playerArray[4];
-        mSprint=playerArray[5];
-        mTac=playerArray[6];
-        mKickDice=playerArray[7];
-        mKickDistance=playerArray[8];
-        mDefense=playerArray[9];
-        mArmor=playerArray[10];
-        mInfluenceGenerated=playerArray[11];
-        mMaxInfluence=playerArray[12];
-        mMaxLife=Integer.parseInt(playerArray[13]);
-        mCurrentLife=mMaxLife;
-        mIcySponge=stringArrayToInt(playerArray[14]);
-        mSeason=playerArray[15];
-        mMeleeRange=playerArray[16];
-        mBaseSize=playerArray[17];
-        mCharacterTraits=getAbilities(playerArray[18]);
-        mHeroicPlays=getAbilities(playerArray[19]);
-        mLegendaryPlays=getAbilities(playerArray[20]);
-        mCharacterPlays=getAbilities(playerArray[21]);
-        String tempSplitVal=playerArray[22];
-        mPlaybookTop=tempSplitVal.split(",");
-        tempSplitVal=playerArray[23];
-        mPlaybookBottom=tempSplitVal.split(",");
-        mType=playerArray[24];
-        tempSplitVal=playerArray[25];
-        mAttributes=tempSplitVal.split(",");
+
+
+            String[] playerArray = context.getResources().getStringArray(player_id);
+            mName=playerArray[0];
+            mTeam=playerArray[1];
+            mDefault_Image=playerArray[2];
+            mCustom_Image=playerArray[3];
+            mJog=playerArray[4];
+            mSprint=playerArray[5];
+            mTac=playerArray[6];
+            mKickDice=playerArray[7];
+            mKickDistance=playerArray[8];
+            mDefense=playerArray[9];
+            mArmor=playerArray[10];
+            mInfluenceGenerated=playerArray[11];
+            mMaxInfluence=playerArray[12];
+            mMaxLife=Integer.parseInt(playerArray[13]);
+            mCurrentLife=mMaxLife;
+            mIcySponge=stringArrayToInt(playerArray[14]);
+            mSeason=playerArray[15];
+            mMeleeRange=playerArray[16];
+            mBaseSize=playerArray[17];
+            mCharacterTraits=getAbilities(playerArray[18]);
+            mHeroicPlays=getAbilities(playerArray[19]);
+            mLegendaryPlays=getAbilities(playerArray[20]);
+            mCharacterPlays=getAbilities(playerArray[21]);
+            String tempSplitVal=playerArray[22];
+            mPlaybookTop=tempSplitVal.split(",");
+            tempSplitVal=playerArray[23];
+            mPlaybookBottom=tempSplitVal.split(",");
+            mType=playerArray[24];
+            tempSplitVal=playerArray[25];
+            mAttributes=tempSplitVal.split(",");
+
 
     }
 

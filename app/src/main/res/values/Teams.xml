@@ -2,8 +2,37 @@
 <resources>
 
     <array name ="TeamList">
+        <item id="team">"Alchemists"</item>
         <item id="team">"Brewers"</item>
         <item id="team">"Butchers"</item>
+        <item id="team">"Engineers"</item>
+        <item id="team">"Fishermen"</item>
+        <item id="team">"Union"</item>
+    </array>
+
+    <array name="Fishermen">
+        <item id="captain">"Shark"</item>
+        <item id="captain">"Corsair"</item>
+        <item id="mascot">"Salt"</item>
+        <item id="player">"Angel"</item>
+        <item id="player">"Siren"</item>
+        <item id="player">"Kraken"</item>
+        <item id="player">"Greyscales"</item>
+        <item id="player">"Jac"</item>
+        <item id="player">"Sakana"</item>
+        <item id="player">"Gutter"</item>
+    </array>
+
+    <array name="Alchemists">
+        <item id="captain">"Midas"</item>
+        <item id="mascot">"Flask"</item>
+        <item id="player">"Calculus"</item>
+        <item id="player">"Mercury"</item>
+        <item id="player">"Katalyst"</item>
+        <item id="player">"Vitriol"</item>
+        <item id="player">"Venin"</item>
+        <item id="player">"Compound"</item>
+
     </array>
 
     <array name="Brewers">
@@ -30,6 +59,26 @@
         <item id="player">"Boar"</item>
         <item id="player">"Tenderiser"</item>
         <item id="player">"Gutter"</item>
+
+    </array>
+
+    <array name="Engineers">
+        <item id="captain">"Ballista"</item>
+        <item id="mascot">"Mainspring"</item>
+        <item id="player">"Velocity"</item>
+        <item id="player">"Salvo"</item>
+        <item id="player">"Colossus"</item>
+        <item id="player">"Ratchet"</item>
+        <item id="player">"Hoist"</item>
+        <item id="player">"CompoundEng"</item>
+        <item id="player">"Gutter"</item>
+
+    </array>
+
+    <array name="Union">
+        <item id="captain">"Blackheart"</item>
+        <item id="player">"Gutter"</item>
+
     </array>
 
 </resources>

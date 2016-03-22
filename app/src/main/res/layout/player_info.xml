@@ -17,15 +17,9 @@
             android:paddingBottom="5dp"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:id="@+id/player_info_melee_range"
-            android:textSize="18sp"
-            android:text="2 inches"
-            android:paddingLeft="225dp"
-            android:paddingTop="5dp" />
+
+
+
 
         <View
             android:layout_height="2dip"
@@ -36,22 +30,35 @@
             android:layout_alignParentStart="true"
             android:id="@+id/line_break_character_play_pager_1"/>
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="MOV"
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:paddingTop="5dp"
-            android:paddingLeft="30dp"
+            android:paddingBottom="5dp"
+
+            android:id="@+id/player_image"
+            android:layout_alignLeft="@+id/player_info_name_field"
             android:layout_below="@+id/line_break_character_play_pager_1"
-            android:layout_width="wrap_content"
-            android:id="@+id/static_mov"
+            android:src="@drawable/tapper"
             />
 
         <TextView
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/player_image"
+            android:text="MOV"
+            android:paddingTop="5dp"
+            android:paddingLeft="3dp"
+            android:layout_below="@+id/line_break_character_play_pager_1"
+            android:layout_width="wrap_content"
+            android:id="@+id/static_mov"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="|"
-            android:padding="5dip"
+            android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:layout_toRightOf="@+id/static_mov"
             android:layout_alignTop="@+id/static_mov"
@@ -69,7 +76,7 @@
             android:layout_toRightOf="@+id/separator_1"
             android:layout_width="wrap_content"
             android:id="@+id/static_tac"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -87,13 +94,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="KICK"
-            android:padding="5dip"
+            android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:layout_below="@+id/line_break_character_play_pager_1"
             android:layout_toRightOf="@+id/separator_2"
             android:layout_width="wrap_content"
             android:id="@+id/static_kick"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -117,7 +124,7 @@
             android:layout_toRightOf="@+id/separator_3"
             android:layout_width="wrap_content"
             android:id="@+id/static_def"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -135,13 +142,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="ARM"
-            android:padding="5dip"
+
             android:paddingTop="5dp"
             android:layout_below="@+id/line_break_character_play_pager_1"
             android:layout_toRightOf="@+id/separator_4"
             android:layout_width="wrap_content"
             android:id="@+id/static_arm"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -165,20 +172,21 @@
             android:layout_toRightOf="@+id/separator_5"
             android:layout_width="wrap_content"
             android:id="@+id/static_inf"
-            />
+            android:textSize="12sp" />
 
 
         <TextView
             android:layout_height="wrap_content"
             android:text="0"
-            android:paddingLeft="30dp"
+            android:layout_toRightOf="@+id/player_image"
+            android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:gravity="center"
             android:layout_below="@+id/static_mov"
             android:layout_width="wrap_content"
             android:id="@+id/item_move"
-            />
+            android:textSize="12sp" />
         <TextView
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -194,13 +202,13 @@
         <TextView
             android:layout_height="wrap_content"
             android:text="0"
-            android:paddingLeft="15dp"
+            android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:layout_below="@+id/static_mov"
             android:layout_toRightOf="@id/separator_2_1"
             android:layout_width="wrap_content"
             android:id="@+id/item_tac"
-            />
+            android:textSize="12sp" />
         <TextView
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -222,7 +230,7 @@
             android:layout_toRightOf="@id/separator_2_2"
             android:layout_width="wrap_content"
             android:id="@+id/item_kick"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -246,7 +254,7 @@
             android:layout_toRightOf="@id/separator_2_3"
             android:layout_width="wrap_content"
             android:id="@+id/item_def"
-            />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -264,13 +272,13 @@
         <TextView
             android:layout_height="wrap_content"
             android:text="0+"
-            android:paddingLeft="15dip"
+            android:paddingLeft="10dip"
             android:paddingTop="5dp"
             android:layout_below="@+id/static_mov"
             android:layout_toRightOf="@id/separator_2_4"
             android:layout_width="wrap_content"
             android:id="@+id/item_arm"
-            />
+            android:textSize="12sp" />
         <TextView
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -293,52 +301,41 @@
             android:layout_toRightOf="@id/separator_2_5"
             android:layout_width="wrap_content"
             android:id="@+id/item_inf"
-            />
+            android:textSize="12sp" />
 
         <View
             android:layout_height="2dip"
             android:background="#FF909090"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_below="@+id/item_move"
+            android:layout_toRightOf="@+id/player_image"
 
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:id="@+id/line_break2"/>
 
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-
-            android:id="@+id/player_image"
-            android:layout_alignLeft="@+id/item_move"
-            android:layout_below="@+id/line_break2"
-            android:src="@drawable/tapper"
-            />
-
-        <!--Spacer view to nudge playbook over -->
 
         <View
-            android:layout_width="15dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/player_image"
-            android:id="@+id/playbook_space"
-            />
+            android:layout_height="0dp"
+            android:layout_width="10dp"
+            android:layout_below="@+id/line_break2"
+            android:layout_toRightOf="@+id/player_image"
+
+            android:id="@+id/playbook_spacer"/>
+
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
 
             android:id="@+id/playbook_top_1"
-            android:layout_toRightOf="@+id/playbook_space"
+            android:layout_toRightOf="@+id/playbook_spacer"
             android:layout_below="@+id/line_break2"
 
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
+
             android:id="@+id/playbook_top_2"
             android:layout_toRightOf="@+id/playbook_top_1"
             android:layout_below="@+id/line_break2"
@@ -346,7 +343,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_3"
             android:layout_toRightOf="@+id/playbook_top_2"
@@ -355,7 +352,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_4"
             android:layout_toRightOf="@+id/playbook_top_3"
@@ -364,7 +361,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_5"
             android:layout_toRightOf="@+id/playbook_top_4"
@@ -373,7 +370,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_6"
             android:layout_toRightOf="@+id/playbook_top_5"
@@ -382,7 +379,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_7"
             android:layout_toRightOf="@+id/playbook_top_6"
@@ -391,7 +388,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_top_8"
             android:layout_toRightOf="@+id/playbook_top_7"
@@ -401,7 +398,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
 
             android:id="@+id/playbook_bottom_1"
@@ -411,7 +408,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_2"
             android:layout_toRightOf="@+id/playbook_bottom_1"
@@ -420,7 +417,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_3"
             android:layout_toRightOf="@+id/playbook_bottom_2"
@@ -429,7 +426,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_4"
             android:layout_toRightOf="@+id/playbook_bottom_3"
@@ -438,7 +435,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_5"
             android:layout_toRightOf="@+id/playbook_bottom_4"
@@ -447,7 +444,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_6"
             android:layout_toRightOf="@+id/playbook_bottom_5"
@@ -456,7 +453,7 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_7"
             android:layout_toRightOf="@+id/playbook_bottom_6"
@@ -465,29 +462,37 @@
             />
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:paddingRight="2dp"
             android:id="@+id/playbook_bottom_8"
             android:layout_toRightOf="@+id/playbook_bottom_7"
             android:layout_below="@+id/playbook_top_7"
 
             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:id="@+id/player_info_melee_range"
+            android:layout_below="@+id/player_image"
+            android:textSize="14sp"
+            android:text="2 inches"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp" />
+
         <!-- Health Track -->
 
-        <View
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/player_image"
-            android:id="@+id/health_space"
-            />
+
 
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:paddingLeft="2dp"
             android:id="@+id/health_1"
-            android:layout_alignLeft="@id/health_space"
-            android:layout_below="@+id/playbook_bottom_1"
+            android:layout_alignLeft="@id/playbook_top_1"
+            android:layout_alignTop="@id/player_info_melee_range"
+
             android:src="@drawable/health_empty" />
 
         <ImageView
@@ -734,12 +739,12 @@
             android:layout_height="2dip"
             android:background="#FF909090"
             android:layout_width="match_parent"
-            android:layout_below="@+id/player_image"
+            android:layout_below="@+id/health_16"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/line_break3"/>
 
-        <!-- View Pager Testing -->
+        <!-- View Pager -->
 
         <android.support.v4.view.ViewPager
             android:id="@+id/player_info_view_pager"

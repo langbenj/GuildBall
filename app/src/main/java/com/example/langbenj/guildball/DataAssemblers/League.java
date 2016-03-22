@@ -14,13 +14,10 @@ public class League {
 
     public League(){
         //Need to shift this to looping through the array of teams TODO
-
-
         Context context = App.getContext();
         int teams_id = context.getResources().getIdentifier("TeamList", "array", context.getPackageName());
         mTeamNameArray = context.getResources().getStringArray(teams_id);
         mLeague = buildLeague(mTeamNameArray);
-
     }
 
     public Team[] buildLeague(String [] passedTeamList) {
