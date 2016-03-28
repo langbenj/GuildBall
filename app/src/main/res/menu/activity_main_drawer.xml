@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_guilds"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Guilds" />
+            android:title="Cards" />
         <item
             android:id="@+id/nav_lists"
             android:icon="@drawable/ic_menu_gallery"
@@ -13,19 +13,19 @@
         <item
             android:id="@+id/nav_play"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Play a Game" />
+            android:title="Play" />
         <item
             android:id="@+id/nav_replay"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Replay" />
+            android:title="Models" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_menu_share"
-            android:title="Share List" />
+            android:title="Stats" />
         <item
             android:id="@+id/nav_results"
             android:icon="@drawable/ic_menu_send"
-            android:title="Share Results" />
+            android:title="Share" />
     </group>
 
 

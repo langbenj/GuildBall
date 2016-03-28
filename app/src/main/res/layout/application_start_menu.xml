@@ -2,44 +2,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/start_menu_layout">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="32sp"
-        android:text="Winning Six"
-        android:layout_marginTop="100dp"
-        android:id="@+id/main_menu_title"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_menu_title"
-        android:textSize="24sp"
-        android:text="Guild Ball Team Manager"
-        android:layout_marginTop="5dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/main_menu_subtitle" />
+    android:id="@+id/start_menu_layout"
+    android:background="@drawable/mainmenu">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guild Info"
+        android:text="Cards"
         android:id="@+id/guild_info_button"
-        android:layout_below="@+id/main_menu_subtitle"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/team_builder_button"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/team_builder_button" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teams"
+        android:id="@+id/team_builder_button"
+        android:layout_alignTop="@+id/guild_info_button"
+        android:layout_marginLeft="20dp"
         android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Builder"
-        android:id="@+id/team_builder_button"
-        android:layout_below="@+id/guild_info_button"
-        android:layout_marginTop="20dp"
+        android:text="Play"
+        android:id="@+id/play_button"
+        android:layout_alignTop="@+id/guild_info_button"
+        android:layout_toRightOf="@+id/team_builder_button"
+        android:layout_marginLeft="20dp"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Models"
+        android:id="@+id/collection_button"
+        android:layout_below="@+id/team_builder_button"
+        android:layout_alignLeft="@+id/guild_info_button"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stats"
+        android:id="@+id/stats_button"
+        android:layout_alignTop="@+id/collection_button"
+        android:layout_toRightOf="@+id/collection_button"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:id="@+id/share_button"
+        android:layout_alignTop="@+id/collection_button"
+        android:layout_toRightOf="@+id/stats_button"
+        android:layout_marginLeft="20dp" />
 
 
 </RelativeLayout>

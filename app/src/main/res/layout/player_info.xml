@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/player_info_view">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:paddingLeft="5dp"
+            android:background="#e4e4e4"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/player_info_name_field"
             android:paddingBottom="5dp"
@@ -48,11 +46,12 @@
             android:layout_toRightOf="@+id/player_image"
             android:text="MOV"
             android:paddingTop="5dp"
-            android:paddingLeft="3dp"
+            android:paddingLeft="5dp"
             android:layout_below="@+id/line_break_character_play_pager_1"
             android:layout_width="wrap_content"
             android:id="@+id/static_mov"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:paddingRight="5dp" />
 
         <TextView
             android:layout_height="wrap_content"
@@ -749,7 +748,7 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/player_info_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="300dip"
+            android:layout_height="340dip"
             android:layout_below="@+id/line_break3">
 
              <android.support.v4.view.PagerTabStrip
@@ -775,4 +774,3 @@
 
     </RelativeLayout>
 
-</ScrollView>

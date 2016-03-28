@@ -45,8 +45,8 @@
         android:id="@+id/player_item_mov_title"
         android:text="MOV"
         android:paddingTop="5dip"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="7dip"
         />
     <TextView
         android:layout_height="wrap_content"
@@ -145,8 +145,8 @@
             android:layout_toLeftOf="@+id/player_item_separator1_title"
             android:layout_toStartOf="@+id/player_item_separator1_title"
             android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:paddingBottom="5dip" />
+            android:paddingBottom="5dip"
+            android:text="8&quot;/10&quot;" />
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
