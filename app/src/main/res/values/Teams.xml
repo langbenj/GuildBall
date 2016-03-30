@@ -7,7 +7,6 @@
         <item id="team">"Butchers"</item>
         <item id="team">"Engineers"</item>
         <item id="team">"Fishermen"</item>
-
         <item id="team">"Masons"</item>
         <item id="team">"Morticians"</item>
         <item id="team">"Union"</item>
@@ -103,6 +102,7 @@
 
     <array name="Masons">
         <item id="captain">"Honour"</item>
+        <item id="captain">"Hammer"</item>
         <item id="mascot">"Marbles"</item>
         <item id="player">"Harmony"</item>
         <item id="player">"Mallet"</item>

@@ -1291,6 +1291,35 @@
         <item id="attributes">"Castellyian, Human, Female, Captain, Central Midfielder"</item>
     </array>
 
+    <array name="Hammer">
+        <item id="name">"Hammer"</item>
+        <item id="team">"Masons"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"5\""</item>
+        <item id="sprint">"7\""</item>
+        <item id="tac">"7"</item>
+        <item id="kick_dice">"2"</item>
+        <item id="kick_distance">"8\""</item>
+        <item id="defense">"3+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"4"</item>
+        <item id="max_influence">"6"</item>
+        <item id="max_life">"18"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"ToughHide,Knockback,Stoic"</item>
+        <item id="heroic_plays">"HammerTime"</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"PunishingMarch,IronFist,BallHog"</item>
+        <item id="playbook_top">"1,M_T,M_1_KD,Blank,2_Push_2,4_Push_2"</item>
+        <item id="playbook_bottom">"M_Push_1,M_1_Push_1,M_2,M_2_T,3,3_KD"</item>
+        <item id="type">"Captain"</item>
+        <item id="attributes">"Raed,Human,Male,Captain,Attacking Midfielder"</item>
+    </array>
+
     <array name="Marbles">
         <item id="name">"Marbles"</item>
         <item id="team">"Masons"</item>

@@ -496,6 +496,12 @@
         <item id="description">"Once per turn during this model's activation, you may place a [3\"] AOE over the centre of this model. Models within this ongoing-effect AOE benefit from cover."</item>
     </array>
 
+    <array name="Stoic">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Stoic"</item>
+        <item id="description">"Once per turn, this model may ignore the first Push that it suffers."</item>
+    </array>
+
     <array name="Sturdy">
         <item id="type">"Character Trait"</item>
         <item id="name">"Sturdy"</item>
@@ -593,6 +599,12 @@
         <item id="type">"Heroic Play"</item>
         <item id="name">"Fangtooth Unleashed [4\" Pulse]"</item>
         <item id="description">"All friendly models within the pulse immediately suffer [5] DMG. This model gains [+2\"/+2\"] MOV and [+1] DMG to Character Plays that cause damage and Playbook damage results."</item>
+    </array>
+
+    <array name="HammerTime">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Hammer Time"</item>
+        <item id="description">"Friendly Guild models within the aura may use Punishing March, Iron Fist and Ball Hog as if they were Character Plays on those model's cards."</item>
     </array>
 
     <array name="HumanBallOfFire">
@@ -754,6 +766,17 @@
         <item id="cost">"1"</item>
         <item id="guild_ball_cost">""</item>
         <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="BallHog">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Ball Hog"</item>
+        <item id="description">"Target other friendly model loses [1] Influence. This model gains [+1/+0\"] KICK. This Character Play may only be used once per turn."</item>
+        <item id="cost">"0"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
     </array>
@@ -1127,6 +1150,17 @@
 
     </array>
 
+    <array name="IronFist">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Iron Fist"</item>
+        <item id="description">"Target other friendly model loses [1] Influence. This model gains [+1] DMG to all Playbook damage results. This Character Play may only be used once per turn."</item>
+        <item id="cost">"0"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
     <array name="KickBolt">
         <item id="type">"Character Play"</item>
         <item id="name">"Kick Bolt"</item>
@@ -1249,6 +1283,18 @@
         <item id="zone">"AOE 3\""</item>
         <item id="sustain">"Yes"</item>
     </array>
+
+    <array name="PunishingMarch">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Punishing March"</item>
+        <item id="description">"Target other friendly model loses [1] Influence. This model gains [+2\"/+2\"] MOV. This Character Play may only be used once per turn."</item>
+        <item id="cost">"0"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
 
     <array name="PuppetMaster">
         <item id="type">"Character Play"</item>
