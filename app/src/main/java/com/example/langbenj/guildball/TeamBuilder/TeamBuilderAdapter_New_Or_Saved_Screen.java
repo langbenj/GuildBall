@@ -2,6 +2,7 @@ package com.example.langbenj.guildball.TeamBuilder;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.ArrayMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +13,17 @@ import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.TeamBuilderListFragmentBusEvent;
 import com.example.langbenj.guildball.R;
 
-public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter<TeamBuilderAdapter_New_Or_Saved_Screen.ViewHolder> {
+import java.util.ArrayList;
 
+public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter<TeamBuilderAdapter_New_Or_Saved_Screen.ViewHolder> {
+    private ArrayList<String> mTeamTest = new ArrayList<String>();
     private BuiltTeams[] teamList;
 
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTeamNameField;
         public ImageView mImageNameField;
         private int mCurrPosition;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -42,6 +46,17 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
     public TeamBuilderAdapter_New_Or_Saved_Screen() {
 
 
+        mTeamTest.add("Midas-Conditions");
+        mTeamTest.add("alchemists");
+        mTeamTest.add("Midas");
+        mTeamTest.add("Flask");
+        mTeamTest.add("Vitriol");
+        mTeamTest.add("Katalyst");
+        mTeamTest.add("Venin");
+        mTeamTest.add("Compound");
+        mTeamTest.add("Hemlocke");
+        mTeamTest.add("Mist");
+
     }
 
     @Override
@@ -57,8 +72,11 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
         // Get the team name based on the current position
 
         // Set text fields
-        String teamName = "Test Team " + position;
-        String teamLogo = "brewers";
+
+
+
+        String teamName = mTeamTest.get(0);
+        String teamLogo = mTeamTest.get(1);
         TextView textView = viewHolder.mTeamNameField;
         textView.setText((CharSequence) teamName);
 
@@ -77,7 +95,7 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 1;
 
     }
 

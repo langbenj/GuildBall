@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,8 @@ public class TeamBuilderFragment_New_Or_Saved_Screen extends Fragment  {
                 App.bus.post(new StringFragmentBusEvent("new_team_button"));
             }
         });
+
+
 
         return view;
     }

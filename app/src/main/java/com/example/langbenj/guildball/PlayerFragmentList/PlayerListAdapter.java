@@ -2,6 +2,7 @@ package com.example.langbenj.guildball.PlayerFragmentList;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.ArrayMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.PlayerListFragmentBusEvent;
 import com.example.langbenj.guildball.DataAssemblers.Player;
 import com.example.langbenj.guildball.R;
+
+import java.util.ArrayList;
 
 //This class is used whenever a recycler list of players on a team are needed. It pulls the players information and displays it in a scrollable list
 //Some functions of this will only work if a paticular section that is set in App.getCurrentSection()
@@ -51,6 +54,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
             //Setup the onClickListener for the add/remove button that is on the team builder list
             if (current_section.equals("lists")) {
                 ImageButton image_button = (ImageButton) itemView.findViewById(R.id.add_player_to_team_button);
+                image_button.setImageResource(R.drawable.ic_add_circle_outline_black_36dp);
                 image_button.setOnClickListener(this);
             }
         }
@@ -61,39 +65,8 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
 
             String passed_player= (String) mPlayerNameField.getText();
             App.setCurrentPlayer(null);
+            App.bus.post(new PlayerListFragmentBusEvent(passed_player));
 
-            switch (current_section) {
-
-                case "guilds":
-                    //If the current section is guilds just load the player information fragment into the container
-                    App.bus.post(new PlayerListFragmentBusEvent(passed_player));
-                    break;
-                case "lists":
-                    //If the current section is lists you are in the team builder section. In this section we will handle clicks on the add/remove button (+/x) swapping the image when it's clicked.
-                    // Also depending on what's clicked the player will be added to the proper place in the team list.
-                    ImageButton target_button=(ImageButton)v.findViewById(R.id.add_player_to_team_button);
-                    switch (v.getId()) {
-                        case R.id.add_player_to_team_button:
-                            if (mNotOnTeam) {
-                                target_button.setImageResource(R.drawable.ic_clear_black_36dp);
-                                mNotOnTeam=false;
-                                String [] passed_array = {passed_player, "add"};
-                                App.bus.post(new AddRemovePlayerBusEvent(passed_array));
-                            }
-                            else {
-                                target_button.setImageResource(R.drawable.ic_add_circle_outline_black_36dp);
-                                String [] passed_array = {passed_player, "remove"};
-                                mNotOnTeam=true;
-                                App.bus.post(new AddRemovePlayerBusEvent(passed_array));
-                            }
-                            break;
-                        default:
-                            //Opens the player info if you are in the lists section and click on the player's name
-                            App.bus.post(new PlayerListFragmentBusEvent(passed_player));
-                            break;
-                    }
-                    break;
-            }
         }
     }
 
@@ -111,18 +84,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View playerView;
-        switch (current_section) {
-            //Load different XML layouts for the list based on the section
-            case "guilds":
-                playerView = inflater.inflate(R.layout.player_list_item, parent, false);
-                break;
-            case "lists":
-                playerView = inflater.inflate(R.layout.player_list_item_minimized, parent, false);
-                break;
-            default:
-                playerView =inflater.inflate(R.layout.player_list_item, parent, false);
-                break;
-        }
+        playerView =inflater.inflate(R.layout.player_list_item, parent, false);
         return new ViewHolder(playerView);
     }
 

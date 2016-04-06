@@ -11,6 +11,8 @@ import com.example.langbenj.guildball.DataAssemblers.Player;
 import com.example.langbenj.guildball.DataAssemblers.Team;
 import com.squareup.otto.Bus;
 
+import java.util.ArrayList;
+
 public class App extends Application {
 
     private static Application sApplication;
@@ -85,7 +87,25 @@ public class App extends Application {
     }
 
 
+    public static ArrayList<String> mTeamCreatePlayerList = new ArrayList<>();
 
+    public static ArrayList<String> getmTeamCreatePlayerList() {
+        return mTeamCreatePlayerList;
+    }
+
+    public static void setmTeamCreatePlayerList(ArrayList<String> mTeamCreatePlayerList) {
+        App.mTeamCreatePlayerList = mTeamCreatePlayerList;
+    }
+
+    public static String mCurrentTeam;
+
+    public static String getCurrentTeam() {
+        return mCurrentTeam;
+    }
+
+    public static void setCurrentTeam(String team_name) {
+        App.mCurrentTeam = team_name;
+    }
 
     @Override
     public void onCreate() {

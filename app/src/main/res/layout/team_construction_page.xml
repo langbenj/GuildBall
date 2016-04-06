@@ -45,46 +45,12 @@
         android:id="@+id/new_list_name_edit_box"
         android:textSize="14sp" />
 
-    <View
-        android:layout_height="2dip"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/team_construction_enter_list_name_prompt"
-        android:background="#FF909090"
-        android:layout_marginTop="5dp"
-        android:id="@+id/team_construction_line_1"
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_below="@+id/team_construction_line_1"
-        android:text="Players"
-
-        android:id="@+id/team_construction_option_list_title"
-        android:textStyle="bold"
-        android:textSize="14sp" />
 
     <View
         android:layout_height="2dip"
         android:layout_width="match_parent"
-        android:layout_below="@+id/team_construction_option_list_title"
-        android:background="#FF909090"
-        android:id="@+id/team_construction_line_2"
-       />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/player_list_recycler"
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
-        android:scrollbars="vertical"
-        android:layout_below="@+id/team_construction_line_2"></android.support.v7.widget.RecyclerView>
-
-    <View
-        android:layout_height="2dip"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/player_list_recycler"
+        android:layout_below="@+id/new_list_name_edit_box"
         android:background="#FF909090"
         android:layout_marginTop="5dp"
         android:id="@+id/team_construction_line_3"
@@ -95,12 +61,12 @@
         android:layout_height="wrap_content"
 
         android:layout_below="@+id/team_construction_line_3"
-        android:text="Your Team"
+        android:text="Choose Your Captain, Players and Mascot Below"
         android:id="@+id/team_construction_built_team_title"
         android:textStyle="bold"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <View
         android:layout_height="2dip"
@@ -115,201 +81,289 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/team_construction_line_4">
-
-        <TableRow
-           android:layout_marginLeft="5dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Captain:"
-        android:id="@+id/team_builder_captain_title"
-        android:textStyle="bold"
-        android:textSize="14sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Tapper"
-        android:id="@+id/team_builder_captain"
-        android:textSize="14sp" />
-
-            <View
-                android:layout_width="70dp"
-                android:layout_height="10dp" />
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginRight="5dp"
-    android:text="Mascot:"
-    android:id="@+id/team_builder_mascot_title"
-    android:textStyle="bold"
-    android:textSize="14sp"
-        android:layout_marginLeft="5dp" />
+        android:layout_below="@+id/team_construction_line_4"
+        android:id="@+id/team_list_table">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Scum"
-        android:id="@+id/team_builder_mascot"
-        android:textSize="14sp" />
-
-
-
+    <TableRow>
+        <Button
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:id="@+id/team_player1_image"
+            android:background="@drawable/ic_add_box_black_48dp"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player1"
+            android:id="@+id/team_player1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/team_player2_image"
+            android:background="@drawable/ic_add_box_black_48dp"
+            android:layout_marginLeft="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player2"
+            android:id="@+id/team_player2"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
     </TableRow>
-<TableRow
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="10dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-
-        android:text="Player 1:"
-        android:id="@+id/team_builder_player1_title"
-        android:textStyle="bold"
-        android:textSize="14sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="p1"
-        android:id="@+id/team_builder_player1"
-        android:layout_gravity="left"
-
-        android:textSize="14sp"
-        android:layout_marginLeft="5dp" />
-
-    <View
-        android:layout_width="40dp"
-        android:layout_height="10dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginRight="5dp"
-        android:text="Player 2:"
-        android:id="@+id/team_builder_player2_title"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="p2"
-        android:layout_marginRight="10dp"
-        android:id="@+id/team_builder_player2"
-
-        android:textSize="14sp" />
 
 
+        <TableRow>
+        <View
+            android:layout_height="10dp"
+            android:layout_width="match_parent" />
+            </TableRow>
 
-</TableRow>
-        <TableRow
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp">
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player3_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-
-                android:text="Player 3:"
-                android:id="@+id/team_builder_player3_title"
+                android:text="Player3"
+                android:id="@+id/team_player3"
                 android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="p3"
-                android:id="@+id/team_builder_player3"
-                android:layout_gravity="left"
-
-                android:textSize="14sp"
-                android:layout_marginLeft="5dp" />
-
-            <View
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
                 android:layout_width="40dp"
-                android:layout_height="10dp" />
+                android:layout_height="40dp"
+                android:id="@+id/team_player4_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginRight="5dp"
-                android:text="Player 4:"
-                android:id="@+id/team_builder_player4_title"
+                android:text="Player4"
+                android:id="@+id/team_player4"
                 android:textStyle="bold"
-                android:textSize="14sp"
-                 />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="p4"
-                android:layout_marginRight="10dp"
-                android:id="@+id/team_builder_player4"
-                android:layout_gravity="left"
-
-                android:textSize="14sp" />
-
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
         </TableRow>
-        <TableRow
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
 
-                android:text="Player 5:"
-                android:id="@+id/team_builder_player5_title"
-                android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="p5"
-                android:id="@+id/team_builder_player5"
-                android:layout_gravity="left"
-
-                android:textSize="14sp"
-                android:layout_marginLeft="5dp" />
-
+        <TableRow>
             <View
-                android:layout_width="40dp"
-                android:layout_height="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginRight="5dp"
-                android:text="Player 6:"
-                android:id="@+id/team_builder_player6_title"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                 />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="p6"
-                android:layout_marginRight="10dp"
-                android:id="@+id/team_builder_player6"
-                android:layout_gravity="left"
-
-                android:textSize="14sp" />
-
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
         </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player5_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player5"
+                android:id="@+id/team_player5"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player6_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player6"
+                android:id="@+id/team_player6"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player7_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player7"
+                android:id="@+id/team_player7"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player8_image"
+                android:background="@drawable/brewers_logo"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player8"
+                android:id="@+id/team_player8"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player9_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player9"
+                android:id="@+id/team_player9"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player10_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player10"
+                android:id="@+id/team_player10"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player11_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player11"
+                android:id="@+id/team_player11"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player12_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player12"
+                android:id="@+id/team_player12"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player13_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player13"
+                android:id="@+id/team_player13"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player14_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player14"
+                android:id="@+id/team_player14"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
     </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Team"
+        android:id="@+id/save_team_buton"
+        android:layout_below="@+id/team_list_table"
+
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
 

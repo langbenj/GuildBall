@@ -58,7 +58,7 @@
         <item id="character_plays">"Intensify"</item>
         <item id="playbook_top">"1,Push_2"</item>
         <item id="playbook_bottom">"M_GB_1_Push_1,M_T"</item>
-        <item id="type">""</item>
+        <item id="type">"Mascot"</item>
         <item id="attributes">"Ethraynnian,Human,Female,Central Midfielder"</item>
     </array>
 
@@ -558,8 +558,6 @@
         <item id="type">"Captain"</item>
         <item id="attributes">"Valentian,Human,Female,Captain,Striker"</item>
     </array>
-
-
 
     <array name="Princess">
         <item id="name">"Princess"</item>

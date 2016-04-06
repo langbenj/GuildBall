@@ -48,7 +48,7 @@
     </array>
 
     <array name="Butchers">
-        <item id="captain">"Fillet"</item>
+        <!--<item id="captain">"Fillet"</item>-->
         <item id="captain">"Ox"</item>
         <item id="mascot">"Princess"</item>
         <item id="player">"Boiler"</item>
