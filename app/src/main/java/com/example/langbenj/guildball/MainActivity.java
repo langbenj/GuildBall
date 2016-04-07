@@ -105,19 +105,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_play) {
             App.setCurrentSection("play");
-            Toast.makeText(App.getContext(), "Play", Toast.LENGTH_SHORT).show();
+            Toast.makeText(App.getContext(), "Play - Coming Soon", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_replay) {
-            App.setCurrentSection("replay");
-            Toast.makeText(App.getContext(), "Replay", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_models) {
+            App.setCurrentSection("models");
+            Toast.makeText(App.getContext(), "Models - Coming Soon", Toast.LENGTH_SHORT).show();
+
+        } else if (id == R.id.nav_stats) {
+            App.setCurrentSection("stats");
+            Toast.makeText(App.getContext(), "Stats - Coming Soon", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_share) {
             App.setCurrentSection("share");
-            Toast.makeText(App.getContext(), "Share", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_results) {
-            App.setCurrentSection("results");
-            Toast.makeText(App.getContext(), "Results", Toast.LENGTH_SHORT).show();
+            Toast.makeText(App.getContext(), "Share - Coming Soon", Toast.LENGTH_SHORT).show();
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

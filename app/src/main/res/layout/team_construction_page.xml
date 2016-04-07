@@ -41,9 +41,22 @@
         android:layout_toRightOf="@+id/team_construction_enter_list_name_prompt"
         android:layout_below="@+id/team_construction_list_name"
         android:layout_alignTop="@+id/team_construction_enter_list_name_prompt"
-        android:text="Enter your list name here"
+        android:hint="Enter your list name here"
         android:id="@+id/new_list_name_edit_box"
-        android:textSize="14sp" />
+        android:inputType="text"
+        android:textSize="14sp"
+        android:imeOptions="actionDone"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Set"
+        android:id="@+id/list_title_set"
+        android:layout_toRightOf="@+id/new_list_name_edit_box"
+        android:layout_alignBottom="@+id/new_list_name_edit_box"
+
+        android:layout_centerHorizontal="true" />
 
 
 
@@ -75,14 +88,13 @@
         android:background="#FF909090"
         android:id="@+id/team_construction_line_4"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp" />
-
+        android:layout_marginBottom="5dp" />
 
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/team_construction_line_4"
-        android:id="@+id/team_list_table">
+        android:id="@+id/table_layout">
 
 
     <TableRow>
@@ -98,9 +110,10 @@
             android:text="Player1"
             android:id="@+id/team_player1"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:clickable="true" />
         <Button
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -113,15 +126,16 @@
             android:text="Player2"
             android:id="@+id/team_player2"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:clickable="true" />
     </TableRow>
 
 
         <TableRow>
         <View
-            android:layout_height="10dp"
+            android:layout_height="5dp"
             android:layout_width="match_parent" />
             </TableRow>
 
@@ -138,9 +152,10 @@
                 android:text="Player3"
                 android:id="@+id/team_player3"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -153,14 +168,15 @@
                 android:text="Player4"
                 android:id="@+id/team_player4"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
         <TableRow>
             <View
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:layout_width="match_parent" />
         </TableRow>
 
@@ -177,9 +193,10 @@
                 android:text="Player5"
                 android:id="@+id/team_player5"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -192,14 +209,15 @@
                 android:text="Player6"
                 android:id="@+id/team_player6"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
         <TableRow>
             <View
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:layout_width="match_parent" />
         </TableRow>
 
@@ -216,9 +234,10 @@
                 android:text="Player7"
                 android:id="@+id/team_player7"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -231,14 +250,15 @@
                 android:text="Player8"
                 android:id="@+id/team_player8"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
         <TableRow>
             <View
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:layout_width="match_parent" />
         </TableRow>
 
@@ -255,9 +275,10 @@
                 android:text="Player9"
                 android:id="@+id/team_player9"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -270,14 +291,15 @@
                 android:text="Player10"
                 android:id="@+id/team_player10"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
         <TableRow>
             <View
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:layout_width="match_parent" />
         </TableRow>
 
@@ -294,9 +316,10 @@
                 android:text="Player11"
                 android:id="@+id/team_player11"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -309,14 +332,15 @@
                 android:text="Player12"
                 android:id="@+id/team_player12"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
         <TableRow>
             <View
-                android:layout_height="10dp"
+                android:layout_height="5dp"
                 android:layout_width="match_parent" />
         </TableRow>
 
@@ -333,9 +357,10 @@
                 android:text="Player13"
                 android:id="@+id/team_player13"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -348,21 +373,62 @@
                 android:text="Player14"
                 android:id="@+id/team_player14"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
+        </TableRow>
+        <TableRow>
+            <View
+                android:layout_height="5dp"
+                android:layout_width="match_parent" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player15_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player15"
+                android:id="@+id/team_player15"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player16_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player16"
+                android:id="@+id/team_player16"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
         </TableRow>
 
     </TableLayout>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Save Team"
-        android:id="@+id/save_team_buton"
-        android:layout_below="@+id/team_list_table"
-
+        android:id="@+id/tab"
+        android:layout_below="@+id/table_layout"
+        android:layout_marginBottom="5dp"
         android:layout_centerHorizontal="true" />
+
 
 
 </RelativeLayout>
