@@ -9,10 +9,12 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.example.langbenj.guildball.DataAssemblers.League;
 import com.example.langbenj.guildball.Helpers.App;
+import com.example.langbenj.guildball.Helpers.LoadSavedTeamBusEvent;
 import com.example.langbenj.guildball.Helpers.StringArrayFragmentBusEvent;
 import com.example.langbenj.guildball.Helpers.StringFragmentBusEvent;
 import com.example.langbenj.guildball.Helpers.TeamListFragmentBusEvent;
@@ -126,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    //TODO These launchers can be combined into one
+    //TODO These launchers can be combined into one refactoring is definitely needed.
 
 
     public void launchTeamListFragment() {
@@ -186,9 +188,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //Using the Otto library to pass items across a bus. Implemented in App
     @Subscribe
+    public void fragmentLauncherTeamList(LoadSavedTeamBusEvent event) {
+        String team_name=event.getParameter();
+        League temp_league= App.getLeague();
+        String [] team_list=temp_league.getTeamNameArray();
+        int team_index=-1;
+        for (int x=0; x<team_list.length; x++) {
+            if (team_list[x].equals(team_name)) {
+                team_index=x;
+            }
+        }
+        BuildTeamScreenFragment construct_team_fragment = new BuildTeamScreenFragment();
+        Bundle args = new Bundle();
+        args.putInt("TeamIndex", team_index);
+        construct_team_fragment.setArguments(args);
+        FragmentTransaction construct_team_transaction = getSupportFragmentManager().beginTransaction();
+        construct_team_transaction.replace(R.id.fragment_container, construct_team_fragment);
+        construct_team_transaction.addToBackStack(null);
+        construct_team_transaction.commit();
+
+    }
+
+    //Using the Otto library to pass items across a bus. Implemented in App
+    @Subscribe
     public void startMenuFragmentLauncher(StringFragmentBusEvent event) {
         //This is the handler for button presses from the start menu.
         String menu_item=event.getParameter();
+        TeamListFragment teamlist_fragment = new TeamListFragment();
+        FragmentTransaction teamlist_transaction = getSupportFragmentManager().beginTransaction();
         switch (menu_item) {
             case "guild_info":
                 App.setCurrentSection("guilds");
@@ -207,8 +234,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 teambuilder_transaction.commit();
                 break;
             case "new_team_button":
-                TeamListFragment teamlist_fragment = new TeamListFragment();
-                FragmentTransaction teamlist_transaction = getSupportFragmentManager().beginTransaction();
+                teamlist_transaction.replace(R.id.fragment_container, teamlist_fragment);
+                teamlist_transaction.addToBackStack(null);
+                teamlist_transaction.commit();
+                break;
+            case "load_team_button":
                 teamlist_transaction.replace(R.id.fragment_container, teamlist_fragment);
                 teamlist_transaction.addToBackStack(null);
                 teamlist_transaction.commit();
@@ -242,8 +272,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 construct_team_transaction.addToBackStack(null);
                 construct_team_transaction.commit();
                 break;
+
         }
+
     }
+
+
+
 
     //Using the Otto library to pass items across a bus. Implemented in App
     @Subscribe

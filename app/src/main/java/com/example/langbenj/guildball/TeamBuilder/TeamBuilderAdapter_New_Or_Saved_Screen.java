@@ -2,22 +2,22 @@ package com.example.langbenj.guildball.TeamBuilder;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.ArrayMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.langbenj.guildball.DataAssemblers.BuiltTeams;
+import com.example.langbenj.guildball.DataAssemblers.TeamList;
 import com.example.langbenj.guildball.Helpers.App;
-import com.example.langbenj.guildball.Helpers.TeamBuilderListFragmentBusEvent;
+import com.example.langbenj.guildball.Helpers.LoadSavedTeamBusEvent;
+
 import com.example.langbenj.guildball.R;
 
 import java.util.ArrayList;
 
 public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter<TeamBuilderAdapter_New_Or_Saved_Screen.ViewHolder> {
     private ArrayList<String> mTeamTest = new ArrayList<String>();
-    private BuiltTeams[] teamList;
+    private TeamList[] teamList;
 
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTeamNameField;
@@ -38,8 +38,7 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
 
         @Override
         public void onClick(View v) {
-            String passed_team = (String) mTeamNameField.getText();
-            App.bus.post(new TeamBuilderListFragmentBusEvent(passed_team));
+            App.bus.post(new LoadSavedTeamBusEvent("Alchemists"));
         }
     }
 

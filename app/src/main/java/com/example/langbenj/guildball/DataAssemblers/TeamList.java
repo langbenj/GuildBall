@@ -2,7 +2,7 @@ package com.example.langbenj.guildball.DataAssemblers;
 
 import java.util.ArrayList;
 
-public class BuiltTeams {
+public class TeamList {
 
 
     private String mTeamName;
@@ -11,7 +11,7 @@ public class BuiltTeams {
     private ArrayList<String> mPlayerNames = new ArrayList<String>();
 
 
-    public BuiltTeams(String team_name, String guild, Player[] players) {
+    public TeamList(String team_name, String guild, Player[] players) {
         mTeamName = team_name;
         mGuild = guild;
         mPlayers = players;

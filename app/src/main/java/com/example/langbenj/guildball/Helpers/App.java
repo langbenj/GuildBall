@@ -107,6 +107,8 @@ public class App extends Application {
         App.mCurrentTeam = team_name;
     }
 
+
+
     @Override
     public void onCreate() {
         super.onCreate();

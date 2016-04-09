@@ -2,6 +2,7 @@ package com.example.langbenj.guildball.TeamBuilder;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -35,7 +36,8 @@ public class BuildTeamScreenFragment extends Fragment {
     private static String TAG = "BuildTeamScreenFragment";
     private ArrayList<String> mPlayerList = new ArrayList<>();
     private ArrayList<String> mPlayerButtons = new ArrayList<>();
-
+    private ArrayList<Integer> mPlayerButtonResourceIDs = new ArrayList<>();
+    private ArrayList<Integer> mPlayerTextFieldsResourceIDs = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater fragmentInflater, ViewGroup target, Bundle savedInstanceState) {
 
@@ -75,6 +77,43 @@ public class BuildTeamScreenFragment extends Fragment {
         int image_id = context.getResources().getIdentifier(logo_image, "drawable", context.getPackageName());
         image_view.setImageResource(image_id);
 
+        //Set up arrays of the Button resources and player names. This is quicker than running getIdentifier over and over again in a for loop.
+
+        mPlayerButtonResourceIDs.add(R.id.team_player1_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player2_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player3_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player4_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player5_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player6_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player7_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player8_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player9_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player10_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player11_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player12_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player13_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player14_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player15_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player16_image);
+
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player1);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player2);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player3);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player4);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player5);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player6);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player7);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player8);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player9);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player10);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player11);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player12);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player13);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player14);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player15);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player16);
+
+
 
         //These two event trackers watch the list name and update the title
         final EditText editText = (EditText) view.findViewById(R.id.new_list_name_edit_box);
@@ -84,8 +123,8 @@ public class BuildTeamScreenFragment extends Fragment {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    Context context=App.getContext();
-                    String pass_text=editText.getText().toString();
+                    Context context = App.getContext();
+                    String pass_text = editText.getText().toString();
                     title_text.setText(pass_text);
                     handled = true;
                     InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -98,9 +137,9 @@ public class BuildTeamScreenFragment extends Fragment {
         Button title_set = (Button) view.findViewById(R.id.list_title_set);
         title_set.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String pass_text=editText.getText().toString();
+                String pass_text = editText.getText().toString();
                 title_text.setText(pass_text);
-                Log.d(TAG,pass_text);
+                Log.d(TAG, pass_text);
                 InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }
@@ -112,137 +151,25 @@ public class BuildTeamScreenFragment extends Fragment {
             }
         }
 
-        //TODO figure out how to programatically pick out the resource for R.id.______ This will remove thse if/else
 
+        //Set the player names
         String [] player_list = temp_team_to_create.getPlayerNameArray();
 
-        if (player_list.length>=1) {
-            updatePlayerNames(view, R.id.team_player1, player_list[0]);
-        }
-        else {
-            mPlayerButtons.set(0,"blank");
-            updatePlayerNames(view, R.id.team_player1, "");
-        }
+        for (int i=0; i<16; i++) {
+            if (player_list.length>=(i+1)) {
+                updatePlayerNames(view, mPlayerTextFieldsResourceIDs.get(i), player_list[i]);
+            }
+            else {
+                mPlayerButtons.set(i,"blank");
+                updatePlayerNames(view, mPlayerTextFieldsResourceIDs.get(i), "");
+            }
 
-        if (player_list.length>=2) {
-            updatePlayerNames(view, R.id.team_player2, player_list[1]);
-        }
-        else {
-            mPlayerButtons.set(1,"blank");
-            updatePlayerNames(view, R.id.team_player2, "");
-        }
-
-        if (player_list.length>=3) {
-            updatePlayerNames(view, R.id.team_player3, player_list[2]);
-        }
-        else {
-            mPlayerButtons.set(2,"blank");
-            updatePlayerNames(view, R.id.team_player3, "");
-        }
-
-        if (player_list.length>=4) {
-            updatePlayerNames(view, R.id.team_player4, player_list[3]);
-        }
-        else {
-            mPlayerButtons.set(3,"blank");
-            updatePlayerNames(view, R.id.team_player4, "");
-        }
-
-        if (player_list.length>=5) {
-
-            updatePlayerNames(view, R.id.team_player5, player_list[4]);
-
-        }
-        else {
-            mPlayerButtons.set(4,"blank");
-            updatePlayerNames(view, R.id.team_player5, "");
-        }
-        if (player_list.length>=6) {
-            updatePlayerNames(view, R.id.team_player6, player_list[5]);
-        }
-        else {
-            mPlayerButtons.set(5,"blank");
-            updatePlayerNames(view, R.id.team_player6, "");
-        }
-        if (player_list.length>=7) {
-            updatePlayerNames(view, R.id.team_player7, player_list[6]);
-        }
-        else {
-            mPlayerButtons.set(6,"blank");
-            updatePlayerNames(view, R.id.team_player7, "");
         }
 
 
-        if (player_list.length>=8) {
-            updatePlayerNames(view, R.id.team_player8, player_list[7]);
-        }
-        else {
-            mPlayerButtons.set(7,"blank");
-            updatePlayerNames(view, R.id.team_player8, "");
-        }
-        if (player_list.length>=9) {
-            updatePlayerNames(view, R.id.team_player9, player_list[8]);
-        }
-        else {
-            mPlayerButtons.set(8,"blank");
-            updatePlayerNames(view, R.id.team_player9, "");
-        }
+        //TODO Need to figure out how to dynamically set up buttons to remove duplicate code
 
-        if (player_list.length>=10) {
-            updatePlayerNames(view, R.id.team_player10, player_list[9]);
-        }
-        else {
-            mPlayerButtons.set(9,"blank");
-            updatePlayerNames(view, R.id.team_player10, "");
-        }
-
-        if (player_list.length>=11) {
-            updatePlayerNames(view, R.id.team_player11, player_list[10]);
-        }
-        else {
-            updatePlayerNames(view, R.id.team_player11, "");
-            mPlayerButtons.set(10,"blank");
-        }
-
-        if (player_list.length>=12) {
-            updatePlayerNames(view, R.id.team_player12, player_list[11]);
-        }
-        else {
-            mPlayerButtons.set(11,"blank");
-            updatePlayerNames(view, R.id.team_player12, "");
-        }
-
-        if (player_list.length>=13) {
-            updatePlayerNames(view, R.id.team_player13, player_list[12]);
-        }
-        else {
-            mPlayerButtons.set(12,"blank");
-            updatePlayerNames(view, R.id.team_player13, "");
-        }
-        if (player_list.length>=14) {
-            updatePlayerNames(view, R.id.team_player14, player_list[13]);
-        }
-        else {
-            mPlayerButtons.set(13,"blank");
-            updatePlayerNames(view, R.id.team_player14, "");
-        }
-        if (player_list.length>=15) {
-            updatePlayerNames(view, R.id.team_player15, player_list[14]);
-        }
-        else {
-            mPlayerButtons.set(14,"blank");
-            updatePlayerNames(view, R.id.team_player15, "");
-        }
-        if (player_list.length>=16) {
-            updatePlayerNames(view, R.id.team_player16, player_list[15]);
-        }
-        else {
-            mPlayerButtons.set(15,"blank");
-            updatePlayerNames(view, R.id.team_player16, "");
-        }
-
-        //TODO Need to refactor this, to be frank, spaghetti code
-
+        //Sets up the listeners for each button and player name.
         Button add_button_1 = (Button) view.findViewById(R.id.team_player1_image);
         add_button_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -590,7 +517,7 @@ public class BuildTeamScreenFragment extends Fragment {
         player_name_click = (TextView) view.findViewById(R.id.team_player16);
         player_name_click.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                TextView player_view= (TextView) v.findViewById(R.id.team_player16);
+                TextView player_view = (TextView) v.findViewById(R.id.team_player16);
                 String passed_player = (String) player_view.getText();
                 App.setCurrentPlayer(null);
                 App.bus.post(new PlayerListFragmentBusEvent(passed_player));
@@ -614,104 +541,22 @@ public class BuildTeamScreenFragment extends Fragment {
     }
 
 
-    public void changePlayerList(String player_name, String add_or_remove) {
-
-
-    }
-
-    //Using the Otto library to pass items across a bus. Implemented in App
-    @Subscribe
-    public void addOrRemovePlayer (AddRemovePlayerBusEvent event) {
-        String[] passed_string_array = event.getParameter();
-        String player_name = passed_string_array[0];
-        String todo = passed_string_array[1];
-        Player target_player = getPlayerInfo(player_name);
-        String player_display_name = "";
-
-        switch (todo) {
-            case "add":
-                switch (target_player.getType()) {
-                    case "Captain":
-
-                        if (mPlayerList.size() < 10) {
-                            player_display_name = target_player.getName();
-                            mPlayerList.add(player_display_name);
-                        }
-                        break;
-                    case "Mascot":
-                        if (mPlayerList.size() < 10) {
-                            player_display_name = target_player.getName();
-                            mPlayerList.add(player_display_name);
-                        }
-                        break;
-                    case "":
-                        if (mPlayerList.size() < 10) {
-                            player_display_name = target_player.getName();
-                            mPlayerList.add(player_display_name);
-                        }
-                        break;
-                }
-                break;
-            case "remove":
-                mPlayerList.remove(target_player.getName());
-                break;
-        }
-
-        Log.d(TAG, target_player.getType()+" "+player_display_name + " "+todo);
-
-                updatePlayerDisplay();
-
-        }
-
     private void updateButtonImages (View view, int buttonID, String button_drawable) {
-        Context context = App.getContext();
-        Button image_view = (Button) view.findViewById(buttonID);
-        int image_id = context.getResources().getIdentifier(button_drawable, "drawable", context.getPackageName());
-        image_view.setBackgroundResource(image_id);
+
+            Context context = App.getContext();
+            Button image_view = (Button) view.findViewById(buttonID);
+            int image_id = context.getResources().getIdentifier(button_drawable, "drawable", context.getPackageName());
+            image_view.setBackgroundResource(image_id);
+
         return;
     }
 
     private void updatePlayerDisplay() {
-        Context context = App.getContext();
-
-
-
-        //TODO refactor this code to be a function or loop
-        Button image_view;
-        int image_id;
-        updateButtonImages(mCurrentView,R.id.team_player1_image,mPlayerButtons.get(0));
-        updateButtonImages(mCurrentView,R.id.team_player2_image,mPlayerButtons.get(1));
-        updateButtonImages(mCurrentView,R.id.team_player3_image,mPlayerButtons.get(2));
-        updateButtonImages(mCurrentView,R.id.team_player4_image,mPlayerButtons.get(3));
-        updateButtonImages(mCurrentView,R.id.team_player5_image,mPlayerButtons.get(4));
-        updateButtonImages(mCurrentView,R.id.team_player6_image,mPlayerButtons.get(5));
-        updateButtonImages(mCurrentView,R.id.team_player7_image,mPlayerButtons.get(6));
-        updateButtonImages(mCurrentView,R.id.team_player8_image,mPlayerButtons.get(7));
-        updateButtonImages(mCurrentView,R.id.team_player9_image,mPlayerButtons.get(8));
-        updateButtonImages(mCurrentView,R.id.team_player10_image,mPlayerButtons.get(9));
-        updateButtonImages(mCurrentView,R.id.team_player11_image,mPlayerButtons.get(10));
-        updateButtonImages(mCurrentView,R.id.team_player12_image,mPlayerButtons.get(11));
-        updateButtonImages(mCurrentView,R.id.team_player13_image,mPlayerButtons.get(12));
-        updateButtonImages(mCurrentView,R.id.team_player14_image,mPlayerButtons.get(13));
-        updateButtonImages(mCurrentView,R.id.team_player15_image,mPlayerButtons.get(14));
-        updateButtonImages(mCurrentView,R.id.team_player16_image,mPlayerButtons.get(15));
-    }
-
-    private Player getPlayerInfo (String player_name) {
-        //In the team section this handler is called when a new team is being built and a guild is chosen. It should open the team builder screen
-        League temp_league= App.getLeague();
-        String [] team_list=temp_league.getTeamNameArray();
-        Player return_player;
-        Team temp_team;
-        for (int x=0; x<team_list.length; x++) {
-            temp_team=temp_league.getTeam(team_list[x]);
-            return_player=temp_team.getPlayer(player_name);
-            if (return_player != null) {
-                return return_player;
-            }
+        for (int i=0; i<=15; i++) {
+             updateButtonImages(mCurrentView, mPlayerButtonResourceIDs.get(i), mPlayerButtons.get(i));
         }
-        return null;
-
     }
+
+
 }
 

@@ -3,6 +3,7 @@ package com.example.langbenj.guildball.PlayerFragmentList;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.ArrayMap;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
                 image_button.setImageResource(R.drawable.ic_add_circle_outline_black_36dp);
                 image_button.setOnClickListener(this);
             }
+
         }
 
         @Override
@@ -110,6 +112,7 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Vi
         //Pull the image id and set it to the View
         int image_id = context.getResources().getIdentifier(logo_image, "drawable", context.getPackageName());
         image_view.setImageResource(image_id);
+
 
         if (current_section.equals("guilds")) {
             // These are only activated if you are in the guild list they display the player's stats
