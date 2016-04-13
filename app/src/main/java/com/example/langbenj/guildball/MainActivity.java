@@ -9,10 +9,10 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.example.langbenj.guildball.DataAssemblers.League;
+import com.example.langbenj.guildball.Databases.SavedTeamsDbHelper;
 import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.LoadSavedTeamBusEvent;
 import com.example.langbenj.guildball.Helpers.StringArrayFragmentBusEvent;
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         App.bus.register(this);
         //Start the fragment that contains the home page
         launchStartMenuFragment();
+        SavedTeamsDbHelper mDbHelper = new SavedTeamsDbHelper(App.getContext());
+        App.setSavedTeamsDB(mDbHelper);
     }
 
 

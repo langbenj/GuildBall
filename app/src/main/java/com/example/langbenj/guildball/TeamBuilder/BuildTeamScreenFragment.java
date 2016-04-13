@@ -1,8 +1,10 @@
 package com.example.langbenj.guildball.TeamBuilder;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 import com.example.langbenj.guildball.DataAssemblers.League;
 import com.example.langbenj.guildball.DataAssemblers.Player;
 import com.example.langbenj.guildball.DataAssemblers.Team;
+import com.example.langbenj.guildball.Databases.SavedTeamsDbHelper;
 import com.example.langbenj.guildball.Helpers.AddRemovePlayerBusEvent;
 import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.PlayerListFragmentBusEvent;
@@ -27,6 +30,7 @@ import com.example.langbenj.guildball.R;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 
 public class BuildTeamScreenFragment extends Fragment {
@@ -153,7 +157,7 @@ public class BuildTeamScreenFragment extends Fragment {
 
 
         //Set the player names
-        String [] player_list = temp_team_to_create.getPlayerNameArray();
+        final String [] player_list = temp_team_to_create.getPlayerNameArray();
 
         for (int i=0; i<16; i++) {
             if (player_list.length>=(i+1)) {
@@ -514,6 +518,50 @@ public class BuildTeamScreenFragment extends Fragment {
                 updatePlayerDisplay();
             }
         });
+
+        //This button triggers the saving of lists.
+        Button save_team = (Button) view.findViewById(R.id.save_team);
+        save_team.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //First we need to pull in all of the variables:
+                String team=App.getCurrentTeam();
+                for (int i=0; i<16; i++) {
+                    if (mPlayerButtons.get(i).equals((App.getCurrentTeam() + "_logo").toLowerCase())) {
+                        mPlayerList.add(player_list[i]);
+                    }
+                    else {
+                        mPlayerList.add("");
+                    }
+                }
+
+                SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
+                // Gets the data repository in write mode
+                SQLiteDatabase db = current_database.getWritableDatabase();
+
+                // Create a new map of values, where column names are the keys
+                ContentValues values = new ContentValues();
+                values.put("team_id", 1);
+                values.put("teamname",title_text.getText().toString());
+                values.put("team", team);
+                for (int x=0; x<16; x++) {
+                    if (mPlayerList.get(x).equals("")) {
+
+                    }
+                    else {
+                        values.put("player"+(x+1), mPlayerList.get(x));
+                    }
+                }
+
+// Insert the new row, returning the primary key value of the new row
+                long newRowId;
+                newRowId = db.insert(
+                        "teams",
+                        null,
+                        values);
+
+            }
+        });
+
         player_name_click = (TextView) view.findViewById(R.id.team_player16);
         player_name_click.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

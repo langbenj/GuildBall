@@ -1,6 +1,8 @@
 package com.example.langbenj.guildball.TeamBuilder;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.langbenj.guildball.DataAssemblers.TeamList;
+import com.example.langbenj.guildball.Databases.SavedTeamsDbHelper;
 import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.LoadSavedTeamBusEvent;
 
@@ -16,8 +19,8 @@ import com.example.langbenj.guildball.R;
 import java.util.ArrayList;
 
 public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter<TeamBuilderAdapter_New_Or_Saved_Screen.ViewHolder> {
-    private ArrayList<String> mTeamTest = new ArrayList<String>();
-    private TeamList[] teamList;
+    private ArrayList<String> mTeamNames = new ArrayList<String>();
+
 
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTeamNameField;
@@ -43,18 +46,52 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
     }
 
     public TeamBuilderAdapter_New_Or_Saved_Screen() {
+        SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
+        SQLiteDatabase db = current_database.getReadableDatabase();
 
+// Define a projection that specifies which columns from the database
+// you will actually use after this query.
 
-        mTeamTest.add("Midas-Conditions");
-        mTeamTest.add("alchemists");
-        mTeamTest.add("Midas");
-        mTeamTest.add("Flask");
-        mTeamTest.add("Vitriol");
-        mTeamTest.add("Katalyst");
-        mTeamTest.add("Venin");
-        mTeamTest.add("Compound");
-        mTeamTest.add("Hemlocke");
-        mTeamTest.add("Mist");
+        String[] projection = {
+                "team_id",
+                "teamname",
+                "team",
+                "player1",
+                "player2",
+                "player3",
+                "player4",
+                "player5",
+                "player6",
+                "player7",
+                "player8",
+                "player9",
+                "player10",
+                "player11",
+                "player12",
+                "player13",
+                "player14",
+                "player15",
+                "player16"
+        };
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                "teamname" + " DESC";
+
+        Cursor c = db.query(
+                "teams",  // The table to query
+                projection,                               // The columns to return
+                null,                                // The columns for the WHERE clause
+                null,                            // The values for the WHERE clause
+                null,                                     // don't group the rows
+                null,                                     // don't filter by row groups
+                sortOrder                                 // The sort order
+        );
+
+        c.moveToFirst();
+        String team_name = c.getString(c.getColumnIndexOrThrow("teamname"));
+        mTeamNames.add("Midas-Conditions");
+        mTeamNames.add("alchemists");
 
     }
 
@@ -74,8 +111,8 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
 
 
 
-        String teamName = mTeamTest.get(0);
-        String teamLogo = mTeamTest.get(1);
+        String teamName = mTeamNames.get(0);
+        String teamLogo = mTeamNames.get(1);
         TextView textView = viewHolder.mTeamNameField;
         textView.setText((CharSequence) teamName);
 
