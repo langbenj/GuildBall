@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.langbenj.guildball.DataAssemblers.League;
 import com.example.langbenj.guildball.DataAssemblers.Player;
@@ -28,6 +30,8 @@ import com.example.langbenj.guildball.Helpers.App;
 import com.example.langbenj.guildball.Helpers.PlayerListFragmentBusEvent;
 import com.example.langbenj.guildball.R;
 import com.squareup.otto.Subscribe;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -42,6 +46,11 @@ public class BuildTeamScreenFragment extends Fragment {
     private ArrayList<String> mPlayerButtons = new ArrayList<>();
     private ArrayList<Integer> mPlayerButtonResourceIDs = new ArrayList<>();
     private ArrayList<Integer> mPlayerTextFieldsResourceIDs = new ArrayList<>();
+    private String mLoadTeamFlag="no";
+    private String mLoadTeamID;
+    private SavedTeamsDbHelper current_database;
+    private SQLiteDatabase db;
+    private Cursor mLoadResults;
     @Override
     public View onCreateView(LayoutInflater fragmentInflater, ViewGroup target, Bundle savedInstanceState) {
 
@@ -49,10 +58,26 @@ public class BuildTeamScreenFragment extends Fragment {
         View view = fragmentInflater.inflate(R.layout.team_construction_page, target, false);
         mCurrentView = view;
         mCurrentViewGroup=target;
-
+        current_database = App.getSavedTeamsDB();
+        db = current_database.getWritableDatabase();
         //Accept passed team index of the team to load
         Bundle bundle = this.getArguments();
         int teamIndex = bundle.getInt("TeamIndex", 0);
+        if (bundle.size()==2) {
+            mLoadTeamFlag="yes";
+            mLoadTeamID=bundle.getString("LoadedTeamID");
+            String [] temp_ID_arry = {mLoadTeamID};
+
+            String[] fields_to_return = {"teamname","team","player1","player2","player3","player4","player5","player6","player7","player8","player9","player10","player11","player12","player13","player14","player15","player16"
+                    };
+            String selection = "team_id" + " LIKE ?";
+            mLoadResults = db.query("teams", fields_to_return, selection, temp_ID_arry, null, null, null);
+            mLoadResults.moveToFirst();
+            String team = mLoadResults.getString(mLoadResults.getColumnIndexOrThrow("team"));
+        }
+        else {
+            mLoadTeamFlag="no";
+        }
 
 
         //TODO Figure out how to determine if the object is already registered with OTTO
@@ -75,6 +100,10 @@ public class BuildTeamScreenFragment extends Fragment {
 
         //Add the team logo to the upper right of the page
         ImageView image_view = (ImageView) view.findViewById(R.id.team_construction_logo_image);
+        if (mLoadTeamFlag=="yes") {
+            TextView temp_text_view =(TextView) view.findViewById(R.id.team_construction_list_name);
+            temp_text_view.setText(mLoadResults.getString(mLoadResults.getColumnIndexOrThrow("teamname")));
+        }
         String logo_image = (temp_team_to_create.getTeamName()+"_logo").toLowerCase();
         App.setCurrentTeam(temp_team_to_create.getTeamName());
         final Context context = App.getContext();
@@ -160,10 +189,25 @@ public class BuildTeamScreenFragment extends Fragment {
         final String [] player_list = temp_team_to_create.getPlayerNameArray();
 
         for (int i=0; i<16; i++) {
-            if (player_list.length>=(i+1)) {
+
+            //This piece of code will set up the page if the player was loaded.
+
+            if (mLoadTeamFlag!="no") {
+                if (player_list.length >= (i + 1)) {
+                    if (checkIfLoadedPlayer(player_list[i])) {
+                        mPlayerButtons.set(i, (App.getCurrentTeam() + "_logo").toLowerCase());
+                    }
+                }
+            }
+
+
+            if (player_list.length>= (i + 1)) {
                 updatePlayerNames(view, mPlayerTextFieldsResourceIDs.get(i), player_list[i]);
+
+
             }
             else {
+
                 mPlayerButtons.set(i,"blank");
                 updatePlayerNames(view, mPlayerTextFieldsResourceIDs.get(i), "");
             }
@@ -534,33 +578,70 @@ public class BuildTeamScreenFragment extends Fragment {
                     }
                 }
 
-                SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
-                // Gets the data repository in write mode
-                SQLiteDatabase db = current_database.getWritableDatabase();
 
-                // Create a new map of values, where column names are the keys
-                ContentValues values = new ContentValues();
-                values.put("team_id", 1);
-                values.put("teamname",title_text.getText().toString());
-                values.put("team", team);
-                for (int x=0; x<16; x++) {
-                    if (mPlayerList.get(x).equals("")) {
-
+                //TODO Need to shift to an async thread
+                String[] fields_to_return = {"teamname"};
+                String selection = "teamname" + " LIKE ?";
+                String [] criteria = {(String) title_text.getText()};
+                Cursor mCheckResults = db.query("teams", fields_to_return, selection, criteria, null, null, null);
+                if (mCheckResults.getCount()!=0) {
+                    //If the database query returns a 0 value the team is not in the db. Update the db rather than creating a new entry
+                    ContentValues values = new ContentValues();
+                    values.put("team", team);
+                    for (int x = 1; x <= 16; x++) {
+                        if (mPlayerList.get(x-1).equals("")) {
+                            values.put("player" + (x), "");
+                        } else {
+                            values.put("player" + (x), mPlayerList.get(x-1));
+                        }
                     }
-                    else {
-                        values.put("player"+(x+1), mPlayerList.get(x));
+// Which row to update, based on the ID
+
+                    try
+                    {
+                        Toast.makeText(App.getContext(), "List Saved", Toast.LENGTH_SHORT).show();
+                        int count = db.update("teams", values, selection, criteria);
+                    }
+                    catch(Exception e)
+                    {
+                        Toast.makeText(App.getContext(), "Problem With Saving List", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "Problem with updating DB: " + e.getMessage());
+                    }
+
+
+                }
+                else {
+                // Create a new map of values, where column names are the keys
+                    ContentValues values = new ContentValues();
+                    values.put("team_id", UUID.randomUUID().toString());
+                    values.put("teamname", title_text.getText().toString());
+                    values.put("team", team);
+                    for (int x = 1; x <= 16; x++) {
+                        if (mPlayerList.get(x-1).equals("")) {
+                            Toast.makeText(App.getContext(), "List Saved", Toast.LENGTH_SHORT).show();
+                            values.put("player" + x, "");
+                        } else {
+                            Toast.makeText(App.getContext(), "Problem With Saving List", Toast.LENGTH_SHORT).show();
+                            values.put("player" + x, mPlayerList.get(x-1));
+                        }
+                    }
+                    // Insert the new row, returning the primary key value of the new row
+                    long newRowId;
+                    try
+                    {
+                        newRowId = db.insert("teams", null, values);
+                    }
+                    catch(Exception e)
+                    {
+                        Log.d(TAG, "Problem with new DB: " + e.getMessage());
                     }
                 }
-
-// Insert the new row, returning the primary key value of the new row
-                long newRowId;
-                newRowId = db.insert(
-                        "teams",
-                        null,
-                        values);
-
+                mCheckResults.close();
             }
         });
+
+
+
 
         player_name_click = (TextView) view.findViewById(R.id.team_player16);
         player_name_click.setOnClickListener(new View.OnClickListener() {
@@ -585,6 +666,28 @@ public class BuildTeamScreenFragment extends Fragment {
     public void onStart() {
         super.onStart();
         updatePlayerDisplay();
+
+    }
+
+    public boolean checkIfLoadedPlayer (String player_name) {
+
+
+        mLoadResults.moveToFirst();
+
+        boolean return_value=false;
+        ArrayList<String> loaded_list = new ArrayList<>();
+
+        //18 is the total amount of records returned in the DB Query
+        for (int i=0; i<mLoadResults.getColumnCount (); i++) {
+            String player=mLoadResults.getString(i);
+            loaded_list.add(player);
+        }
+
+        if (loaded_list.contains(player_name)) {
+            return_value=true;
+        }
+
+      return return_value;
 
     }
 

@@ -38,6 +38,14 @@ public class Start_Menu extends Fragment {
                 }
             });
 
+            Button odds_button = (Button) view.findViewById(R.id.odds_button);
+            odds_button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String passed_button="odds_button";
+                    App.bus.post(new StringFragmentBusEvent(passed_button));
+                }
+            });
+
 
             return view;
 

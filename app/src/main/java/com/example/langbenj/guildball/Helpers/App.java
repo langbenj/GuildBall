@@ -3,6 +3,7 @@ package com.example.langbenj.guildball.Helpers;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.Cursor;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -39,10 +40,6 @@ public class App extends Application {
         }
         return null;
     }
-
-
-
-
 
 
     //Shared Variable Storage

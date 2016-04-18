@@ -1814,6 +1814,35 @@
         <item id="attributes">"Unknown, Animal, Mascot"</item>
     </array>
 
+    <array name="Strongbox">
+        <item id="name">"Strongbox"</item>
+        <item id="team">"Union"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"3\""</item>
+        <item id="sprint">"5\""</item>
+        <item id="tac">"2"</item>
+        <item id="kick_dice">"2"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"2+"</item>
+        <item id="armour">"2"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"2"</item>
+        <item id="max_life">"10"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"ToughHide,ShellingOut"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"Confidence"</item>
+        <item id="playbook_top">"KD,2"</item>
+        <item id="playbook_bottom">"M_1,M_T"</item>
+        <item id="type">"Mascot"</item>
+        <item id="attributes">"Castellyian,Animal,Mascot"</item>
+    </array>
+
     <array name="Gutter">
         <item id="name">"Gutter"</item>
         <item id="team">"Union"</item>

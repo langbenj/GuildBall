@@ -7,4 +7,7 @@
     <string name="model_value">Default</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="spinner1">Target Number:1</string>
+    <string name="spinner2">Dice:1</string>
+    <string name="spinner3">Armor:0</string>
 </resources>

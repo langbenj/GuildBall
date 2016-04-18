@@ -35,7 +35,7 @@ public class SavedTeamsDbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_NAME_PLAYER16 = "player16";
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
-                    COLUMN_NAME_ENTRY_ID + " INTEGER PRIMARY KEY," +
+                    COLUMN_NAME_ENTRY_ID + " TEXT PRIMARY KEY," +
                     COLUMN_NAME_TEAM + " TEXT," +
                     COLUMN_TEAM + " TEXT," +
                     COLUMN_NAME_PLAYER1 + " TEXT," +

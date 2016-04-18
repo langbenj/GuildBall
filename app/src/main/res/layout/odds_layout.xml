@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/odds_layout"
+    android:contextClickable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target:"
+        android:id="@+id/target_title"
+        android:textSize="22sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/target_up"
+        android:layout_toRightOf="@+id/target_title" />
+
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignLeft="@+id/target_up"
+        android:layout_below="@+id/target_up"
+        android:text="10"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:gravity="center" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/target_down"
+        android:layout_alignLeft="@+id/target_up"
+        android:layout_below="@+id/editText"/>
+
+
+</RelativeLayout>

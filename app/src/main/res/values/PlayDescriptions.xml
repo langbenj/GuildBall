@@ -459,6 +459,12 @@
         <item id="description">"This model can also play for the named teams."</item>
     </array>
 
+    <array name="ShellingOut">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Shelling Out [4\" Aura]"</item>
+        <item id="description">"Friendly Guild models gain [+1] TAC when making an Attack against an enemy model that is within this aura. When a friendly model inflicts the taken-out condition on an enemy model that is within this aura, the friendly team gains an additional [1] MP."</item>
+    </array>
+
     <array name="ShadowLike">
         <item id="type">"Character Trait"</item>
         <item id="name">"Shadow Like"</item>

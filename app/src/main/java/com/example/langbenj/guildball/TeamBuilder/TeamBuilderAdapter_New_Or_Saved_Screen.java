@@ -20,79 +20,55 @@ import java.util.ArrayList;
 
 public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter<TeamBuilderAdapter_New_Or_Saved_Screen.ViewHolder> {
     private ArrayList<String> mTeamNames = new ArrayList<String>();
-
-
+    private ArrayList<String> mTeamTeams = new ArrayList<String>();
+    private Cursor mSavedTeamDatabaseResults;
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTeamNameField;
         public ImageView mImageNameField;
-        private int mCurrPosition;
-
+        private final SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
+        private final SQLiteDatabase db = current_database.getReadableDatabase();
 
         public ViewHolder(View itemView) {
             super(itemView);
             //Assign references to the TextViews in the XML layout. These will be used later to write info to the fields
             mTeamNameField = (TextView) itemView.findViewById(R.id.build_team_name_field);
             mImageNameField = (ImageView) itemView.findViewById(R.id.build_team_list_logo_image);
-
-
             //Setup the onClickListener to handle click events on each view (individual row)
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            App.bus.post(new LoadSavedTeamBusEvent("Alchemists"));
+            //Handles the clicks on the saved team names
+            String[] fields_to_return = {"team_id"};
+            String selection = "teamname" + " LIKE ?";
+            String [] passed_team_name= {(String) mTeamNameField.getText()};
+            Cursor results = db.query("teams", fields_to_return, selection, passed_team_name, null, null, null);
+            results.moveToFirst();
+            String team_id = results.getString(results.getColumnIndexOrThrow("team_id"));
+            results.close();
+
+
+            App.bus.post(new LoadSavedTeamBusEvent(team_id));
         }
     }
 
     public TeamBuilderAdapter_New_Or_Saved_Screen() {
         SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
         SQLiteDatabase db = current_database.getReadableDatabase();
-
-// Define a projection that specifies which columns from the database
-// you will actually use after this query.
-
-        String[] projection = {
-                "team_id",
-                "teamname",
-                "team",
-                "player1",
-                "player2",
-                "player3",
-                "player4",
-                "player5",
-                "player6",
-                "player7",
-                "player8",
-                "player9",
-                "player10",
-                "player11",
-                "player12",
-                "player13",
-                "player14",
-                "player15",
-                "player16"
-        };
-
-// How you want the results sorted in the resulting Cursor
-        String sortOrder =
-                "teamname" + " DESC";
-
-        Cursor c = db.query(
-                "teams",  // The table to query
-                projection,                               // The columns to return
-                null,                                // The columns for the WHERE clause
-                null,                            // The values for the WHERE clause
-                null,                                     // don't group the rows
-                null,                                     // don't filter by row groups
-                sortOrder                                 // The sort order
-        );
-
-        c.moveToFirst();
-        String team_name = c.getString(c.getColumnIndexOrThrow("teamname"));
-        mTeamNames.add("Midas-Conditions");
-        mTeamNames.add("alchemists");
-
+        String[] fields_to_return = {"team_id","teamname", "team"};
+        String sort_type ="teamname" + " DESC";
+       mSavedTeamDatabaseResults = db.query("teams",fields_to_return, null,null, null, null, sort_type );
+        mSavedTeamDatabaseResults.moveToFirst();
+        String team_name;
+        String team_team;
+        for (int i=0; i<mSavedTeamDatabaseResults.getCount(); i++) {
+            team_name = mSavedTeamDatabaseResults.getString(mSavedTeamDatabaseResults.getColumnIndexOrThrow("teamname"));
+            mTeamNames.add(team_name);
+            team_team = mSavedTeamDatabaseResults.getString(mSavedTeamDatabaseResults.getColumnIndexOrThrow("team"));
+            mTeamTeams.add(team_team);
+            mSavedTeamDatabaseResults.moveToNext();
+        }
     }
 
     @Override
@@ -111,11 +87,10 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
 
 
 
-        String teamName = mTeamNames.get(0);
-        String teamLogo = mTeamNames.get(1);
+        String teamName = mTeamNames.get(position);
+        String teamLogo = mTeamTeams.get(position);
         TextView textView = viewHolder.mTeamNameField;
         textView.setText((CharSequence) teamName);
-
         //Pull the logo image view from the viewHolder
         ImageView image_view = viewHolder.mImageNameField;
         //build the string name of the team logo
@@ -131,7 +106,7 @@ public class TeamBuilderAdapter_New_Or_Saved_Screen extends RecyclerView.Adapter
 
     @Override
     public int getItemCount() {
-        return 1;
+        return mSavedTeamDatabaseResults.getCount();
 
     }
 

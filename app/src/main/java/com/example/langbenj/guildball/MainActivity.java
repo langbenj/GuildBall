@@ -1,6 +1,8 @@
 package com.example.langbenj.guildball;
 
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -27,6 +29,8 @@ import com.example.langbenj.guildball.TeamBuilder.BuildTeamScreenFragment;
 import com.example.langbenj.guildball.TeamBuilder.TeamBuilderFragment_New_Or_Saved_Screen;
 import com.example.langbenj.guildball.TeamFragmentList.TeamListFragment;
 import com.squareup.otto.Subscribe;
+
+import Odds.Odds_Fragment;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
@@ -192,18 +196,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //Using the Otto library to pass items across a bus. Implemented in App
     @Subscribe
     public void fragmentLauncherTeamList(LoadSavedTeamBusEvent event) {
-        String team_name=event.getParameter();
+        String [] team_id={event.getParameter()};
+
+        //Load the team name from the database based on what was pushed through the bus
+        SavedTeamsDbHelper current_database = App.getSavedTeamsDB();
+        SQLiteDatabase db = current_database.getReadableDatabase();
+        String[] fields_to_return = {"team"};
+        String selection = "team_id" + " LIKE ?";
+        Cursor results = db.query("teams", fields_to_return, selection, team_id, null, null, null);
+        results.moveToFirst();
+        String team = results.getString(results.getColumnIndexOrThrow("team"));
+        results.close();
+
+
+    // Find the index number of the team the loaded team belongs to.
         League temp_league= App.getLeague();
         String [] team_list=temp_league.getTeamNameArray();
         int team_index=-1;
         for (int x=0; x<team_list.length; x++) {
-            if (team_list[x].equals(team_name)) {
+            if (team_list[x].equals(team)) {
                 team_index=x;
             }
         }
         BuildTeamScreenFragment construct_team_fragment = new BuildTeamScreenFragment();
         Bundle args = new Bundle();
         args.putInt("TeamIndex", team_index);
+
+        args.putString("LoadedTeamID",team_id[0]);
         construct_team_fragment.setArguments(args);
         FragmentTransaction construct_team_transaction = getSupportFragmentManager().beginTransaction();
         construct_team_transaction.replace(R.id.fragment_container, construct_team_fragment);
@@ -235,6 +254,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 teambuilder_transaction.replace(R.id.fragment_container, teambuilder_fragment);
                 teambuilder_transaction.addToBackStack(null);
                 teambuilder_transaction.commit();
+                break;
+            case "odds_button":
+                App.setCurrentSection("odds");
+                Odds_Fragment odds_fragment = new Odds_Fragment();
+                FragmentTransaction oddsbuilder_transaction = getSupportFragmentManager().beginTransaction();
+                oddsbuilder_transaction.replace(R.id.fragment_container, odds_fragment);
+                oddsbuilder_transaction.addToBackStack(null);
+                oddsbuilder_transaction.commit();
                 break;
             case "new_team_button":
                 teamlist_transaction.replace(R.id.fragment_container, teamlist_fragment);

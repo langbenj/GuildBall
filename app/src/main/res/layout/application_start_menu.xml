@@ -26,8 +26,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:id="@+id/play_button"
+        android:text="Timer"
+        android:id="@+id/timer_button"
         android:layout_alignTop="@+id/guild_info_button"
         android:layout_toRightOf="@+id/team_builder_button"
         android:layout_marginLeft="20dp"
@@ -36,8 +36,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Models"
-        android:id="@+id/collection_button"
+        android:text="Odds"
+        android:id="@+id/odds_button"
         android:layout_below="@+id/team_builder_button"
         android:layout_alignLeft="@+id/guild_info_button"
         android:layout_marginTop="10dp" />
@@ -45,10 +45,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stats"
-        android:id="@+id/stats_button"
-        android:layout_alignTop="@+id/collection_button"
-        android:layout_toRightOf="@+id/collection_button"
+        android:text="Models"
+        android:id="@+id/models_button"
+        android:layout_alignTop="@+id/odds_button"
+        android:layout_toRightOf="@+id/odds_button"
         android:layout_marginLeft="20dp" />
 
     <Button
@@ -56,8 +56,8 @@
         android:layout_height="wrap_content"
         android:text="Share"
         android:id="@+id/share_button"
-        android:layout_alignTop="@+id/collection_button"
-        android:layout_toRightOf="@+id/stats_button"
+        android:layout_alignTop="@+id/odds_button"
+        android:layout_toRightOf="@+id/models_button"
         android:layout_marginLeft="20dp" />
 
 
