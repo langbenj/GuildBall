@@ -33,6 +33,35 @@
         <item id="attributes">"Valentian,Human,Male,Captain,CentralMidfielder"</item>
     </array>
 
+    <array name="Smoke">
+        <item id="name">"Smoke"</item>
+        <item id="team">"Alchemists"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"4\""</item>
+        <item id="sprint">"6\""</item>
+        <item id="tac">"4"</item>
+        <item id="kick_dice">"4"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"4"</item>
+        <item id="max_influence">"6"</item>
+        <item id="max_life">"16"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"CloudJumper,MomentousInspiration,UnpredictableMovement"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">"ChemicalShower"</item>
+        <item id="character_plays">"SmokeBomb,AlchemyMix,ChemicalBreeze"</item>
+        <item id="playbook_top">"Blank,T,2,Blank"</item>
+        <item id="playbook_bottom">"1,M_Push_1,M_Push_2,M_T"</item>
+        <item id="type">"Captain"</item>
+        <item id="attributes">"Ethrayannian,Human,Female,Captain,Defensive Midfielder"</item>
+    </array>
+
     <array name="Flask">
         <item id="name">"Flask"</item>
         <item id="team">"Alchemists"</item>
@@ -118,6 +147,35 @@
         <item id="playbook_bottom">"1,M_GB_1,M_GB_2,M_Push_1_Dodge_1,3,M_3_Push_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Male,Attacking Midfielder"</item>
+    </array>
+
+    <array name="VetKatalyst">
+        <item id="name">"VetKatalyst"</item>
+        <item id="team">"Alchemists"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"5\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"8"</item>
+        <item id="kick_dice">"1"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"2+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"2"</item>
+        <item id="max_influence">"2"</item>
+        <item id="max_life">"29"</item>
+        <item id="icy_sponge">"0,14,24"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"2\""</item>
+        <item id="base_size">"50mm"</item>
+        <item id="character_traits">"Furious,ChemicalFrenzy,Deteriorating"</item>
+        <item id="heroic_plays">"GloriousAchievement"</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"Intensify"</item>
+        <item id="playbook_top">"Blank,Blank,2,KD,T,M_2_GB_1,Blank,Blank"</item>
+        <item id="playbook_bottom">"1,M_Push_1,M_1_GB_1,M_Push_2,3,M_3_Push_2,M_3_GB_1,3_KD"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Erskirii,Human,Male,Veteran,Attacking Midfielder"</item>
     </array>
 
     <array name="Vitriol">
@@ -1549,6 +1607,35 @@
         <item id="playbook_bottom">"M_Dodge_1,Dodge_2,M_2,KD,M_Push_1_Dodge_1"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Ethraynnian, Human, Male, Captain, Defensive Midfielder"</item>
+    </array>
+
+    <array name="Scalpel">
+        <item id="name">"Scalpel"</item>
+        <item id="team">"Morticians"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"7\""</item>
+        <item id="sprint">"9\""</item>
+        <item id="tac">"7"</item>
+        <item id="kick_dice">"3"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"4"</item>
+        <item id="max_influence">"6"</item>
+        <item id="max_life">"17"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"AnatomicalPrecision,Slippery"</item>
+        <item id="heroic_plays">"UnnaturalStamina"</item>
+        <item id="legendary_plays">"VoodooStrings"</item>
+        <item id="character_plays">"TormentedAgony,SecondWind,WakeTheDead"</item>
+        <item id="playbook_top">"M_Dodge_1,Blank,2,Blank,3,KD,4_Push_1_Dodge_1"</item>
+        <item id="playbook_bottom">"1,T,M_1_Push_1_Dodge_1,M_2_GB_1,M_2_Dodge_1,M_3_Dodge_1,M_3_GB_1"</item>
+        <item id="type">"Captain"</item>
+        <item id="attributes">"Erskirii,Human,Female,Captain,Attacking Midfielder"</item>
     </array>
 
     <array name="Dirge">

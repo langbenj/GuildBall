@@ -10,22 +10,16 @@
             android:id="@+id/nav_lists"
             android:icon="@drawable/ic_group_black_48dp"
             android:title="Teams" />
-        <item
-            android:id="@+id/nav_play"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Play" />
+
         <item
             android:id="@+id/nav_models"
             android:icon="@drawable/ic_directions_walk_black_48dp"
-            android:title="Models" />
+            android:title="Odds" />
         <item
-            android:id="@+id/nav_stats"
-            android:icon="@drawable/ic_poll_black_48dp"
-            android:title="Stats" />
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_menu_share"
-            android:title="Share" />
+            android:id="@+id/nav_play"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Timer" />
+
     </group>
 
 

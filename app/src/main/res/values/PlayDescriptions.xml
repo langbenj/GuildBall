@@ -69,10 +69,22 @@
         <item id="description">"This model gains [+1] DEF agains each Attack or Character Play made against it by the named model type."</item>
     </array>
 
+    <array name="ChemicalFrenzy">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Chemical Frenzy"</item>
+        <item id="description">"This model gains [+1] DMG to Playbook damage results when targeting an enemy model suffering at least one condition."</item>
+    </array>
+
     <array name="CloseControl">
         <item id="type">"Character Trait"</item>
         <item id="name">"Close Control"</item>
         <item id="description">"Once per turn this model may ignore the first Tackle Playbook result against it."</item>
+    </array>
+
+    <array name="CloudJumper">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Cloud Jumper"</item>
+        <item id="description">"Once per turn during its activation, this model may choose an ongoing-effect AOE within [4\"]. This model may be placed anywhere within the chosen ongoing-effect AOE."</item>
     </array>
 
     <array name="CounterCharge">
@@ -139,6 +151,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Defence Support[Spigot]"</item>
         <item id="description">"While within [4\"] of the named model, this model gains +1 DEF."</item>
+    </array>
+
+    <array name="Deteriorating">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Deteriorating [4]"</item>
+        <item id="description">"At the end of this model\'s activation this model suffers the stated DMG."</item>
     </array>
 
     <array name="DrainedTrueReplication">
@@ -607,6 +625,12 @@
         <item id="description">"All friendly models within the pulse immediately suffer [5] DMG. This model gains [+2\"/+2\"] MOV and [+1] DMG to Character Plays that cause damage and Playbook damage results."</item>
     </array>
 
+    <array name="GloriousAchievement">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Glorious Achievement"</item>
+        <item id="description">"If this model inflicts the taken-out condition on an enemy model, this model may immediately suffer the taken-out condition and reduce its HP to [0]. The friendly team gains an additional [+2] VP."</item>
+    </array>
+
     <array name="HammerTime">
         <item id="type">"Heroic Play"</item>
         <item id="name">"Hammer Time"</item>
@@ -692,6 +716,12 @@
         <item id="description">"Immediately remove all conditions from this model. This model gains [+2] TAC.</item>
     </array>
 
+    <array name="UnnaturalStamina">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Unnatural Stamina"</item>
+        <item id="description">"The next time this model used Second Wind this turn it does so without spending Influence.</item>
+    </array>
+
 
 
     <!--Legendary Plays-->
@@ -700,6 +730,12 @@
         <item id="type">"Legendary Play"</item>
         <item id="name">"Caught in a Net [8\" Pulse]"</item>
         <item id="description">"Enemy models within the pulse suffer [-4\"/-4\"] MOV."</item>
+    </array>
+
+    <array name="ChemicalShower">
+        <item id="type">"Legendary Play"</item>
+        <item id="name">"Chemical Shower"</item>
+        <item id="description">"Position two [3\"] AOEs within [8\"] of this model. Models within one or more of these AOEs immediately suffer [3] condition-damage. Models entering or ending their activation in either of these ongoing-effect AOEs suffer the poison condition."</item>
     </array>
 
     <array name="Exsanguinate">
@@ -762,6 +798,12 @@
         <item id="description">"Choose either [+1] ARM or [1] Influence. Friendly Guild models within the pulse gain the chosen benefit."</item>
     </array>
 
+    <array name="VoodooStrings">
+        <item id="type">"Legendary Play"</item>
+        <item id="name">"Voodoo Strings [8\" Pulse]"</item>
+        <item id="description">"Enemy models within the pulse immediately suffer a [3\"] Push directly towards this model."</item>
+    </array>
+
 
     <!--Character Plays-->
 
@@ -774,6 +816,17 @@
         <item id="range">"S"</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="AlchemyMix">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Alchemy Mix"</item>
+        <item id="description">"Choose an ongoing-effect AOE that was positioned by a friendly model. Position a new [3\"] ongoing-effect AOE in contact with the chosen AOE. The new AOE is a duplicate of the chosen ongoing-effect AOE. This character play may only be used once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
     </array>
 
     <array name="BallHog">
@@ -874,6 +927,17 @@
         <item id="range">"4\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ChemicalBreeze">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Chemical Breeze"</item>
+        <item id="description">"Choose an ongoing-effect AOE that was positioned by a friendly model. The chosen AOE may be positioned within [4\"] of its current location. Models within the AOE when it is positioned are considered to have entered the AOE. This Character Play may only be used once on each ongoing-effect AOE per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
     </array>
 
     <array name="ChemicalResist">
@@ -1566,6 +1630,17 @@
         <item id="sustain">"Yes"</item>
     </array>
 
+    <array name="TormentedAgony">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Tormented Agony"</item>
+        <item id="description">"Target enemy model loses [1] Influence. Target enemy model that has not yet activated this turn within [10\"] is allocated [1] Influence."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
     <array name="UnexpectedArrival">
         <item id="type">"Character Play"</item>
         <item id="name">"Unexpected Arrival"</item>
@@ -1661,6 +1736,17 @@
         <item id="cost">"1"</item>
         <item id="guild_ball_cost">""</item>
         <item id="range">"8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="WakeTheDead">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Wake The Dead"</item>
+        <item id="description">"Target friendly model gains Reanimate (Once per turn when this model is reduced to [0] HP, before suffering the taken-out condition recover [3] HP and remove all conditions)."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"P"</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
     </array>

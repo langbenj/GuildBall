@@ -46,6 +46,14 @@ public class Start_Menu extends Fragment {
                 }
             });
 
+            Button timer_button = (Button) view.findViewById(R.id.timer_button);
+            timer_button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String passed_button="timer_button";
+                    App.bus.post(new StringFragmentBusEvent(passed_button));
+                }
+            });
+
 
             return view;
 

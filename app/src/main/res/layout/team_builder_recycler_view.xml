@@ -32,7 +32,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
 
-        android:background="#18c6f6"
+        android:background="#ececec"
         android:textSize="18sp" />
 
     <View

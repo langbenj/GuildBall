@@ -30,6 +30,7 @@ import com.example.langbenj.guildball.TeamBuilder.TeamBuilderFragment_New_Or_Sav
 import com.example.langbenj.guildball.TeamFragmentList.TeamListFragment;
 import com.squareup.otto.Subscribe;
 
+import Countdown.CountdownFragment;
 import Odds.Odds_Fragment;
 
 
@@ -113,22 +114,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             teambuilder_transaction.commit();
 
         } else if (id == R.id.nav_play) {
-            App.setCurrentSection("play");
-            Toast.makeText(App.getContext(), "Play - Coming Soon", Toast.LENGTH_SHORT).show();
+            App.setCurrentSection("timer");
+            CountdownFragment countdown_fragment = new CountdownFragment();
+            FragmentTransaction countdown_transaction = getSupportFragmentManager().beginTransaction();
+            countdown_transaction.replace(R.id.fragment_container, countdown_fragment);
+            countdown_transaction.addToBackStack(null);
+            countdown_transaction.commit();
 
         } else if (id == R.id.nav_models) {
-            App.setCurrentSection("models");
-            Toast.makeText(App.getContext(), "Models - Coming Soon", Toast.LENGTH_SHORT).show();
+            App.setCurrentSection("odds");
 
-        } else if (id == R.id.nav_stats) {
+            Odds_Fragment odds_fragment = new Odds_Fragment();
+            FragmentTransaction oddsbuilder_transaction = getSupportFragmentManager().beginTransaction();
+            oddsbuilder_transaction.replace(R.id.fragment_container, odds_fragment);
+            oddsbuilder_transaction.addToBackStack(null);
+            oddsbuilder_transaction.commit();
+
+        }
+        /*
+        else if (id == R.id.nav_stats) {
             App.setCurrentSection("stats");
-            Toast.makeText(App.getContext(), "Stats - Coming Soon", Toast.LENGTH_SHORT).show();
+            Toast.makeText(App.getContext(), "Models - Coming Soon", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_share) {
             App.setCurrentSection("share");
             Toast.makeText(App.getContext(), "Share - Coming Soon", Toast.LENGTH_SHORT).show();
 
         }
+        */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -262,6 +275,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 oddsbuilder_transaction.replace(R.id.fragment_container, odds_fragment);
                 oddsbuilder_transaction.addToBackStack(null);
                 oddsbuilder_transaction.commit();
+                break;
+            case "timer_button":
+                App.setCurrentSection("timer");
+                CountdownFragment countdown_fragment = new CountdownFragment();
+                FragmentTransaction countdown_transaction = getSupportFragmentManager().beginTransaction();
+                countdown_transaction.replace(R.id.fragment_container, countdown_fragment);
+                countdown_transaction.addToBackStack(null);
+                countdown_transaction.commit();
                 break;
             case "new_team_button":
                 teamlist_transaction.replace(R.id.fragment_container, teamlist_fragment);

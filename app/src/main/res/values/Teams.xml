@@ -16,10 +16,12 @@
 
     <array name="Alchemists">
         <item id="captain">"Midas"</item>
+        <item id="captain">"Smoke"</item>
         <item id="mascot">"Flask"</item>
         <item id="player">"Calculus"</item>
         <item id="player">"Mercury"</item>
         <item id="player">"Katalyst"</item>
+        <item id="player">"VetKatalyst"</item>
         <item id="player">"Vitriol"</item>
         <item id="player">"Venin"</item>
         <item id="player">"Compound"</item>
@@ -118,6 +120,7 @@
 
     <array name="Morticians">
         <item id="captain">"Obulus"</item>
+        <item id="captain">"Scalpel"</item>
         <item id="mascot">"Dirge"</item>
         <item id="player">"Cosset"</item>
         <item id="player">"Graves"</item>

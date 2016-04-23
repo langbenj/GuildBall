@@ -6,59 +6,40 @@
     android:background="@drawable/mainmenu">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cards"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
         android:id="@+id/guild_info_button"
         android:layout_marginBottom="125dp"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/team_builder_button"
-        android:layout_marginLeft="5dp"
-        android:layout_toLeftOf="@+id/team_builder_button" />
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/menu_cards" />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Teams"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
         android:id="@+id/team_builder_button"
         android:layout_alignTop="@+id/guild_info_button"
+        android:layout_toRightOf="@+id/guild_info_button"
         android:layout_marginLeft="20dp"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Timer"
-        android:id="@+id/timer_button"
-        android:layout_alignTop="@+id/guild_info_button"
-        android:layout_toRightOf="@+id/team_builder_button"
-        android:layout_marginLeft="20dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/menu_teams" />
+
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Odds"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
         android:id="@+id/odds_button"
         android:layout_below="@+id/team_builder_button"
         android:layout_alignLeft="@+id/guild_info_button"
-        android:layout_marginTop="10dp" />
-
+        android:layout_marginTop="10dp"
+        android:background="@drawable/menu_odds" />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Models"
-        android:id="@+id/models_button"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:id="@+id/timer_button"
         android:layout_alignTop="@+id/odds_button"
         android:layout_toRightOf="@+id/odds_button"
-        android:layout_marginLeft="20dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share"
-        android:id="@+id/share_button"
-        android:layout_alignTop="@+id/odds_button"
-        android:layout_toRightOf="@+id/models_button"
-        android:layout_marginLeft="20dp" />
-
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/menu_timer" />
 
 </RelativeLayout>
