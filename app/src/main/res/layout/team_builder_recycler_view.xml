@@ -3,16 +3,15 @@
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <View
+        android:layout_height="200dp"
+        android:background="@drawable/title_team_builder"
+        android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/team_builder_title"
+        android:layout_alignParentTop="true" />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="5dp"
-    android:text="Team Builder"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:id="@+id/team_builder_title"
-    android:textStyle="bold"
-    />
 
     <View
         android:layout_height="2dip"
@@ -22,18 +21,16 @@
         android:id="@+id/team_builder_line_1" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Create a New List"
-        android:padding="5dp"
-
+        android:layout_centerHorizontal="true"
         android:id="@+id/create_new_team_button"
         android:layout_below="@+id/team_builder_line_1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-
-        android:background="#ececec"
-        android:textSize="18sp" />
+        android:background="#000000"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
     <View
         android:layout_height="2dip"
@@ -46,6 +43,7 @@
         android:layout_height="wrap_content"
         android:text="Choose a Saved Team"
         android:padding="5dp"
+        android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_below="@+id/team_builder_line_2"
         android:id="@+id/saved_team_list_title"

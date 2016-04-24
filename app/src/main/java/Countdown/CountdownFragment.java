@@ -43,7 +43,7 @@ public class CountdownFragment extends Fragment {
             }
 
             public void onFinish() {
-                countdown_2_textview.setText("Time's Up!");
+                countdown_2_textview.setText("DONE!");
             }
         };
 
@@ -54,7 +54,7 @@ public class CountdownFragment extends Fragment {
             }
 
             public void onFinish() {
-                countdown_2_textview.setText("Time's Up!");
+                countdown_2_textview.setText("DONE!");
             }
         };
         countdown_button_1 = (Button) view.findViewById(R.id.timer_button_1);
@@ -109,6 +109,17 @@ public class CountdownFragment extends Fragment {
         });
         return view;
 
+
+    }
+
+    public void onStop() {
+        super.onStop();
+      countdown1_status="stop";
+      countdown2_status="stop";
+      countdown1_store=2700000;
+      countdown2_store=2700000;
+        countdown1.cancel();
+        countdown2.cancel();
     }
 
 
@@ -120,7 +131,7 @@ public class CountdownFragment extends Fragment {
         }
 
         public void onFinish() {
-            countdown_1_textview.setText("Time's Up!");
+            countdown_1_textview.setText("DONE!");
         }
         }.start();
     }

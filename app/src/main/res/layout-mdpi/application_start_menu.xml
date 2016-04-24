@@ -6,8 +6,8 @@
     android:background="@drawable/mainmenu">
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="65dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:id="@+id/guild_info_button"
         android:background="@drawable/menu_cards"
         android:layout_alignParentLeft="false"
@@ -17,24 +17,24 @@
         android:layout_marginRight="30dp" />
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="65dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:id="@+id/team_builder_button"
         android:layout_alignRight="@+id/guild_info_button"
         android:layout_below="@+id/guild_info_button"
         android:background="@drawable/menu_teams" />
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="65dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:id="@+id/odds_button"
         android:layout_alignRight="@+id/team_builder_button"
         android:layout_below="@+id/team_builder_button"
         android:background="@drawable/menu_odds" />
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="65dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:id="@+id/timer_button"
         android:layout_alignRight="@+id/odds_button"
         android:layout_below="@+id/odds_button"
