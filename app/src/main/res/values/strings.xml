@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Guild Ball</string>
+    <string name="app_name">GB Manager</string>
     <string name="action_settings">Credits</string>
     <string name="icy_sponge">Icy Sponge</string>
     <string name="add_life">&gt;</string>

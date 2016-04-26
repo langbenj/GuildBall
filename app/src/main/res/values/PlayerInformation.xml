@@ -31,7 +31,7 @@
         <item id="playbook_bottom">"M_GB_1,M_Push_1_Dodge_1,M_GB_2,2,M_2_Push_1_Dodge_1,KD</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Valentian,Human,Male,Captain,CentralMidfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Smoke">
         <item id="name">"Smoke"</item>
@@ -60,7 +60,36 @@
         <item id="playbook_bottom">"1,M_Push_1,M_Push_2,M_T"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Ethrayannian,Human,Female,Captain,Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Naja">
+        <item id="name">"Naja"</item>
+        <item id="team">"Alchemists"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"6\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"3"</item>
+        <item id="kick_dice">"1"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"5+"</item>
+        <item id="armour">"0"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"3"</item>
+        <item id="max_life">"7"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"2\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"VenomousStrike,UnpredictableMovement,AssistVenin"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"Hypnosis"</item>
+        <item id="playbook_top">"1,GB_1,2"</item>
+        <item id="playbook_bottom">"M_Dodge_1,T,M_GB_1_Dodge_1"</item>
+        <item id="type">"Mascot"</item>
+        <item id="attributes">"Indar, Animal, Mascot"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Flask">
         <item id="name">"Flask"</item>
@@ -89,7 +118,7 @@
         <item id="playbook_bottom">"M_GB_1_Push_1,M_T"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Ethraynnian,Human,Female,Central Midfielder"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="Calculus">
         <item id="name">"Calculus"</item>
@@ -118,7 +147,7 @@
         <item id="playbook_bottom">"1,M_1_Push_1,M_2_Push_1_Dodge_1,3"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian,Human,Female,Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Katalyst">
         <item id="name">"Katalyst"</item>
@@ -147,7 +176,7 @@
         <item id="playbook_bottom">"1,M_GB_1,M_GB_2,M_Push_1_Dodge_1,3,M_3_Push_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Male,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="VetKatalyst">
         <item id="name">"VetKatalyst"</item>
@@ -176,7 +205,7 @@
         <item id="playbook_bottom">"1,M_Push_1,M_1_GB_1,M_Push_2,3,M_3_Push_2,M_3_GB_1,3_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Male,Veteran,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="Vitriol">
         <item id="name">"Vitriol"</item>
@@ -205,7 +234,7 @@
         <item id="playbook_bottom">"1,M_Push_1_Dodge_1,M_GB_2,3,M_3_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic,Human,Female,Strker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Mercury">
         <item id="name">"Mercury"</item>
@@ -234,7 +263,7 @@
         <item id="playbook_bottom">"1,M_1_Push_1,M_2_Push_2,3"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian,Human,Male,Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Venin">
         <item id="name">"Venin"</item>
@@ -263,7 +292,7 @@
         <item id="playbook_bottom">"1,M_T_Dodge_1,M_GB_1_Dodge_1,M_2_Push_1_Dodge_1,M_2_GB_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Figeon,Human,Male,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Compound">
         <item id="name">"Compound"</item>
@@ -292,7 +321,7 @@
         <item id="playbook_bottom">"1,M_T_Push_1,M_Push_2,M_KD,M_2_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic,Human,Male,Goalkeeper"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
 
 
@@ -324,7 +353,7 @@
         <item id="playbook_bottom">"M_Push_1,M_1_Push_1,M_KD,M_2_KD</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"EISNORAN,HUMAN,FEMALE,CAPTAIN,CENTRAL MIDFIELDER"</item>
-    </array>
+        <item id="font_size">"15"</item></array>
 
     <array name="Friday">
         <item id="name">"Friday"</item>
@@ -353,7 +382,7 @@
         <item id="playbook_bottom">"M_T,M_2,GB_1</item>
         <item id="type">""</item>
         <item id="attributes">"MALD,HUMAN,FEMALE,STRIKER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Hooper">
         <item id="name">"Hooper"</item>
@@ -382,7 +411,7 @@
         <item id="playbook_bottom">"M_Push_1,2,M_KD,M_Push_2,M_3</item>
         <item id="type">""</item>
         <item id="attributes">"MALD,HUMAN,MALE,ATTACKING MIDFIELDER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Mash">
         <item id="name">"Mash"</item>
@@ -411,7 +440,7 @@
         <item id="playbook_bottom">"M_Push_1,M_T,M_KD,M_2_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"EISNORAN,HUMAN,MALE,STRIKER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Scum">
         <item id="name">"Scum"</item>
@@ -440,7 +469,36 @@
         <item id="playbook_bottom">"1,M_2,GB_1"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"MALD,ANIMAL,MASCOT"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Quaff">
+        <item id="name">"Quaff"</item>
+        <item id="team">"Brewers"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"6\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"3"</item>
+        <item id="kick_dice">"1"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"3"</item>
+        <item id="max_life">"10"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"LovedCreature,BagOfQuaffers"</item>
+        <item id="heroic_plays"></item>
+        <item id="legendary_plays"></item>
+        <item id="character_plays">"SecondWind"</item>
+        <item id="playbook_top">"1,T"</item>
+        <item id="playbook_bottom">"M_Push_1,M_Push_2"</item>
+        <item id="type">"Mascot"</item>
+        <item id="attributes">"EISNORAN,ANIMAL,MASCOT"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Spigot">
         <item id="name">"Spigot"</item>
@@ -469,7 +527,36 @@
         <item id="playbook_bottom">"M_T,2,M_KD,M_3</item>
         <item id="type">""</item>
         <item id="attributes">"RAED,HUMAN,MALE,DEFENSIVE MIDFIELDER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="VetSpigot">
+        <item id="name">"VetSpigot"</item>
+        <item id="team">"Brewers"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"5\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"5"</item>
+        <item id="kick_dice">"4"</item>
+        <item id="kick_distance">"8\""</item>
+        <item id="defense">"3+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"2"</item>
+        <item id="max_influence">"4"</item>
+        <item id="max_life">"16"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"MatchFit,CloseControl,PaintOnYourBoots"</item>
+        <item id="heroic_plays">"BackToHisBest"</item>
+        <item id="legendary_plays"></item>
+        <item id="character_plays">"TooledUp,BallsGone"</item>
+        <item id="playbook_top">"1,GB_2,M_Push_2,Blank"</item>
+        <item id="playbook_bottom">"M_T,2,M_KD,M_3</item>
+        <item id="type">""</item>
+        <item id="attributes">"RAED,HUMAN,MALE,VETERAN,STRIKER"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Stave">
         <item id="name">"Stave"</item>
@@ -498,7 +585,7 @@
         <item id="playbook_bottom">"M_KD,M_Push_1,2,M_Push_2,M_3"</item>
         <item id="type">""</item>
         <item id="attributes">"MALD,HUMAN,MALE,CENTER BACK"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Stoker">
         <item id="name">"Stoker"</item>
@@ -527,7 +614,7 @@
         <item id="playbook_bottom">"M_Push_2,T,M_KD,M_3</item>
         <item id="type">""</item>
         <item id="attributes">"EISNORAN,HUMAN,MALE,DEFENSIVE MIDFIELDER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Tapper">
         <item id="name">"Tapper"</item>
@@ -556,7 +643,7 @@
         <item id="playbook_bottom">"1,M_KD,M_Push_1,M_3,M_Push_2"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"MALD,HUMAN,MALE,CAPTAIN,CENTRAL MIDFIELDER"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <!--Butchers-->
     <array name="Ox">
@@ -586,7 +673,7 @@
         <item id="playbook_bottom">"M_1,M_T,Push_2,M_2,M_2_Push_2,M_3,1_GB_2"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Skaldic,Human,Male,Captain,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Fillet">
         <item id="name">"Fillet"</item>
@@ -615,7 +702,7 @@
         <item id="playbook_bottom">"M_T,M_1,M_2,2_T,M_3_Dodge_1,KD,M_4_Dodge_1"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Valentian,Human,Female,Captain,Striker"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="Princess">
         <item id="name">"Princess"</item>
@@ -644,7 +731,37 @@
         <item id="playbook_bottom">"M_T,M_2,GB_2,M_3"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Raed,Animal,Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Truffles">
+        <item id="name">"Truffles"</item>
+        <item id="team">"Butchers"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"4\""</item>
+        <item id="sprint">"6\""</item>
+        <item id="tac">"3"</item>
+        <item id="kick_dice">"1"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"0"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"2"</item>
+        <item id="max_life">"11"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"SmellBlood,ToughHide,Sturdy"</item>
+        <item id="heroic_plays"></item>
+        <item id="legendary_plays"></item>
+        <item id="character_plays">"HogWild"</item>
+        <item id="playbook_top">"Push_1,Blank,T"</item>
+        <item id="playbook_bottom">"M_1,M_KD,M_2"</item>
+        <item id="type">"Mascot"</item>
+        <item id="attributes">"Skaldic,Animal,Mascot"</item>
+        <item id="font_size">"14"</item></array>
+
 
     <array name="Boiler">
         <item id="name">"Boiler"</item>
@@ -673,7 +790,7 @@
         <item id="playbook_bottom">"1,M_2,Push_1_Dodge_1,KD,M_3"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian,Human,Male,Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Brisket">
         <item id="name">"Brisket"</item>
@@ -702,7 +819,36 @@
         <item id="playbook_bottom">"M_T,M_2,M_2_Dodge_1,M_2_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic,Human,Female,Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="VetBrisket">
+        <item id="name">"VetBrisket"</item>
+        <item id="team">"Butchers"</item>
+        <item id="default_image"></item>
+        <item id="custom_image"></item>
+        <item id="jog">"6\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"5"</item>
+        <item id="kick_dice">"3"</item>
+        <item id="kick_distance">"8\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"2"</item>
+        <item id="max_influence">"4"</item>
+        <item id="max_life">"13"</item>
+        <item id="icy_sponge">"0,5,10"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"AboveAndBeyond,SupportFromTheWing,UnpredictableMovement"</item>
+        <item id="heroic_plays"></item>
+        <item id="legendary_plays"></item>
+        <item id="character_plays">"BallsGone,QuickTime"</item>
+        <item id="playbook_top">"Blank,2_T,M_T_Push_1,2_Dodge_2,3_GB_2"</item>
+        <item id="playbook_bottom">"M_1,M_1_Dodge_1,M_2,M_GB_2,M_3"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Skaldic,Human,Female,Veteran, Winger"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Meathook">
         <item id="name">"Meathook"</item>
@@ -731,7 +877,7 @@
         <item id="playbook_bottom">"M_1,M_T,M_2,M_2_T,GB_1,M_3"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Female,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Shank">
         <item id="name">"Shank"</item>
@@ -760,7 +906,7 @@
         <item id="playbook_bottom">"M_1_Dodge_1,M_2_Dodge_1,GB_1,M_3_Dodge_1,GB_2,M_3_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Female,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Boar">
         <item id="name">"Boar"</item>
@@ -789,7 +935,7 @@
         <item id="playbook_bottom">"M_1,M_2,KD,M_3,M_T,Push_2,M_4,4_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic,Human,Male,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Tenderiser">
         <item id="name">"Tenderiser"</item>
@@ -818,7 +964,7 @@
         <item id="playbook_bottom">"M_1,Push_2,M_2_Push_1,M_3,M_3_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Male,Goalkeeper"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
 
     <!--Engineers-->
@@ -848,8 +994,37 @@
         <item id="playbook_top">"1,Blank,KD,2,Blank,Blank"</item>
         <item id="playbook_bottom">"M_T,M_Push_1,M_Push_2,M_1_Push_2,M_KD,3"</item>
         <item id="type">"Captain"</item>
-    <item id="attributes">"Figeon, Human, Male, Captain, Defensive Midfielder"</item>
-    </array>
+        <item id="attributes">"Figeon, Human, Male, Captain, Defensive Midfielder"</item>
+        <item id="font_size">"14"</item></array>
+
+    <array name="PinVice">
+        <item id="name">"PinVice"</item>
+        <item id="team">"Engineers"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"7\""</item>
+        <item id="sprint">"9\""</item>
+        <item id="tac">"6"</item>
+        <item id="kick_dice">"4"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"4"</item>
+        <item id="max_influence">"6"</item>
+        <item id="max_life">"16"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"CloseControl"</item>
+        <item id="heroic_plays">"MechanicalHeart"</item>
+        <item id="legendary_plays">"WellOiledMachine"</item>
+        <item id="character_plays">"Controller,Alternator,Deletion"</item>
+        <item id="playbook_top">"1,Dodge_2,2,M_1_Push_1_Dodge_1,KD,Blank"</item>
+        <item id="playbook_bottom">"M_Dodge_1,M_T,M_1_Dodge_1,M_2_Dodge_1,3,M_3_Dodge_2"</item>
+        <item id="type">"Captain"</item>
+        <item id="attributes">"Indar, Human, Female, Mechanica, Captain, Striker"</item>
+        <item id="font_size">"14"</item></array>
 
     <array name="Mainspring">
         <item id="name">"Mainspring"</item>
@@ -878,7 +1053,36 @@
         <item id="playbook_bottom">"M_T,Dodge_2"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Indar, Mechanica, Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Mother">
+        <item id="name">"Mother"</item>
+        <item id="team">"Engineers"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"5\""</item>
+        <item id="sprint">"7\""</item>
+        <item id="tac">"3"</item>
+        <item id="kick_dice">"2"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"3"</item>
+        <item id="max_life">"9"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"SpiderNests,ProximityMine"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"Burrow"</item>
+        <item id="playbook_top">"T,Blank,2"</item>
+        <item id="playbook_bottom">"1,M_Push_1_Dodge_1,M_Dodge_2"</item>
+        <item id="type">"Mascot"</item>
+        <item id="attributes">"Indar, Mechanica, Mascot"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Velocity">
         <item id="name">"Velocity"</item>
@@ -907,7 +1111,36 @@
         <item id="playbook_bottom">"M_T,M_Push_1_Dodge_1,M_T_Dodge_2,M_Push_2_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian, Mechanica, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="VetVelocity">
+        <item id="name">"VetVelocity"</item>
+        <item id="team">"Engineers"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"6\""</item>
+        <item id="sprint">"8\""</item>
+        <item id="tac">"5"</item>
+        <item id="kick_dice">"4"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"4+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"2"</item>
+        <item id="max_influence">"4"</item>
+        <item id="max_life">"14"</item>
+        <item id="icy_sponge">"0,5,10"</item>
+        <item id="season">"2"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"GoalDefence,HundredHandStance,FlyKeeper"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"AggressiveDefence,SmashedShins"</item>
+        <item id="playbook_top">"Dodge_1,T_GB_1,2,Blank,3"</item>
+        <item id="playbook_bottom">"1,M_Push_2,M_Push_1_Dodge_1,M_T_GB_1,M_T_Push_2"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Ethraynnian, Mechanica, Veteran, Goalkeeper"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Salvo">
         <item id="name">"Salvo"</item>
@@ -936,7 +1169,7 @@
         <item id="playbook_bottom">"1,M_T,M_Push_1_Dodge_1,M_T_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian, Human, Male, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Colossus">
         <item id="name">"Colossus"</item>
@@ -965,7 +1198,7 @@
         <item id="playbook_bottom">"1,M_KD,M_KD_Push_1,3,M_T_Push_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Raed, Human, Male, Mechanica, Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Ratchet">
         <item id="name">"Ratchet"</item>
@@ -994,7 +1227,7 @@
         <item id="playbook_bottom">"1,M_T,M_Push_2,3"</item>
         <item id="type">""</item>
         <item id="attributes">"Indar, Human, Male, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Hoist">
         <item id="name">"Hoist"</item>
@@ -1023,7 +1256,7 @@
         <item id="playbook_bottom">"1,M_T,1_Push_1,M_Dodge_2,M_2_Dodge_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Indar, Mechanica, Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="CompoundEng">
         <item id="name">"Compound"</item>
@@ -1052,7 +1285,7 @@
         <item id="playbook_bottom">"1,M_T_Push_1,M_Push_2,M_KD,M_2_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic,Human,Male,Goalkeeper"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <!--Fishermen-->
     <array name="Shark">
@@ -1082,7 +1315,7 @@
         <item id="playbook_bottom">"M_Dodge_1,T,M_GB_1,M_Push_1_Dodge_1,3,M_GB_2"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Eisnoran, Human, Male, Captain, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Corsair">
         <item id="name">"Corsair"</item>
@@ -1111,7 +1344,7 @@
         <item id="playbook_bottom">"M_T,M_KD,M_2_Push_1,M_GB_1,M_3_Push_1"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Indar, Human, Male, Captain, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Salt">
         <item id="name">"Salt"</item>
@@ -1140,7 +1373,7 @@
         <item id="playbook_bottom">"M_Dodge_1,M_GB_1"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Eisnoran, Animal, Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Angel">
         <item id="name">"Angel"</item>
@@ -1169,7 +1402,7 @@
         <item id="playbook_bottom">"M_T,M_Push_1_Dodge_1,2,M_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Figeon, Human, Female, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Siren">
         <item id="name">"Siren"</item>
@@ -1198,7 +1431,7 @@
         <item id="playbook_bottom">"M_Dodge_1,Dodge_2,M_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Unknown, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Kraken">
         <item id="name">"Kraken"</item>
@@ -1227,7 +1460,7 @@
         <item id="playbook_bottom">"M_KD,2,M_GB_1,3,M_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Unknown, Human, Male, Centre Back"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Greyscales">
         <item id="name">"Greyscales"</item>
@@ -1256,7 +1489,7 @@
         <item id="playbook_bottom">"M_Dodge_1,T,M_GB_1,M_GB_2,M_Push_1_Dodge_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Figeon, Human, Male, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Jac">
         <item id="name">"Jac"</item>
@@ -1285,7 +1518,7 @@
         <item id="playbook_bottom">"1,M_Push_1,2,M_KD,M_T_Push_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Skaldic, Human, Male, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Sakana">
         <item id="name">"Sakana"</item>
@@ -1314,7 +1547,7 @@
         <item id="playbook_bottom">"M_Dodge_1,M_GB_1,M_1_GB_1,M_Dodge_2,2_GB_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Indar, Human, Male, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
 
     <!--Masons-->
@@ -1345,7 +1578,7 @@
         <item id="playbook_bottom">"M_T,M_2,M_Push_1_Dodge_1,3,Push_2,4"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Castellyian, Human, Female, Captain, Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Hammer">
         <item id="name">"Hammer"</item>
@@ -1374,7 +1607,7 @@
         <item id="playbook_bottom">"M_Push_1,M_1_Push_1,M_2,M_2_T,3,3_KD"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Raed,Human,Male,Captain,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Marbles">
         <item id="name">"Marbles"</item>
@@ -1403,7 +1636,7 @@
         <item id="playbook_bottom">"M_T,M_Push_1,M_2"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Indar, Animal, Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Harmony">
         <item id="name">"Harmony"</item>
@@ -1432,7 +1665,7 @@
         <item id="playbook_bottom">"M_T,M_Dodge_1,M_2,Dodge_2,GB_1,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Castellyian, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Mallet">
         <item id="name">"Mallet"</item>
@@ -1461,7 +1694,7 @@
         <item id="playbook_bottom">"M_GB_1,M_2,M_T,3,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Castellyian, Human, Male, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Brick">
         <item id="name">"Brick"</item>
@@ -1490,7 +1723,7 @@
         <item id="playbook_bottom">"1,M_2,M_T,3,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Castellyian, Human, Male, Centre Back"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Flint">
         <item id="name">"Flint"</item>
@@ -1519,7 +1752,7 @@
         <item id="playbook_bottom">"M_T,M_Push_1_Dodge_1,M_GB_1,2"</item>
         <item id="type">""</item>
         <item id="attributes">"Raed, Human, Male, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Tower">
         <item id="name">"Tower"</item>
@@ -1548,7 +1781,7 @@
         <item id="playbook_bottom">"M_Push_1,M_T,M_2,KD,3_KD"</item>
         <item id="type">""</item>
         <item id="attributes">"Raed, Human, Male, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Chisel">
         <item id="name">"Chisel"</item>
@@ -1577,7 +1810,7 @@
         <item id="playbook_bottom">"M_Dodge_1,M_1_Dodge_1,M_1_GB_1,M_2_Dodge_1,2_GB_1,3_Dodge_2,3_GB_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Valentian, Human, Female, Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <!--Morticians-->
     <array name="Obulus">
@@ -1607,7 +1840,7 @@
         <item id="playbook_bottom">"M_Dodge_1,Dodge_2,M_2,KD,M_Push_1_Dodge_1"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Ethraynnian, Human, Male, Captain, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Scalpel">
         <item id="name">"Scalpel"</item>
@@ -1636,7 +1869,7 @@
         <item id="playbook_bottom">"1,T,M_1_Push_1_Dodge_1,M_2_GB_1,M_2_Dodge_1,M_3_Dodge_1,M_3_GB_1"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Erskirii,Human,Female,Captain,Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item><item id="font_size">"16"</item></array>
 
     <array name="Dirge">
         <item id="name">"Dirge"</item>
@@ -1665,7 +1898,7 @@
         <item id="playbook_bottom">"M_GB_1,M_Dodge_1"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Valentian, Animal, Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Cosset">
         <item id="name">"Cosset"</item>
@@ -1694,7 +1927,7 @@
         <item id="playbook_bottom">"1,M_2,T,M_3,Push_2,M_GB_2,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Valentian, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Graves">
         <item id="name">"Graves"</item>
@@ -1723,7 +1956,7 @@
         <item id="playbook_bottom">"1,M_Push_1,M_2,3,GB_1,M_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Raed, Human, Male, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Ghast">
         <item id="name">"Ghast"</item>
@@ -1752,7 +1985,7 @@
         <item id="playbook_bottom">"1,M_KD,2_KD,M_3,M_GB_2,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Valentian, Human, Male,Centre Back"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="Silence">
         <item id="name">"Silence"</item>
@@ -1781,7 +2014,7 @@
         <item id="playbook_bottom">"1,M_2,M_Dodge_1,3,M_Push_1_Dodge_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Valentian, Human, Male, Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Bonesaw">
         <item id="name">"Bonesaw"</item>
@@ -1810,7 +2043,7 @@
         <item id="playbook_bottom">"M_Dodge_1,M_T,M_GB_2,M_1_Push_1_Dodge_1"</item>
         <item id="type">""</item>
         <item id="attributes">"Piert, Human, Male, Striker"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <!-- Union Players -->
 
@@ -1841,7 +2074,7 @@
         <item id="playbook_bottom">"M_Dodge_1,2,T,M_GB_2,M_3_T,M_3_KD"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Unknown, Human, Male, Captain, Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="VeteranRage">
         <item id="name">"VeteranRage"</item>
@@ -1870,7 +2103,65 @@
         <item id="playbook_bottom">"M_1,M_2,M_2_Push_1,M_3,M_3_Push_1,M_GB_2,3_GB_2"</item>
         <item id="type">"Captain"</item>
         <item id="attributes">"Castellyian, Human, Male, Captain, Veteran, Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Avarisse">
+        <item id="name">"Avarisse"</item>
+        <item id="team">"Union"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"4\""</item>
+        <item id="sprint">"7\""</item>
+        <item id="tac">"6"</item>
+        <item id="kick_dice">"1"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"3+"</item>
+        <item id="armour">"0"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"3"</item>
+        <item id="max_life">"20"</item>
+        <item id="icy_sponge">"0,7,14"</item>
+        <item id="season">"1"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"SelectiveAllGuilds,ToughHide,DetachGreede"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"SingledOut"</item>
+        <item id="playbook_top">"1,KD,T,3,Blank"</item>
+        <item id="playbook_bottom">"M_GB_1,M_Push_2,2,M_2_Push_2,M_3_Push_2"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Raed, Human, Male, Centre Back"</item>
+        <item id="font_size">"16"</item></array>
+
+    <array name="Greede">
+        <item id="name">"Greede"</item>
+        <item id="team">"Union"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"4\""</item>
+        <item id="sprint">"5\""</item>
+        <item id="tac">"5"</item>
+        <item id="kick_dice">"4"</item>
+        <item id="kick_distance">"4\""</item>
+        <item id="defense">"5+"</item>
+        <item id="armour">"0"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"4"</item>
+        <item id="max_life">"4"</item>
+        <item id="icy_sponge">"0"</item>
+        <item id="season">"1"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"30mm"</item>
+        <item id="character_traits">"SelectiveAllGuilds,Benched,ReattachAvarisse,DefenceSupportAvarisse,Crazy"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">""</item>
+        <item id="character_plays">"WheredTheyGo,RabidAnimal"</item>
+        <item id="playbook_top">"Blank,Blank,Blank,Blank,Blank,Blank,Blank,Blank"</item>
+        <item id="playbook_bottom">"1,M_Dodge_1,2,3,M_GB_1,M_T,4,M_GB_2"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Raed, Animal, Male, Striker"</item>
+        <item id="font_size">"16"</item></array>
 
     <array name="Coin">
         <item id="name">"Coin"</item>
@@ -1899,7 +2190,7 @@
         <item id="playbook_bottom">"1,GB_1"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Unknown, Animal, Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Strongbox">
         <item id="name">"Strongbox"</item>
@@ -1928,7 +2219,7 @@
         <item id="playbook_bottom">"M_1,M_T"</item>
         <item id="type">"Mascot"</item>
         <item id="attributes">"Castellyian,Animal,Mascot"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Gutter">
         <item id="name">"Gutter"</item>
@@ -1957,7 +2248,7 @@
         <item id="playbook_bottom">"M_1,Push_1,M_2,M_GB_1,M_GB_2</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii,Human,Female,Central Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Decimate">
         <item id="name">"Decimate"</item>
@@ -1986,7 +2277,7 @@
         <item id="playbook_bottom">"M_1_Dodge_1,M_2_Dodge_1,M_T,M_T_Dodge_2,3_Dodge_1,M_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Erskirii, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Fangtooth">
         <item id="name">"Fangtooth"</item>
@@ -2015,7 +2306,7 @@
         <item id="playbook_bottom">"M_KD,M_GB_1,M_2_KD,M_GB_2,4"</item>
         <item id="type">""</item>
         <item id="attributes">"Ethraynnian, Human, Male, Centre Back"</item>
-    </array>
+        <item id="font_size">"14"</item></array>
 
     <array name="Hemlocke">
         <item id="name">"Hemlocke"</item>
@@ -2044,7 +2335,7 @@
         <item id="playbook_bottom">"M_T,M_Dodge_1,M_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Eisnoran, Human, Female, Defensive Midfielder"</item>
-    </array>
+        <item id="font_size">"15"</item></array>
 
     <array name="Minx">
         <item id="name">"Minx"</item>
@@ -2073,7 +2364,7 @@
         <item id="playbook_bottom">"M_1,T,M_2,GB_2,M_3_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Unknown, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Mist">
         <item id="name">"Mist"</item>
@@ -2102,7 +2393,7 @@
         <item id="playbook_bottom">"T,M_Dodge_1,M_GB_1,M_Dodge_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Unknown, Human, Male, Striker"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Rage">
         <item id="name">"Rage"</item>
@@ -2131,7 +2422,7 @@
         <item id="playbook_bottom">"M_1,M_2,T,M_3,M_GB_2,4_GB_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Castellyian, Human, Male, Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="Snakeskin">
         <item id="name">"Snakeskin"</item>
@@ -2160,7 +2451,7 @@
         <item id="playbook_bottom">"1,M_T,M_GB_2,M_Dodge_2,3"</item>
         <item id="type">""</item>
         <item id="attributes">"Castellyian, Human, Female, Winger"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
     <array name="HarryTheHat">
         <item id="name">"HarryTheHat"</item>
@@ -2189,6 +2480,6 @@
         <item id="playbook_bottom">"1,T,M_Push_2,2,M_2_Push_2,3,M_3_Push_2"</item>
         <item id="type">""</item>
         <item id="attributes">"Unknown, Human, Male, Attacking Midfielder"</item>
-    </array>
+        <item id="font_size">"16"</item></array>
 
 </resources>

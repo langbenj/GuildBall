@@ -33,6 +33,7 @@ public class Player {
     private String [] mPlaybookBottom;
     private String mType;
     private String [] mAttributes;
+    private String mFontSize;
     private String TAG="Player.java";
 
     //Constructor for creating a player object. Player's name that is passed in ties to the PlayerInformation.xml file
@@ -76,7 +77,7 @@ public class Player {
             mType=playerArray[24];
             tempSplitVal=playerArray[25];
             mAttributes=tempSplitVal.split(",");
-
+        mFontSize=playerArray[26];
 
     }
 
@@ -228,4 +229,7 @@ public class Player {
         return mAttributes;
     }
 
+    public String getFontSize() {
+        return mFontSize;
+    }
 }

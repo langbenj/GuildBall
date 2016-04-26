@@ -18,23 +18,28 @@
         <item id="captain">"Midas"</item>
         <item id="captain">"Smoke"</item>
         <item id="mascot">"Flask"</item>
+        <item id="mascot">"Naja"</item>
         <item id="player">"Calculus"</item>
         <item id="player">"Mercury"</item>
         <item id="player">"Katalyst"</item>
         <item id="player">"VetKatalyst"</item>
         <item id="player">"Vitriol"</item>
         <item id="player">"Venin"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Compound"</item>
         <item id="player">"Decimate"</item>
         <item id="player">"Hemlocke"</item>
         <item id="player">"Mist"</item>
         <item id="player">"Snakeskin"</item>
         <item id="player">"HarryTheHat"</item>
+
     </array>
 
     <array name="Brewers">
         <item id="captain">"Tapper"</item>
         <item id="captain">"Esters"</item>
+        <item id="mascot">"Quaff"</item>
         <item id="mascot">"Scum"</item>
         <item id="player">"Friday"</item>
         <item id="player">"Hooper"</item>
@@ -42,6 +47,8 @@
         <item id="player">"Spigot"</item>
         <item id="player">"Stave"</item>
         <item id="player">"Stoker"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Gutter"</item>
         <item id="player">"Fangtooth"</item>
         <item id="player">"Hemlocke"</item>
@@ -50,15 +57,19 @@
     </array>
 
     <array name="Butchers">
-        <!--<item id="captain">"Fillet"</item>-->
+        <item id="captain">"Fillet"</item>
         <item id="captain">"Ox"</item>
         <item id="mascot">"Princess"</item>
+        <item id="mascot">"Truffles"</item>
         <item id="player">"Boiler"</item>
         <item id="player">"Brisket"</item>
+        <item id="player">"VetBrisket"</item>
         <item id="player">"Meathook"</item>
         <item id="player">"Shank"</item>
         <item id="player">"Boar"</item>
         <item id="player">"Tenderiser"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Gutter"</item>
         <item id="player">"Decimate"</item>
         <item id="player">"Minx"</item>
@@ -68,17 +79,23 @@
 
     <array name="Engineers">
         <item id="captain">"Ballista"</item>
+        <item id="captain">"PinVice"</item>
         <item id="mascot">"Mainspring"</item>
+        <item id="mascot">"Mother"</item>
         <item id="player">"Velocity"</item>
+        <item id="player">"VetVelocity"</item>
         <item id="player">"Salvo"</item>
         <item id="player">"Colossus"</item>
         <item id="player">"Ratchet"</item>
         <item id="player">"Hoist"</item>
         <item id="player">"CompoundEng"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Gutter"</item>
         <item id="player">"Decimate"</item>
         <item id="player">"Rage"</item>
         <item id="player">"HarryTheHat"</item>
+
     </array>
 
     <array name="Fishermen">
@@ -91,15 +108,20 @@
         <item id="player">"Greyscales"</item>
         <item id="player">"Jac"</item>
         <item id="player">"Sakana"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Gutter"</item>
         <item id="player">"Fangtooth"</item>
         <item id="player">"Hemlocke"</item>
         <item id="player">"Snakeskin"</item>
+
     </array>
 
     <array name="Hunters">
-        <item id="captain">"Hemlocke"</item>
-        <item id="mascot">"Minx"</item>
+        <item id="player">"Hemlocke"</item>
+        <item id="player">"Minx"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
     </array>
 
     <array name="Masons">
@@ -112,10 +134,13 @@
         <item id="player">"Flint"</item>
         <item id="player">"Tower"</item>
         <item id="player">"Chisel"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Decimate"</item>
         <item id="player">"Minx"</item>
         <item id="player">"Mist"</item>
         <item id="player">"Snakeskin"</item>
+
     </array>
 
     <array name="Morticians">
@@ -127,10 +152,13 @@
         <item id="player">"Ghast"</item>
         <item id="player">"Silence"</item>
         <item id="player">"Bonesaw"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Fangtooth"</item>
         <item id="player">"Minx"</item>
         <item id="player">"Mist"</item>
         <item id="player">"Rage"</item>
+
     </array>
 
     <!-- TODO Need to fix this so that spaces are workable in the name-->
@@ -139,6 +167,8 @@
         <item id="captain">"VeteranRage"</item>
         <item id="mascot">"Coin"</item>
         <item id="mascot">"Strongbox"</item>
+        <item id="player">"Avarisse"</item>
+        <item id="player">"Greede"</item>
         <item id="player">"Gutter"</item>
         <item id="player">"Decimate"</item>
         <item id="player">"Fangtooth"</item>

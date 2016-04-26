@@ -68,7 +68,7 @@ public class BuildTeamScreenFragment extends Fragment {
             mLoadTeamID=bundle.getString("LoadedTeamID");
             String [] temp_ID_arry = {mLoadTeamID};
 
-            String[] fields_to_return = {"teamname","team","player1","player2","player3","player4","player5","player6","player7","player8","player9","player10","player11","player12","player13","player14","player15","player16"
+            String[] fields_to_return = {"teamname","team","player1","player2","player3","player4","player5","player6","player7","player8","player9","player10","player11","player12","player13","player14","player15","player16","player17","player18"
                     };
             String selection = "team_id" + " LIKE ?";
             mLoadResults = db.query("teams", fields_to_return, selection, temp_ID_arry, null, null, null);
@@ -128,6 +128,8 @@ public class BuildTeamScreenFragment extends Fragment {
         mPlayerButtonResourceIDs.add(R.id.team_player14_image);
         mPlayerButtonResourceIDs.add(R.id.team_player15_image);
         mPlayerButtonResourceIDs.add(R.id.team_player16_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player17_image);
+        mPlayerButtonResourceIDs.add(R.id.team_player18_image);
 
         mPlayerTextFieldsResourceIDs.add(R.id.team_player1);
         mPlayerTextFieldsResourceIDs.add(R.id.team_player2);
@@ -145,7 +147,8 @@ public class BuildTeamScreenFragment extends Fragment {
         mPlayerTextFieldsResourceIDs.add(R.id.team_player14);
         mPlayerTextFieldsResourceIDs.add(R.id.team_player15);
         mPlayerTextFieldsResourceIDs.add(R.id.team_player16);
-
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player17);
+        mPlayerTextFieldsResourceIDs.add(R.id.team_player18);
 
 
         //These two event trackers watch the list name and update the title
@@ -179,7 +182,7 @@ public class BuildTeamScreenFragment extends Fragment {
         });
 
         if (mPlayerButtons.size()==0) { //Only init the array if it's new
-            for (int i = 0; i < 16; i++) {
+            for (int i = 0; i < 18; i++) {
                 mPlayerButtons.add("ic_add_box_black_48dp");
             }
         }
@@ -188,7 +191,7 @@ public class BuildTeamScreenFragment extends Fragment {
         //Set the player names
         final String [] player_list = temp_team_to_create.getPlayerNameArray();
 
-        for (int i=0; i<16; i++) {
+        for (int i=0; i<18; i++) {
 
             //This piece of code will set up the page if the player was loaded.
 
@@ -563,13 +566,67 @@ public class BuildTeamScreenFragment extends Fragment {
             }
         });
 
+        player_name_click = (TextView) view.findViewById(R.id.team_player16);
+        player_name_click.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView player_view= (TextView) v.findViewById(R.id.team_player16);
+                String passed_player = (String) player_view.getText();
+                App.setCurrentPlayer(null);
+                App.bus.post(new PlayerListFragmentBusEvent(passed_player));
+            }
+        });
+
+        Button add_button_17 = (Button) view.findViewById(R.id.team_player17_image);
+        add_button_17.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (mPlayerButtons.get(16) == "ic_add_box_black_48dp") {
+                    mPlayerButtons.set(16, (App.getCurrentTeam() + "_logo").toLowerCase());
+                } else if (mPlayerButtons.get(16).equals((App.getCurrentTeam() + "_logo").toLowerCase())) {
+                    mPlayerButtons.set(16, "ic_add_box_black_48dp");
+                }
+                updatePlayerDisplay();
+            }
+        });
+
+        player_name_click = (TextView) view.findViewById(R.id.team_player17);
+        player_name_click.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView player_view= (TextView) v.findViewById(R.id.team_player17);
+                String passed_player = (String) player_view.getText();
+                App.setCurrentPlayer(null);
+                App.bus.post(new PlayerListFragmentBusEvent(passed_player));
+            }
+        });
+
+        Button add_button_18 = (Button) view.findViewById(R.id.team_player18_image);
+        add_button_18.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (mPlayerButtons.get(17) == "ic_add_box_black_48dp") {
+                    mPlayerButtons.set(17, (App.getCurrentTeam() + "_logo").toLowerCase());
+                } else if (mPlayerButtons.get(17).equals((App.getCurrentTeam() + "_logo").toLowerCase())) {
+                    mPlayerButtons.set(17, "ic_add_box_black_48dp");
+                }
+                updatePlayerDisplay();
+            }
+        });
+
+        player_name_click = (TextView) view.findViewById(R.id.team_player18);
+        player_name_click.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView player_view= (TextView) v.findViewById(R.id.team_player18);
+                String passed_player = (String) player_view.getText();
+                App.setCurrentPlayer(null);
+                App.bus.post(new PlayerListFragmentBusEvent(passed_player));
+            }
+        });
+
         //This button triggers the saving of lists.
         Button save_team = (Button) view.findViewById(R.id.save_team);
         save_team.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //First we need to pull in all of the variables:
                 String team=App.getCurrentTeam();
-                for (int i=0; i<16; i++) {
+                for (int i=0; i<18; i++) {
                     if (mPlayerButtons.get(i).equals((App.getCurrentTeam() + "_logo").toLowerCase())) {
                         mPlayerList.add(player_list[i]);
                     }
@@ -577,6 +634,8 @@ public class BuildTeamScreenFragment extends Fragment {
                         mPlayerList.add("");
                     }
                 }
+
+
 
 
                 //TODO Need to shift to an async thread
@@ -588,7 +647,7 @@ public class BuildTeamScreenFragment extends Fragment {
                     //If the database query returns a 0 value the team is not in the db. Update the db rather than creating a new entry
                     ContentValues values = new ContentValues();
                     values.put("team", team);
-                    for (int x = 1; x <= 16; x++) {
+                    for (int x = 1; x <= 18; x++) {
                         if (mPlayerList.get(x-1).equals("")) {
                             values.put("player" + (x), "");
                         } else {
@@ -599,8 +658,9 @@ public class BuildTeamScreenFragment extends Fragment {
 
                     try
                     {
-                        Toast.makeText(App.getContext(), "List Saved", Toast.LENGTH_SHORT).show();
+
                         int count = db.update("teams", values, selection, criteria);
+                        Toast.makeText(App.getContext(), "Your Team Has Been Saved", Toast.LENGTH_SHORT).show();
                     }
                     catch(Exception e)
                     {
@@ -616,12 +676,11 @@ public class BuildTeamScreenFragment extends Fragment {
                     values.put("team_id", UUID.randomUUID().toString());
                     values.put("teamname", title_text.getText().toString());
                     values.put("team", team);
-                    for (int x = 1; x <= 16; x++) {
+                    for (int x = 1; x <= 18; x++) {
                         if (mPlayerList.get(x-1).equals("")) {
-                            Toast.makeText(App.getContext(), "List Saved", Toast.LENGTH_SHORT).show();
                             values.put("player" + x, "");
                         } else {
-                            Toast.makeText(App.getContext(), "Problem With Saving List", Toast.LENGTH_SHORT).show();
+
                             values.put("player" + x, mPlayerList.get(x-1));
                         }
                     }
@@ -629,10 +688,13 @@ public class BuildTeamScreenFragment extends Fragment {
                     long newRowId;
                     try
                     {
+
                         newRowId = db.insert("teams", null, values);
+                        Toast.makeText(App.getContext(), "Your Team Has Been Saved", Toast.LENGTH_SHORT).show();
                     }
                     catch(Exception e)
                     {
+                        Toast.makeText(App.getContext(), "Problem With Saving List", Toast.LENGTH_SHORT).show();
                         Log.d(TAG, "Problem with new DB: " + e.getMessage());
                     }
                 }
@@ -640,18 +702,6 @@ public class BuildTeamScreenFragment extends Fragment {
             }
         });
 
-
-
-
-        player_name_click = (TextView) view.findViewById(R.id.team_player16);
-        player_name_click.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                TextView player_view = (TextView) v.findViewById(R.id.team_player16);
-                String passed_player = (String) player_view.getText();
-                App.setCurrentPlayer(null);
-                App.bus.post(new PlayerListFragmentBusEvent(passed_player));
-            }
-        });
 
         return view;
 
@@ -703,7 +753,7 @@ public class BuildTeamScreenFragment extends Fragment {
     }
 
     private void updatePlayerDisplay() {
-        for (int i=0; i<=15; i++) {
+        for (int i=0; i<=17; i++) {
              updateButtonImages(mCurrentView, mPlayerButtonResourceIDs.get(i), mPlayerButtons.get(i));
         }
     }

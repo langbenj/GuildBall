@@ -18,6 +18,7 @@ import com.example.langbenj.guildball.R;
 public class HeroicPlayPagerFragment extends Fragment {
     private String title;
     private int page;
+    public static String font_size;
 
     // newInstance constructor for creating fragment with arguments
     public static HeroicPlayPagerFragment newInstance() {
@@ -43,12 +44,13 @@ public class HeroicPlayPagerFragment extends Fragment {
 
         Ability[] heroicPlays = player.getHeroicPlays();
         Ability heroic_play=heroicPlays[0];
-
+        font_size = player.getFontSize();
         TextView target_field = (TextView) view.findViewById(R.id.heroic_play_name);
         target_field.setText((CharSequence) heroic_play.getName());
+        target_field.setTextSize(Integer.parseInt(font_size));
         target_field = (TextView) view.findViewById(R.id.heroic_play_description);
         target_field.setText((CharSequence) heroic_play.getAbilityDescription());
-
+        target_field.setTextSize(Integer.parseInt(font_size));
 
         return view;
     }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/odds_layout"
+    android:contextClickable="true">
+    <View
+        android:layout_height="80dp"
+        android:background="@drawable/credits_title"
+        android:layout_width="fill_parent"
+
+        android:id="@+id/odds_header"
+        android:layout_alignParentTop="true" />
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/line_break1"
+        android:layout_below="@+id/odds_header" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Thanks to Steamforged Games for making such a great game and inspiring me to make this app."
+        android:id="@+id/ben"
+        android:layout_below="@+id/line_break1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Since I'll never write a great novel to dedicate to her, I'd like to take this chance to dedicate this app to my wife, Melissa. I couldn't have done this without your support. I love you."
+        android:id="@+id/melissa"
+        android:layout_below="@+id/ben"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Thanks to the Chicagoland Gaming group for providing feedback and encouragement. You guys are great. Come visit us on Facebook and drop by for a game."
+        android:id="@+id/chicago"
+        android:layout_below="@+id/melissa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="And thanks to Lon Sims (tehlon on the forums) for help with the math odds."
+        android:id="@+id/math"
+        android:layout_below="@+id/chicago"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Copyright © 2015 Steamforged Games Ltd. All rights reserved."
+        android:id="@+id/copyright"
+        android:layout_below="@+id/math"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

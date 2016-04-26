@@ -33,6 +33,9 @@ public class SavedTeamsDbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_NAME_PLAYER14 = "player14";
     public static final String COLUMN_NAME_PLAYER15 = "player15";
     public static final String COLUMN_NAME_PLAYER16 = "player16";
+    public static final String COLUMN_NAME_PLAYER17 = "player17";
+    public static final String COLUMN_NAME_PLAYER18 = "player18";
+
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     COLUMN_NAME_ENTRY_ID + " TEXT PRIMARY KEY," +
@@ -53,7 +56,9 @@ public class SavedTeamsDbHelper extends SQLiteOpenHelper {
                     COLUMN_NAME_PLAYER13 + " TEXT," +
                     COLUMN_NAME_PLAYER14 + " TEXT," +
                     COLUMN_NAME_PLAYER15 + " TEXT," +
-                    COLUMN_NAME_PLAYER16 + " TEXT" +
+                    COLUMN_NAME_PLAYER16 + " TEXT," +
+                    COLUMN_NAME_PLAYER17 + " TEXT," +
+                    COLUMN_NAME_PLAYER18 + " TEXT"+
                     " )";
 
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + TABLE_NAME;

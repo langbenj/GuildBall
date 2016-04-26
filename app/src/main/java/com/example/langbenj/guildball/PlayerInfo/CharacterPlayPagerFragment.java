@@ -23,10 +23,12 @@ public class CharacterPlayPagerFragment extends Fragment {
 
     // Store instance variables based on arguments passed
     @Override
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+    public static String font_size;
 
 
     private void setPlayerInfoDisplay(View view, String res_ID, String contents, String type) {
@@ -37,6 +39,7 @@ public class CharacterPlayPagerFragment extends Fragment {
                 view_id = view.getResources().getIdentifier(res_ID, "id", getContext().getPackageName());
                 TextView target_field = (TextView) view.findViewById(view_id);
                 target_field.setText((CharSequence) contents);
+                target_field.setTextSize(Integer.parseInt(font_size));
 
                 break;
             case "drawable":
@@ -55,6 +58,8 @@ public class CharacterPlayPagerFragment extends Fragment {
         View view = inflater.inflate(R.layout.character_play_pager_layout, container, false);
         Player current_player = App.getCurrentPlayer();
         Ability[] character_abilities = current_player.getCharacterPlays();
+        font_size = current_player.getFontSize();
+
         String temp_target;
         String temp_value="";
         for (int i=0;i<character_abilities.length; i++) {

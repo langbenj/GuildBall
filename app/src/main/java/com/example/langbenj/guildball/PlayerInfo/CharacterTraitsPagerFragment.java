@@ -18,6 +18,7 @@ import com.example.langbenj.guildball.R;
 public class CharacterTraitsPagerFragment extends Fragment {
     private String title;
     private int page;
+    public static String font_size;
 
     // newInstance constructor for creating fragment with arguments
     public static CharacterTraitsPagerFragment newInstance() {
@@ -39,7 +40,7 @@ public class CharacterTraitsPagerFragment extends Fragment {
                 view_id = view.getResources().getIdentifier(res_ID, "id", getContext().getPackageName());
                 TextView target_field = (TextView) view.findViewById(view_id);
                 target_field.setText((CharSequence) contents);
-
+                target_field.setTextSize(Integer.parseInt(font_size));
                 break;
             case "drawable":
                 image_id = view.getResources().getIdentifier(contents, "drawable", getContext().getPackageName());
@@ -64,7 +65,7 @@ public class CharacterTraitsPagerFragment extends Fragment {
         String temp_target;
         String temp_value;
         int i=0;
-
+        font_size = player.getFontSize();
         for (Ability ability:character_abilities) {
             temp_target = "character_trait_name_" + (i + 1);
             temp_value = ability.getName();

@@ -11,6 +11,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.example.langbenj.guildball.DataAssemblers.League;
@@ -58,6 +59,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         launchStartMenuFragment();
         SavedTeamsDbHelper mDbHelper = new SavedTeamsDbHelper(App.getContext());
         App.setSavedTeamsDB(mDbHelper);
+      // DisplayMetrics metrics = getResources().getDisplayMetrics();
+     //   String met=metrics.toString();
+      //  Toast.makeText(App.getContext(), met, Toast.LENGTH_LONG).show();
+
     }
 
 
@@ -90,6 +95,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+
+            App.setCurrentSection("credits");
+            Credits credits_fragment = new Credits();
+            FragmentTransaction credits_transaction = getSupportFragmentManager().beginTransaction();
+            credits_transaction.replace(R.id.fragment_container, credits_fragment);
+            credits_transaction.addToBackStack(null);
+            credits_transaction.commit();
             return true;
         }
 

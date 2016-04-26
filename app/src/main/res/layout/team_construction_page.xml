@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/new_list_name_edit_box"
         android:background="#FF909090"
-        android:layout_marginTop="5dp"
+
         android:id="@+id/team_construction_line_3"
         />
 
@@ -78,7 +78,7 @@
         android:id="@+id/team_construction_built_team_title"
         android:textStyle="bold"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+
         android:textSize="16sp" />
 
     <View
@@ -87,7 +87,7 @@
         android:layout_below="@+id/team_construction_built_team_title"
         android:background="#FF909090"
         android:id="@+id/team_construction_line_4"
-        android:layout_marginTop="5dp"
+
         android:layout_marginBottom="5dp" />
 
     <TableLayout
@@ -133,11 +133,7 @@
     </TableRow>
 
 
-        <TableRow>
-        <View
-            android:layout_height="5dp"
-            android:layout_width="match_parent" />
-            </TableRow>
+
 
         <TableRow>
             <Button
@@ -174,11 +170,7 @@
                 android:clickable="true" />
         </TableRow>
 
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
 
         <TableRow>
             <Button
@@ -215,11 +207,7 @@
                 android:clickable="true" />
         </TableRow>
 
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
 
         <TableRow>
             <Button
@@ -256,11 +244,7 @@
                 android:clickable="true" />
         </TableRow>
 
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
 
         <TableRow>
             <Button
@@ -297,11 +281,7 @@
                 android:clickable="true" />
         </TableRow>
 
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
 
         <TableRow>
             <Button
@@ -338,11 +318,7 @@
                 android:clickable="true" />
         </TableRow>
 
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
 
         <TableRow>
             <Button
@@ -378,11 +354,7 @@
                 android:layout_marginLeft="10dp"
                 android:clickable="true" />
         </TableRow>
-        <TableRow>
-            <View
-                android:layout_height="5dp"
-                android:layout_width="match_parent" />
-        </TableRow>
+
         <TableRow>
             <Button
                 android:layout_width="40dip"
@@ -418,16 +390,53 @@
                 android:clickable="true" />
         </TableRow>
 
+        <TableRow>
+            <Button
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:id="@+id/team_player17_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player17"
+                android:id="@+id/team_player17"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/team_player18_image"
+                android:background="@drawable/ic_add_box_black_48dp"
+                android:layout_marginLeft="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player18"
+                android:id="@+id/team_player18"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="true" />
+        </TableRow>
+
     </TableLayout>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
         android:text="Save Team"
         android:id="@+id/save_team"
         android:layout_below="@+id/table_layout"
-        android:layout_marginBottom="5dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
 
 
 
