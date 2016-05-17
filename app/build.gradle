@@ -1,11 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'Google Inc.:Google APIs:23'
+    signingConfigs {
+        config {
+            keyAlias 'GuildBall'
+            keyPassword 'tY4574cB'
+            storeFile file('C:/keystore/android.jks')
+            storePassword 'tY4574cB'
+        }
+    }
+    compileSdkVersion 23
     buildToolsVersion '23.0.1'
     defaultConfig {
-        applicationId "com.example.langbenj.guildball"
-        minSdkVersion 19
+        applicationId 'com.langco.langbenj.guildball'
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -14,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     productFlavors {

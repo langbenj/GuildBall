@@ -6,18 +6,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.langbenj.guildball.Helpers.App;
-import com.example.langbenj.guildball.Helpers.StringFragmentBusEvent;
-import com.example.langbenj.guildball.R;
+import com.langco.langbenj.guildball.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Odds_Fragment extends Fragment {
     private static View view;
@@ -51,14 +45,14 @@ public class Odds_Fragment extends Fragment {
         dice_up_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 TextView dice_field = (TextView) view.findViewById(R.id.dice_text);
-                setUpDownFields(dice_field, 1, 1, 15);
+                setUpDownFields(dice_field, 1, 1, 13);
             }
         });
 
         dice_down_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 TextView dice_field = (TextView) view.findViewById(R.id.dice_text);
-                setUpDownFields(dice_field,-1,1,15);
+                setUpDownFields(dice_field,-1,1,13);
             }
         });
 
@@ -91,12 +85,15 @@ public class Odds_Fragment extends Fragment {
                 }
 
 
-                String  result = "100";
+                String  result = "100%";
                 TextView result_textView = (TextView) view.findViewById(R.id.result_0);
                 result_textView.setText(result);
 
 
-                result = ((int) (compiled_probability_list.get(1).intValue())+"%");
+                result = (String.format( "%.1f", compiled_probability_list.get(1)))+"%";
+                if (result.equals("100.0%")) {
+                    result="100%";
+                }
                 result_textView = (TextView) view.findViewById(R.id.result_1);
                 result_textView.setText(result);
 
@@ -104,8 +101,12 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(2).intValue())+"%");
 
+
+                    result = (String.format( "%.1f", compiled_probability_list.get(2)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_2);
                 result_textView.setText(result);
@@ -114,8 +115,10 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(3).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(3)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_3);
                 result_textView.setText(result);
@@ -124,8 +127,10 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(4).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(4)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_4);
                 result_textView.setText(result);
@@ -134,8 +139,10 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(5).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(5)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_5);
                 result_textView.setText(result);
@@ -144,8 +151,10 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(6).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(6)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_6);
                 result_textView.setText(result);
@@ -154,8 +163,10 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(7).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(7)))+"%";
+                    if (result.equals("100.0%")) {
+                        result="100%";
+                    }
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_7);
                 result_textView.setText(result);
@@ -165,7 +176,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(8).intValue())+"%");
+                    result = (String.format( "%.1f", compiled_probability_list.get(8)))+"%";
 
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_8);
@@ -176,7 +187,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(9).intValue())+"%");
+                    result = (String.format( "%.1f", compiled_probability_list.get(9)))+"%";
 
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_9);
@@ -186,7 +197,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(10).intValue())+"%");
+                    result = (String.format( "%.1f", compiled_probability_list.get(10)))+"%";
 
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_10);
@@ -196,7 +207,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(11).intValue())+"%");
+                    result = (String.format( "%.1f", compiled_probability_list.get(11)))+"%";
 
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_11);
@@ -207,8 +218,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(12).intValue())+"%");
-
+                    result = (String.format( "%.1f", compiled_probability_list.get(12)))+"%";
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_12);
                 result_textView.setText(result);
@@ -217,7 +227,7 @@ public class Odds_Fragment extends Fragment {
                     result = "";
                 }
                 else {
-                    result = ((int) (compiled_probability_list.get(13).intValue())+"%");
+                    result = (String.format( "%.1f", compiled_probability_list.get(13)))+"%";
 
                 }
                 result_textView = (TextView) view.findViewById(R.id.result_13);

@@ -1,4 +1,4 @@
-package com.example.langbenj.guildball;
+package com.langco.langbenj.guildball;
 
 import org.junit.Test;
 

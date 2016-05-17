@@ -14,6 +14,12 @@
         <item id="description">"During an Attack from this model enemy models suffer [-1] ARM."</item>
     </array>
 
+    <array name="AnimosityHonour">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Animosity [Honour]"</item>
+        <item id="description">"This model cannot be affected by friendly Character Traits from the named model."</item>
+    </array>
+
     <array name="AssistPrincess">
         <item id="type">"Character Trait"</item>
         <item id="name">"Assist [Princess]"</item>
@@ -37,6 +43,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Attack Support [Princess]"</item>
         <item id="description">"This model gains [+2] TAC while within [4\"] of the named friendly model."</item>
+    </array>
+
+    <array name="BackToTheShadows">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Back To The Shadows"</item>
+        <item id="description">"At the end of its activation, if this model caused damage to an enemy model during the activation, this model may make a [4\"] Dodge."</item>
     </array>
 
     <array name="BagOfCoffers">
@@ -73,6 +85,18 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Benched"</item>
         <item id="description">"This model does not start on the Pitch and does not count towards your maximum team size allowance."</item>
+    </array>
+
+    <array name="BigGameTraps">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Big Game Traps"</item>
+        <item id="description">"Once per turn during this model’s activation, the Controlling Player may place a friendly 30mm trapmarker within [2\"] of this model. A Player may have up to [3] friendly trap-markers on the Pitch at once. When an enemy model moves within [1\"] of a friendly trap-marker, that model immediately suffers the snared condition and the trap-marker is removed."</item>
+    </array>
+
+    <array name="BreakingPlay">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Breaking Play"</item>
+        <item id="description">"After this model has finished its activation this turn, other friendly guild models within [6\"] gain [+1] DEF against enemy Character Plays."</item>
     </array>
 
     <array name="BurningPassion">
@@ -141,6 +165,12 @@
         <item id="description">"Once per turn this model may spend [2] MP during its activation to remove the taken-out condition from the friendly named model and place it in base contact with full HP. The named model is not allocated Influence this turn but may activate as normal. Models created by this ability do not generate VPs."</item>
     </array>
 
+    <array name="CreationVileswarm">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Creation [Vileswarm]"</item>
+        <item id="description">"Once per turn this model may spend [2] MP during its activation to remove the taken-out condition from the friendly named model and place it in base contact with full HP. The named model is not allocated Influence this turn but may activate as normal. Models created by this ability do not generate VPs."</item>
+    </array>
+
     <array name="CrucialArtery">
         <item id="type">"Character Trait"</item>
         <item id="name">"Crucial Artery"</item>
@@ -163,6 +193,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Dark Doubts"</item>
         <item id="description">"If this model suffers the taken–out condition as a result of an enemy Attack or Play, the enemy team suffers [–4] MP after resolving the Attack or Play."</item>
+    </array>
+
+    <array name="DefenceSupportKraken">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Defence Support [Kraken]"</item>
+        <item id="description">"While within [4\"] of the named model, this model gains +1 DEF."</item>
     </array>
 
     <array name="DefenseSupportSalt">
@@ -211,6 +247,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Elemental Infusion"</item>
         <item id="description">"If this model makes an Attack against an enemy model that is suffering from one or more of the following conditions, the following cumulative benefits apply to the Attack against that model:\nBurning: [+1] DMG to Playbook damage results.\nPoison:[+2] TAC.\nBleed: Target model suffers [-1] ARM."</item>
+    </array>
+
+    <array name="EscapingFate">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Escaping Fate"</item>
+        <item id="description">"Once per turn when this model is reduced to [0] HP, before suffering the taken-out condition, this model may recover [1] HP, remove all conditions, and make a [4\"] Dodge."</item>
     </array>
 
     <array name="ExtendedReach">
@@ -273,6 +315,12 @@
         <item id="description">"During a Charge, in addition to one or more Playbook damage results, the targeted enemy model suffers a [2\"] Push directly away from this model and [2] DMG."</item>
     </array>
 
+    <array name="ForestSight">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Forest Sight"</item>
+        <item id="description">"This model ignores forest terrain while drawing LOS."</item>
+    </array>
+
     <array name="Furious">
         <item id="type">"Character Trait"</item>
         <item id="name">"Furious"</item>
@@ -307,6 +355,18 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Hundred Hand Stance"</item>
         <item id="description">"While this model is within [4\"] of the friendly goal-post, immediately after an enemy model fails a Shot, this model may gain possession of the ball-marker"</item>
+    </array>
+
+    <array name="HuntersPrey">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Hunters Prey"</item>
+        <item id="description">"When damaged by this model enemy models suffer the snared condition."</item>
+    </array>
+
+    <array name="IsolatedTarget">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Isolated Target"</item>
+        <item id="description">"This model gains [+1] DMG to Playbook damage results while targeting an enemy model suffering the snared condition."</item>
     </array>
 
     <array name="KickSupportDirge">
@@ -351,6 +411,18 @@
         <item id="description">"When this model’s activation ends, the named friendly model may take its activation next if able to do so."</item>
     </array>
 
+    <array name="LinkedZarola">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Linked [Zarola]"</item>
+        <item id="description">"When this model’s activation ends, the named friendly model may take its activation next if able to do so."</item>
+    </array>
+
+    <array name="LinkedFahad">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Linked [Fahad]"</item>
+        <item id="description">"When this model’s activation ends, the named friendly model may take its activation next if able to do so."</item>
+    </array>
+
     <array name="LovedCreature">
         <item id="type">"Character Trait"</item>
         <item id="name">"Loved Creature"</item>
@@ -375,10 +447,34 @@
         <item id="description">"This model cannot be affected by other friendly Plays or Character Traits."</item>
     </array>
 
+    <array name="MobFavourite">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Mob Favourite"</item>
+        <item id="description">"If this model uses a Character Play to inflict the takenout condition on an enemy model, the friendly team gains an additional [+1] VP."</item>
+    </array>
+
     <array name="MomentousInspiration">
         <item id="type">"Character Trait"</item>
         <item id="name">"Momentous Inspiration [4\" Aura]"</item>
         <item id="description">"While within this aura, friendly models that generate one or more successful hits when using a Character Play that causes damage, additionally generate [1] MP."</item>
+    </array>
+
+    <array name="MudConcealer">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Mud Concealer"</item>
+        <item id="description">"While within rough-ground this model gains [+1] ARM."</item>
+    </array>
+
+    <array name="NaturesBlessing">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Natures Blessing"</item>
+        <item id="description">"Once per turn during its activation, this model may choose a piece of forest terrain within [4\"]. This model may be placed anywhere within the chosen forest terrain."</item>
+    </array>
+
+    <array name="NaturesGrowth">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Natures Growth"</item>
+        <item id="description">"Once per turn during this model’s activation, the Controlling Player may place a [3\"] AOE within [8\"] of this model. This AOE may not be placed within [3\"] of another terrain piece. This AOE is forest terrain. This AOE is removed in the End Phase."</item>
     </array>
 
     <array name="NoxiousDeath">
@@ -410,6 +506,14 @@
         <item id="name">"Paint On Your Boots"</item>
         <item id="description">"While within 8\" of the edge of the Pitch this model gains Poised. (Once per turn, this model may make a Counter-Attack without spending MP.)"</item>
     </array>
+
+    <array name="PitFall">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Pit Fall"</item>
+        <item id="description">"Once per turn during this model’s activation, the Controlling Player may place a friendly 40mm pitfallmarker within [2\"] of this model. A Player may only have [1] friendly pitfall-marker on the Pitch. When an enemy model moves within [1\"] of a friendly pitfall-marker, that model immediately suffers the snared and bleed conditions and the pitfall-marker is removed."</item>
+    </array>
+
+
 
     <array name="Poised">
         <item id="type">"Character Trait"</item>
@@ -487,6 +591,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Rising Anger"</item>
         <item id="description">"The first time this model is damaged by an enemy model each turn, the friendly team gains [2] MP."</item>
+    </array>
+
+    <array name="Rollerball">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Rollerball"</item>
+        <item id="description">"At the start of this model’s activation it may choose to gain [+2\"/+2\"] MOV. If it does so, it may use Ramming Speed without spending Influence but cannot make Attacks. Rollerball lasts until the end of the turn."</item>
     </array>
 
     <array name="RushKeeper">
@@ -652,6 +762,24 @@
         <item id="description">During the Maintenance Phase, if the named model is within [4\"], this model gains [+1/+1] INF.</item>
     </array>
 
+    <array name="TagAlong">
+        <item id="type">Character Trait</item>
+        <item id="name">Tag Along</item>
+        <item id="description">Once per turn after a friendly model ends an Advance that that caused it to leave this model’s melee zone, this model may immediately make a Jog directly towards that model.</item>
+    </array>
+
+    <array name="TeamPlayer">
+        <item id="type">Character Trait</item>
+        <item id="name">Team Player [4\" Aura]</item>
+        <item id="description">While within this aura, when a friendly model suffers damage, this model may suffer the damage instead.</item>
+    </array>
+
+    <array name="ThatsNotTheBall">
+        <item id="type">Character Trait</item>
+        <item id="name">Thats Not The Ball...</item>
+        <item id="description">An enemy model engaged by this model must pay [1] additional Influence to make a Kick.</item>
+    </array>
+
     <array name="TheOwner">
         <item id="type">"Character Trait"</item>
         <item id="name">"The Owner [4\" Aura]"</item>
@@ -682,6 +810,12 @@
         <item id="description">"When damaged by this model enemy models suffer the poison condition."</item>
     </array>
 
+    <array name="VindictiveHuman">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Vindictive [Human]"</item>
+        <item id="description">"This model pays [1] less Influence to Charge when targeting an enemy model with the named Character Type."</item>
+    </array>
+
     <array name="VolleyThreat">
         <item id="type">"Character Trait"</item>
         <item id="name">"Volley Threat"</item>
@@ -690,6 +824,12 @@
 
 
     <!--Heroic Plays-->
+
+    <array name="BlessingOfTheSunFather">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Blessing Of The Sun Father"</item>
+        <item id="description">"Target other friendly model within [6\"]. Once during its activation that model may use a COST [3] or less Character Play without spending Influence."</item>
+    </array>
 
     <array name="BloodyCoin">
         <item id="type">"Heroic Play"</item>
@@ -768,6 +908,12 @@
         <item id="type">Heroic Play</item>
         <item id="name">Old Jake\'s</item>
         <item id="description">"Choose a target friendly [Mechanica] model within [4\"] that hasn’t activated this turn, it may Sprint or Charge without spending Influence in its next activation. At the end of its activation it suffers the taken-out condition."</item>
+    </array>
+
+    <array name="PackmasterVileswarm">
+        <item id="type">Heroic Play</item>
+        <item id="name">Packmaster [Vileswarm]</item>
+        <item id="description">"Target friendly named model within [4\"] gains [+1] DMG to Playbook damage results."</item>
     </array>
 
     <array name="ProtectThoseClose">
@@ -955,6 +1101,17 @@
         <item id="sustain">"Yes"</item>
     </array>
 
+    <array name="ArrowToTheKnee">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Arrow To The Knee"</item>
+        <item id="description">"Target enemy model suffers [-2/-2”] KICK and [2] DMG. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
     <array name="BallHog">
         <item id="type">"Character Play"</item>
         <item id="name">"Ball Hog"</item>
@@ -970,6 +1127,17 @@
         <item id="type">"Character Play"</item>
         <item id="name">"Ball\'s Gone!"</item>
         <item id="description">"Tackle the target enemy model. The ball-token may then be placed in possession of a friendly model within [4\"]."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"P"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
+    <array name="BearHug">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Bear Hug"</item>
+        <item id="description">"Target enemy model suffers [4] DMG and the bleed condition."</item>
         <item id="cost">""</item>
         <item id="guild_ball_cost">"2"</item>
         <item id="range">"P"</item>
@@ -1021,6 +1189,17 @@
         <item id="sustain">"-"</item>
     </array>
 
+    <array name="BoomBox">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Boom Box"</item>
+        <item id="description">"Target enemy model suffers [4] DMG and a [4\"] Push directly away from this model."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
 
     <array name="BurnTheFloor">
         <item id="type">"Character Play"</item>
@@ -1056,6 +1235,17 @@
         <item id="range">"6\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="ChainBolas">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Chain Bolas"</item>
+        <item id="description">"Target enemy model suffers [2] DMG and the snared condition. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
     </array>
 
     <array name="ChainGrab">
@@ -1202,6 +1392,17 @@
         <item id="sustain">"Yes"</item>
     </array>
 
+    <array name="DreadGaze">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Dread Gaze"</item>
+        <item id="description">"While within the aura enemy models suffer [-2] TAC."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"Aura 4\""</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
     <array name="EmbalmingFluid">
         <item id="type">"Character Play"</item>
         <item id="name">"Embalming Fluid"</item>
@@ -1296,6 +1497,17 @@
         <item id="description">"While this model is on the Pitch the target enemy model can only move directly towards this model during its Advance. This Character Play may only be used once per turn."</item>
         <item id="cost">"1"</item>
         <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="Gravedigger">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Gravedigger"</item>
+        <item id="description">"If target enemy model suffers the taken-out condition this turn, the friendly team gains an additional [+1] VP. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"1"</item>
         <item id="range">"6\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
@@ -1486,6 +1698,17 @@
         <item id="sustain">"Yes"</item>
     </array>
 
+    <array name="MidnightOffering">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Midnight Offering"</item>
+        <item id="description">"Target friendly model may immediately make a Jog. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
     <array name="Misdirection">
         <item id="type">"Character Play"</item>
         <item id="name">"Misdirection"</item>
@@ -1541,6 +1764,19 @@
         <item id="zone">"AOE 3\""</item>
         <item id="sustain">"Yes"</item>
     </array>
+
+    <array name="Pinned">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Pinned"</item>
+        <item id="description">"Target enemy model suffers [2] DMG. While this model is on the Pitch, the target enemy model can only move directly towards this model during its Advance. This Character Play may only be used once per turn."</item>
+        <item id="cost">"3"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+
 
     <array name="PunishingMarch">
         <item id="type">"Character Play"</item>
@@ -1664,6 +1900,17 @@
         <item id="sustain">"Yes"</item>
     </array>
 
+    <array name="Skewered">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Skewered"</item>
+        <item id="description">"Target enemy model suffers [3] DMG and the snared condition. This Character Play may only be used once per turn."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
     <array name="ScreechingBanshee">
         <item id="type">"Character Play"</item>
         <item id="name">"Screeching Banshee"</item>
@@ -1774,6 +2021,17 @@
         <item id="sustain">"-"</item>
     </array>
 
+    <array name="SnapFire">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Snap Fire"</item>
+        <item id="description">"Target enemy model suffers [1] DMG."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+    </array>
+
     <array name="StandFirm">
         <item id="type">"Character Play"</item>
         <item id="name">"Stand Firm"</item>
@@ -1782,6 +2040,17 @@
         <item id="guild_ball_cost">""</item>
         <item id="range">"4\""</item>
         <item id="zone">""</item>
+        <item id="sustain">"Yes"</item>
+    </array>
+
+    <array name="SunStrike">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Sun Strike"</item>
+        <item id="description">"Once during its activation, target friendly Guild model may generate [1] MP from a successful Character Play that targets an enemy model."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
     </array>
 

@@ -1,4 +1,4 @@
-package com.example.langbenj.guildball;
+package com.langco.langbenj.guildball;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
