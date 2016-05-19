@@ -24,10 +24,6 @@ public class Odds_Fragment extends Fragment {
         Button dice_up_button = (Button) view.findViewById(R.id.dice_up);
         Button dice_down_button = (Button) view.findViewById(R.id.dice_down);
         Button submit_button = (Button) view.findViewById(R.id.submit_button);
-
-
-
-
         target_up_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 TextView target_field = (TextView) view.findViewById(R.id.target_text);
