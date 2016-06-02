@@ -2280,6 +2280,35 @@
         <item id="attributes">"Erskirii, Animal, Mascot"</item>
         <item id="font_size">"16"</item></array>
 
+    <array name="Casket">
+        <item id="name">"Casket"</item>
+        <item id="team">"Morticians"</item>
+        <item id="default_image">""</item>
+        <item id="custom_image">""</item>
+        <item id="jog">"5\""</item>
+        <item id="sprint">"7\""</item>
+        <item id="tac">"5"</item>
+        <item id="kick_dice">"2"</item>
+        <item id="kick_distance">"6\""</item>
+        <item id="defense">"3+"</item>
+        <item id="armour">"1"</item>
+        <item id="influence_generated">"1"</item>
+        <item id="max_influence">"4"</item>
+        <item id="max_life">"17"</item>
+        <item id="icy_sponge">"0,6,12"</item>
+        <item id="season">"1"</item>
+        <item id="melee_range">"1\""</item>
+        <item id="base_size">"40mm"</item>
+        <item id="character_traits">"ToughHide,FoulOdour,Reanimate"</item>
+        <item id="heroic_plays">""</item>
+        <item id="legendary_plays">"CasketTime"</item>
+        <item id="character_plays">"GhostlyVisage,HeavyBurden"</item>
+        <item id="playbook_top">"Blank,M_GB_1,KD,3,Blank"</item>
+        <item id="playbook_bottom">"1,M_2,T,M_2_Push_2,3_Push_2"</item>
+        <item id="type">""</item>
+        <item id="attributes">"Figeon, Human, Male, Centre Back"</item>
+        <item id="font_size">"16"</item></array>
+
     <array name="Cosset">
         <item id="name">"Cosset"</item>
         <item id="team">"Morticians"</item>

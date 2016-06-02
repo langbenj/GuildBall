@@ -230,7 +230,8 @@ public class CountdownFragment extends Fragment {
         pause_button.setVisibility(View.INVISIBLE);
         countdown_time_view.setVisibility(View.VISIBLE);
         countdown_time_set.setVisibility(View.VISIBLE);
-
+        overtime_1.setVisibility(View.INVISIBLE);
+        overtime_2.setVisibility(View.INVISIBLE);
     }
 
     private void pause_countdown() {

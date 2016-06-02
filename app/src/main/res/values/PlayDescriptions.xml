@@ -305,7 +305,7 @@
 
     <array name="FoulOdour">
         <item id="type">"Character Trait"</item>
-        <item id="name">"Foul Odour"</item>
+        <item id="name">"Foul Odour [3\" Aura]"</item>
         <item id="description">"Other models within the aura treat open-ground as rough-ground."</item>
     </array>
 
@@ -338,6 +338,8 @@
         <item id="name">"Get Over Here! [Salt]"</item>
         <item id="description">"Once during this model's activation, if the named model is within [10\"] of this model, the named model may make a Dodge up to it's base-move towards the model"</item>
     </array>
+
+
 
     <array name="GoalDefence">
         <item id="type">"Character Trait"</item>
@@ -864,7 +866,7 @@
 
     <array name="HammerTime">
         <item id="type">"Heroic Play"</item>
-        <item id="name">"Hammer Time"</item>
+        <item id="name">"Hammer Time [8\" Aura]"</item>
         <item id="description">"Friendly Guild models within the aura may use Punishing March, Iron Fist and Ball Hog as if they were Character Plays on those model's cards."</item>
     </array>
 
@@ -968,6 +970,12 @@
 
 
     <!--Legendary Plays-->
+
+    <array name="CasketTime">
+        <item id="type">"Legendary Play"</item>
+        <item id="name">"Casket Time"</item>
+        <item id="description">"The next time this model inflicts the taken-out condition on an enemy [Human] model, the friendly team scores an additional [+2] VPs. In addition the model which suffered the taken-out condition may not be given icy-sponge tokens in the next Maintenance Phase, and may not receive any this turn. "</item>
+    </array>
 
     <array name="CaughtInANet">
         <item id="type">"Legendary Play"</item>
@@ -1491,6 +1499,16 @@
         <item id="sustain">"-"</item>
     </array>
 
+    <array name="GhostlyVisage">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Ghostly Visage"</item>
+        <item id="description">"An enemy model suffers [-0\"/-4\"] MOV when it targets a friendly model within this ongoing-effect AOE with a Charge. The enemy model also suffers [-2] TAC for the duration of the Charge."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"AOE 3\""</item>
+        <item id="sustain">"-"</item>
+    </array>
     <array name="Goad">
         <item id="type">"Character Play"</item>
         <item id="name">"Goad"</item>
