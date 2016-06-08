@@ -35,6 +35,4 @@
         android:id="@+id/view" />
 
 
-
-
 </RelativeLayout>

@@ -474,11 +474,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:id="@+id/player_info_melee_range"
-            android:layout_below="@+id/player_image"
             android:textSize="14sp"
-            android:text="2 inches"
+            android:text="Melee Range 2"
             android:paddingLeft="5dp"
-            android:paddingTop="5dp" />
+            android:paddingTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/player_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp" />
 
         <!-- Health Track -->
 
@@ -571,8 +575,8 @@
             android:layout_height="15dp"
             android:paddingLeft="2dp"
             android:id="@+id/health_11"
-            android:layout_toRightOf="@id/health_10"
-            android:layout_alignTop="@id/health_1"
+            android:layout_alignLeft="@id/health_1"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -580,7 +584,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_12"
             android:layout_toRightOf="@id/health_11"
-            android:layout_alignTop="@id/health_1"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -588,7 +592,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_13"
             android:layout_toRightOf="@id/health_12"
-            android:layout_alignTop="@id/health_1"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -596,7 +600,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_14"
             android:layout_toRightOf="@id/health_13"
-            android:layout_alignTop="@id/health_1"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -604,7 +608,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_15"
             android:layout_toRightOf="@id/health_14"
-            android:layout_alignTop="@id/health_1"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
 
 
@@ -614,7 +618,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_16"
             android:layout_below="@id/health_1"
-            android:layout_alignLeft="@id/health_1"
+            android:layout_toRightOf="@id/health_15"
             android:src="@drawable/health_empty" />
 
         <ImageView
@@ -647,15 +651,15 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_20"
             android:layout_toRightOf="@id/health_19"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_1"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:paddingLeft="2dp"
             android:id="@+id/health_21"
-            android:layout_toRightOf="@id/health_20"
-            android:layout_alignTop="@id/health_16"
+            android:layout_alignLeft="@id/health_1"
+            android:layout_below="@id/health_15"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -663,7 +667,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_22"
             android:layout_toRightOf="@id/health_21"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_15"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -671,7 +675,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_23"
             android:layout_toRightOf="@id/health_22"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_15"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -679,7 +683,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_24"
             android:layout_toRightOf="@id/health_23"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_15"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -687,7 +691,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_25"
             android:layout_toRightOf="@id/health_24"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -695,7 +699,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_26"
             android:layout_toRightOf="@id/health_25"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -703,7 +707,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_27"
             android:layout_toRightOf="@id/health_26"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -711,7 +715,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_28"
             android:layout_toRightOf="@id/health_27"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -719,7 +723,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_29"
             android:layout_toRightOf="@id/health_28"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
         <ImageView
             android:layout_width="15dp"
@@ -727,7 +731,7 @@
             android:paddingLeft="2dp"
             android:id="@+id/health_30"
             android:layout_toRightOf="@id/health_29"
-            android:layout_alignTop="@id/health_16"
+            android:layout_below="@id/health_16"
             android:src="@drawable/health_empty" />
 
 
@@ -738,7 +742,7 @@
             android:layout_height="2dip"
             android:background="#FF909090"
             android:layout_width="match_parent"
-            android:layout_below="@+id/health_16"
+            android:layout_below="@+id/health_21"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:id="@+id/line_break3"/>
@@ -761,16 +765,16 @@
 
         </android.support.v4.view.ViewPager>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Health"
+        android:id="@+id/total_health"
+        android:layout_alignTop="@+id/health_10"
+        android:layout_alignLeft="@+id/separator_2_4"
+        android:layout_alignStart="@+id/separator_2_4"
+        android:layout_marginLeft="10dp" />
 
 
-
-
-
-
-
-
-
-
-
-    </RelativeLayout>
+</RelativeLayout>
 

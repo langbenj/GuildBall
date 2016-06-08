@@ -147,8 +147,7 @@
                 android:textStyle="bold"
                 android:textAlignment="textEnd"
                 android:layout_gravity="end"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginRight="10dp" />
             <TextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"

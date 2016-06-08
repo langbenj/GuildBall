@@ -827,6 +827,12 @@
 
     <!--Heroic Plays-->
 
+    <array name="BackToHisBest">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Back To His Best"</item>
+        <item id="description">"While in possession of the ball-marker, this model gains [+2\"/+2\"] MOV."</item>
+    </array>
+
     <array name="BlessingOfTheSunFather">
         <item id="type">"Heroic Play"</item>
         <item id="name">"Blessing Of The Sun Father"</item>
@@ -908,7 +914,7 @@
 
     <array name="Overclocked">
         <item id="type">Heroic Play</item>
-        <item id="name">Old Jake\'s</item>
+        <item id="name">Overclocked</item>
         <item id="description">"Choose a target friendly [Mechanica] model within [4\"] that hasn’t activated this turn, it may Sprint or Charge without spending Influence in its next activation. At the end of its activation it suffers the taken-out condition."</item>
     </array>
 
@@ -1548,7 +1554,7 @@
         <item id="description">"Target enemy model suffers [-4\"/-4\"] MOV and [-1] DEF."</item>
         <item id="cost">""</item>
         <item id="guild_ball_cost">"1"</item>
-        <item id="range">"6\""</item>
+        <item id="range">"P"</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
     </array>
@@ -2219,9 +2225,9 @@
         <item id="type">"Character Play"</item>
         <item id="name">"Wake The Dead"</item>
         <item id="description">"Target friendly model gains Reanimate (Once per turn when this model is reduced to [0] HP, before suffering the taken-out condition recover [3] HP and remove all conditions)."</item>
-        <item id="cost">""</item>
-        <item id="guild_ball_cost">"1"</item>
-        <item id="range">"P"</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
     </array>

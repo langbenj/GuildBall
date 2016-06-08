@@ -435,10 +435,21 @@
         android:layout_height="50dp"
         android:text="Save Team"
         android:id="@+id/save_team"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/table_layout" />
+
+
+        android:layout_below="@+id/table_layout"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentEnd="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Delete Team"
+        android:id="@+id/delete_team"
+        android:layout_toRightOf="@id/save_team"
+        android:layout_alignTop="@id/save_team"
+
+        android:layout_below="@+id/table_layout"
+        android:layout_marginLeft="50dp" />
 
 
 

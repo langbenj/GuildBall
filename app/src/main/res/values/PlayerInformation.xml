@@ -690,7 +690,7 @@
         <item id="influence_generated">"4"</item>
         <item id="max_influence">"6"</item>
         <item id="max_life">"16"</item>
-        <item id="icy_sponge">"0,5,10"</item>
+        <item id="icy_sponge">"0,6,12"</item>
         <item id="season">"2"</item>
         <item id="melee_range">"1\""</item>
         <item id="base_size">"30mm"</item>
