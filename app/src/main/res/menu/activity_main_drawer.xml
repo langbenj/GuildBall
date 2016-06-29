@@ -20,6 +20,11 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Timer" />
 
+        <item
+            android:id="@+id/nav_damage"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Play A Game" />
+
     </group>
 
 

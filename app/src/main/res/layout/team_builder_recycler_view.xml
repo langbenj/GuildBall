@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <View
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:background="@drawable/title_team_builder"
         android:layout_width="fill_parent"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Create a New List"
+        android:text="Create a New Team"
         android:layout_centerHorizontal="true"
         android:id="@+id/create_new_team_button"
         android:layout_below="@+id/team_builder_line_1"
@@ -41,7 +41,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a Saved Team"
+        android:text="Choose a Team to Play or Modify"
         android:padding="5dp"
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceLarge"

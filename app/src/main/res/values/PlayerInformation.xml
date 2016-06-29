@@ -551,9 +551,9 @@
         <item id="character_traits">"MatchFit,CloseControl,PaintOnYourBoots"</item>
         <item id="heroic_plays">"BackToHisBest"</item>
         <item id="legendary_plays"></item>
-        <item id="character_plays">"TooledUp,BallsGone"</item>
-        <item id="playbook_top">"1,GB_2,M_Push_2,Blank"</item>
-        <item id="playbook_bottom">"M_T,2,M_KD,M_3</item>
+        <item id="character_plays">"Goad,BallsGone"</item>
+        <item id="playbook_top">"1,GB_2,1_Push_1_Dodge_1,T_Dodge_2"</item>
+        <item id="playbook_bottom">"M_T,M_Push_1,M_1_Push_1,M_KD</item>
         <item id="type">""</item>
         <item id="attributes">"RAED,HUMAN,MALE,VETERAN,STRIKER"</item>
         <item id="font_size">"16"</item></array>

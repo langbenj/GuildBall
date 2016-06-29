@@ -11,7 +11,7 @@
         android:id="@+id/guild_info_button"
         android:background="@drawable/menu_cards"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp" />
+        android:layout_marginTop="160dp" />
 
     <Button
         android:layout_width="130dp"
@@ -24,9 +24,17 @@
     <Button
         android:layout_width="130dp"
         android:layout_height="65dp"
-        android:id="@+id/odds_button"
+        android:id="@+id/play_button"
         android:layout_alignRight="@+id/team_builder_button"
         android:layout_below="@+id/team_builder_button"
+        android:background="@drawable/menu_play" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:id="@+id/odds_button"
+        android:layout_alignRight="@+id/team_builder_button"
+        android:layout_below="@+id/play_button"
         android:background="@drawable/menu_odds" />
 
     <Button

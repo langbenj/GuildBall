@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp">
+<TableRow>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="VETKATALYST-30"
+        android:id="@+id/player_1_button"
+        android:textSize="11sp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Player 2"
+        android:id="@+id/player_2_button"
+        android:textSize="12sp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Player 3"
+        android:id="@+id/player_3_button"
+        android:textSize="12sp" />
+</TableRow>
+    <TableRow>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Player 4"
+        android:id="@+id/player_4_button"
+        android:textSize="12sp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Player 5"
+        android:id="@+id/player_5_button"
+        android:textSize="12sp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Player 6"
+        android:id="@+id/player_6_button"
+        android:textSize="12sp" />
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Player 7"
+            android:id="@+id/player_7_button"
+            android:textSize="12sp" />
+    </TableRow>
+
+</TableLayout>

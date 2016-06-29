@@ -438,18 +438,28 @@
 
 
         android:layout_below="@+id/table_layout"
-        android:layout_marginLeft="30dp"
-        android:layout_alignParentEnd="false" />
+        android:layout_marginLeft="5dp"
+      />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Play Game"
+        android:id="@+id/play_game"
+
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/table_layout"
+        android:layout_toRightOf="@+id/save_team" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="Delete Team"
         android:id="@+id/delete_team"
-        android:layout_toRightOf="@id/save_team"
-        android:layout_alignTop="@id/save_team"
+        android:layout_toRightOf="@id/play_game"
+        android:layout_alignTop="@id/play_game"
 
         android:layout_below="@+id/table_layout"
-        android:layout_marginLeft="50dp" />
+        android:layout_marginLeft="20dp" />
 
 
 
