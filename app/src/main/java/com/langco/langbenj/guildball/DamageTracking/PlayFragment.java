@@ -1,4 +1,4 @@
-package com.langco.langbenj.guildball;
+package com.langco.langbenj.guildball.DamageTracking;
 
 
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.langco.langbenj.guildball.Helpers.App;
+import com.langco.langbenj.guildball.R;
 
 public class PlayFragment extends Fragment {
 
@@ -28,12 +29,11 @@ public class PlayFragment extends Fragment {
 
         view = fragmentInflater.inflate(R.layout.play_main, target, false);
 
-        //PlayTeamListFragment team_fragment = new PlayTeamListFragment();
+
         PlayPlayerInfoFragment info_fragment = new PlayPlayerInfoFragment();
 
 
         FragmentTransaction damage_transaction = getChildFragmentManager().beginTransaction();
-        //damage_transaction.replace(R.id.team_list_container, team_fragment);
         damage_transaction.replace(R.id.player_info_container, info_fragment);
         damage_transaction.addToBackStack(null);
         damage_transaction.commit();

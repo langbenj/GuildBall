@@ -1,44 +1,37 @@
-package com.langco.langbenj.guildball;
+package com.langco.langbenj.guildball.DamageTracking;
 
-import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.langco.langbenj.guildball.DataAssemblers.Player;
 import com.langco.langbenj.guildball.Helpers.App;
-import com.langco.langbenj.guildball.Helpers.PlayDamageBusEvent;
-import com.langco.langbenj.guildball.Helpers.PlayTeamListBusEvent;
-import com.langco.langbenj.guildball.Helpers.StringArrayFragmentBusEvent;
-import com.langco.langbenj.guildball.Helpers.StringFragmentBusEvent;
 import com.langco.langbenj.guildball.PlayerInfo.PlayerInfoPagerAdapter;
-import com.squareup.otto.Subscribe;
+import com.langco.langbenj.guildball.R;
 
 
 public class PlayPlayerInfoFragment extends Fragment {
     private Player mCurrentPlayer;
     private View mCurrentView;
+    private boolean mExtraPlayer = false;
     public View onCreateView(LayoutInflater fragmentInflater, ViewGroup target, Bundle savedInstanceState) {
-
-        String [] player_list = App.getPlayList();
-        boolean greede=false;
-        for (int i=0; i<player_list.length; i++) {
-            if (player_list[i].equals("Greede")) {
-                greede=true;
-            }
-        }
         View view = fragmentInflater.inflate(R.layout.play_player_info, target, false);
-        mCurrentView=view;
         App.bus.register(this);
+        mCurrentView=view;
+
+        //Check to see if the extra player is on the team currently. This triggers special exceptions
+        checkExtraPlayer();
+
+        //Pull the current player list
+        String [] player_list = App.getPlayList();
+
+        //Init the buttons for the top nav and set the text on them to the player names
         final Button player_button_1 = (Button) view.findViewById(R.id.player_1_button);
         final Button player_button_2 = (Button) view.findViewById(R.id.player_2_button);
         final Button player_button_3 = (Button) view.findViewById(R.id.player_3_button);
@@ -46,58 +39,24 @@ public class PlayPlayerInfoFragment extends Fragment {
         final Button player_button_5 = (Button) view.findViewById(R.id.player_5_button);
         final Button player_button_6 = (Button) view.findViewById(R.id.player_6_button);
         final Button player_button_7 = (Button) view.findViewById(R.id.player_7_button);
-        App.setmPlayPlayer1(new Player(player_list[0]));
-        App.setmPlayPlayer2(new Player(player_list[1]));
-        App.setmPlayPlayer3(new Player(player_list[2]));
-        App.setmPlayPlayer4(new Player(player_list[3]));
-        App.setmPlayPlayer5(new Player(player_list[4]));
-        App.setmPlayPlayer6(new Player(player_list[5]));
-        if (greede) {
-            App.setmPlayPlayer7(new Player(player_list[6]));
+        Button [] player_button_list = {player_button_1,player_button_2,player_button_3,player_button_4,player_button_5,player_button_6,player_button_7};
+
+        for (int i=1; i<=6; i++) {
+            App.setPlayPlayer(new Player(player_list[i-1]), i);
+            changeButtonText(player_button_list[i-1],player_list[i-1]);
         }
-        changeButtonText(player_button_1,player_list[0]);
-        changeButtonText(player_button_2,player_list[1]);
-        changeButtonText(player_button_3,player_list[2]);
-        changeButtonText(player_button_4,player_list[3]);
-        changeButtonText(player_button_5,player_list[4]);
-        changeButtonText(player_button_6,player_list[5]);
 
-        if (greede) {
+        //If there's a 7th player then setup the button otherwise remove the button layout
+        if (mExtraPlayer) {
+            App.setPlayPlayer(new Player(player_list[6]),7);
             changeButtonText(player_button_7,player_list[6]);
-
-           // player_button_1.getLayoutParams().width = 50;
         }
         else {
             ViewGroup layout = (ViewGroup) player_button_7.getParent();
-            if(null!=layout) //for safety only  as you are doing onClick
+            if(null!=layout)
                 layout.removeView(player_button_7);
         }
-
-
-        setupPlayer(0);
-
-        Button heal_button = (Button) view.findViewById(R.id.heal_button);
-        Button damage_button = (Button) view.findViewById(R.id.damage_button);
-
-        heal_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                mCurrentPlayer.changeLife(1);
-                buildDamageTrack(mCurrentView,mCurrentPlayer);
-               // App.bus.post(new PlayDamageBusEvent(mCurrentPlayer));
-            }
-        });
-
-        damage_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                mCurrentPlayer.changeLife(-1);
-                buildDamageTrack(mCurrentView,mCurrentPlayer);
-               // App.bus.post(new PlayDamageBusEvent(mCurrentPlayer));
-            }
-        });
-
-
+        //OnClickListeners to set the current player based on the top nav click
         player_button_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setupPlayer(0);
@@ -128,7 +87,6 @@ public class PlayPlayerInfoFragment extends Fragment {
                 setupPlayer(5);
             }
         });
-
         player_button_7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setupPlayer(6);
@@ -136,28 +94,51 @@ public class PlayPlayerInfoFragment extends Fragment {
         });
 
 
+        //Setup the initial first player on the list and fill the fields so the screen isn't blank when a user enters it.
+        setupPlayer(0);
 
+        //Init the heal button and the damage button
+        Button heal_button = (Button) view.findViewById(R.id.heal_button);
+        Button damage_button = (Button) view.findViewById(R.id.damage_button);
+
+        heal_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //Add one to the current player's health and then rebuild the damage track. This will automatically shade damage red
+                mCurrentPlayer.changeLife(1);
+                buildDamageTrack(mCurrentView,mCurrentPlayer);
+
+            }
+        });
+
+        damage_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //Subtract one from the current player's health and then rebuild the damage track. This will automatically shade damage red
+                mCurrentPlayer.changeLife(-1);
+                buildDamageTrack(mCurrentView,mCurrentPlayer);
+            }
+        });
 
         return view;
-
-
     }
 
-    public void onResume() {
-        super.onResume();  // Always call the superclass method first
+    private void checkExtraPlayer () {
+        String [] player_list = App.getPlayList();
+
+        for (int i=0; i<player_list.length; i++) {
+            if (player_list[i].equals("Greede")) {
+                //Greede is the current only case where there is an extra player. In the future this can be expanded.
+                mExtraPlayer =true;
+            }
+        }
     }
 
-   /* @Subscribe
-    public void stringArrayPassed(PlayTeamListBusEvent event) {
-        int passed_int = event.getParameter();
-        setupPlayer(passed_int);
-    }
-*/
+    //Takes a player number looks up the player's info and sets up the display
     private void setupPlayer(int player_number) {
 
         mCurrentPlayer=App.getPlayPlayer(player_number);
         App.setCurrentPlayer(mCurrentPlayer);
         View t=mCurrentView;
+        //Set the text fields to display the current player's info
         setPlayerInfoDisplay(mCurrentView, "player_info_name_field", mCurrentPlayer.getName(), "text");
         setPlayerInfoDisplay(mCurrentView, "item_move", mCurrentPlayer.getJog() + "/" + mCurrentPlayer.getSprint(), "text");
         setPlayerInfoDisplay(mCurrentView, "item_tac", mCurrentPlayer.getTac(), "text");
@@ -166,10 +147,13 @@ public class PlayPlayerInfoFragment extends Fragment {
         setPlayerInfoDisplay(mCurrentView, "item_arm", mCurrentPlayer.getArmor(), "text");
         setPlayerInfoDisplay(mCurrentView, "item_inf", mCurrentPlayer.getInfluenceGenerated() + "/" + mCurrentPlayer.getMaxInfluence(), "text");
         setPlayerInfoDisplay(mCurrentView, "player_info_melee_range", "Melee Range: "+mCurrentPlayer.getMeleeRange(), "text");
+
+        //Call the functions that dynamically set up the image resources
         buildPlaybook(mCurrentView, mCurrentPlayer);
         buildHealthTrack(mCurrentView,mCurrentPlayer);
         buildDamageTrack(mCurrentView,mCurrentPlayer);
 
+        //Add the view pager that shows the player abilities
         ViewPager vpPager = (ViewPager) mCurrentView.findViewById(R.id.player_info_view_pager);
         //Make sure to use: getChildFragmentManager here. A bug pops up where pages will sometimes not display otherwise.
         PlayerInfoPagerAdapter adapterViewPager = new PlayerInfoPagerAdapter(getChildFragmentManager());
@@ -177,30 +161,33 @@ public class PlayPlayerInfoFragment extends Fragment {
 
     }
 
-
+    //Function to change text and images programmatically
     private void setPlayerInfoDisplay(View view, String res_ID, String contents, String type) {
         int view_id;
         int image_id;
 
         switch (type) {
             case "text":
-
-                    view_id = view.getResources().getIdentifier(res_ID, "id",getContext().getPackageName());
-                    TextView target_field = (TextView) view.findViewById(view_id);
-                    target_field.setText(contents);
+                //Pull the id of the view based on the generated string
+                view_id = view.getResources().getIdentifier(res_ID, "id",getContext().getPackageName());
+                //Set the value of the view
+                TextView target_field = (TextView) view.findViewById(view_id);
+                target_field.setText(contents);
                 break;
             case "drawable":
-
-               image_id = view.getResources().getIdentifier(contents, "drawable", getContext().getPackageName());
+                //Pull the id of the image based on the generated string
+                image_id = view.getResources().getIdentifier(contents, "drawable", getContext().getPackageName());
+                //Pull the id of the view based on the generated string
                 view_id = view.getResources().getIdentifier(res_ID, "id", getContext().getPackageName());
-              ImageView target_image_field = (ImageView) view.findViewById(view_id);
+                //Set the image displayed in the view
+                ImageView target_image_field = (ImageView) view.findViewById(view_id);
                 target_image_field.setImageResource(image_id);
 
                 break;
         }
     }
 
-
+    //Set up the health track to display the proper amount of circles and fill some of them with numbers based on the data
     private void buildHealthTrack(View view, Player player) {
         int player_health= player.getMaxLife();
         int [] icy_sponge_array = player.getIcySponge();
@@ -238,6 +225,7 @@ public class PlayPlayerInfoFragment extends Fragment {
 
     }
 
+    //Rebuild the health track switching circles to red if the damage to the player requires it.
     private void buildDamageTrack(View view, Player player) {
         int player_health= player.getMaxLife();
         int current_health = player.getCurrentLife();
@@ -278,6 +266,7 @@ public class PlayPlayerInfoFragment extends Fragment {
 
     }
 
+    //Set up the playbook images based on the player data
     private void buildPlaybook(View view, Player player) {
         String [] top_row = player.getPlaybookTop();
         String [] bottom_row = player.getPlaybookBottom();
@@ -321,6 +310,7 @@ public class PlayPlayerInfoFragment extends Fragment {
 
 
     }
+
     public void changeButtonText(Button butt_reference, String new_text) {
         butt_reference.setText(new_text);
     }
