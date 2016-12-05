@@ -33,6 +33,28 @@
         android:layout_width="wrap_content"
         android:id="@+id/heroic_play_description"/>
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:padding="5dip"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/heroic_play_description"
+        android:id="@+id/heroic_play_name2"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@id/heroic_play_name2"
+        android:layout_alignLeft="@+id/heroic_play_name"
+        android:layout_width="wrap_content"
+        android:id="@+id/heroic_play_description2"/>
+
 
 
 </RelativeLayout>

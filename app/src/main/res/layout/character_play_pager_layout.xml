@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Cost"
+        android:text="CST"
         android:paddingTop="5dp"
         android:textStyle="bold"
 
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:paddingLeft="20dp"
+        android:paddingLeft="10dp"
 
         android:layout_toRightOf="@+id/character_play_cost_title"
         android:id="@+id/spacer2"
@@ -70,7 +70,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Range"
+        android:text="RNG"
         android:paddingTop="5dp"
 
         android:layout_toRightOf="@+id/spacer2"
@@ -92,10 +92,10 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Zone"
+        android:text="ZON"
         android:paddingTop="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
 
         android:layout_toRightOf="@+id/spacer3"
         android:textStyle="bold"
@@ -116,13 +116,35 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Sustain"
+        android:text="SUS"
         android:paddingTop="5dp"
 
         android:textStyle="bold"
         android:layout_toRightOf="@+id/spacer4"
         android:layout_width="wrap_content"
         android:id="@+id/character_play_sustain_title"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_toRightOf="@+id/character_play_sustain_title"
+        android:id="@+id/spacer5"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="OPT"
+        android:paddingTop="5dp"
+
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/spacer5"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_opt_title"
         />
 
     <!-- Character Play Values -->
@@ -211,6 +233,21 @@
         android:layout_alignLeft="@+id/character_play_sustain_title"
         android:layout_alignStart="@+id/character_play_sustain_title"
         android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_alignTop="@+id/character_play_cost_1"
+        android:layout_below="@id/line_break_character_play_pager_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_opt_1"
+        android:layout_alignRight="@+id/character_play_opt_title"
+        android:layout_alignEnd="@+id/character_play_opt_title"
+        android:layout_alignLeft="@+id/character_play_opt_title"
+        android:layout_alignStart="@+id/character_play_opt_title"
+        android:gravity="center_horizontal"
+        />
 
     <TextView
         android:layout_height="wrap_content"
@@ -307,6 +344,21 @@
         android:layout_alignStart="@+id/character_play_sustain_title"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_alignTop="@+id/character_play_name_2"
+        android:layout_below="@id/character_play_description_1"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_opt_2"
+        android:layout_alignRight="@+id/character_play_opt_title"
+        android:layout_alignEnd="@+id/character_play_opt_title"
+        android:layout_alignLeft="@+id/character_play_opt_title"
+        android:layout_alignStart="@+id/character_play_opt_title"
+        android:gravity="center_horizontal"
+        />
+
 
 
 
@@ -402,6 +454,22 @@
         android:layout_alignStart="@+id/character_play_sustain_title"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_alignTop="@+id/character_play_name_3"
+        android:layout_below="@id/character_play_description_2"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_opt_3"
+        android:layout_alignRight="@+id/character_play_opt_title"
+        android:layout_alignEnd="@+id/character_play_opt_title"
+        android:layout_alignLeft="@+id/character_play_opt_title"
+        android:layout_alignStart="@+id/character_play_opt_title"
+        android:gravity="center_horizontal"
+        />
+
+
 
 
 
@@ -492,6 +560,23 @@
         android:layout_alignLeft="@+id/character_play_sustain_title"
         android:layout_alignStart="@+id/character_play_sustain_title"
         android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_alignTop="@+id/character_play_name_4"
+        android:layout_below="@id/character_play_description_3"
+        android:layout_width="wrap_content"
+        android:id="@+id/character_play_opt_4"
+        android:layout_alignRight="@+id/character_play_opt_title"
+        android:layout_alignEnd="@+id/character_play_opt_title"
+        android:layout_alignLeft="@+id/character_play_opt_title"
+        android:layout_alignStart="@+id/character_play_opt_title"
+        android:gravity="center_horizontal"
+       />
+
+
 
     <TextView
         android:layout_height="wrap_content"
