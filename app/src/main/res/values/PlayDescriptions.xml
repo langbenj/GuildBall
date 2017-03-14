@@ -89,6 +89,18 @@
         <item id="description">"This model cannot be selected for a team but is automatically added when the named friendly model is selected for a team. This model does not count towards your maximum team size allowance."</item>
     </array>
 
+    <array name="BenchedBrainpan">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Benched [Brainpan]"</item>
+        <item id="description">"This model cannot be selected for a team but is automatically added when the named friendly model is selected for a team. This model does not count towards your maximum team size allowance."</item>
+    </array>
+
+    <array name="BetweenARock">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Between a Rock… (4\" Aura)"</item>
+        <item id="description">"Once per turn, when an other friendly model within this aura suffers damage from an enemy Attack or Play, after the Attack or Play is resolved, this model may make a Jog."</item>
+    </array>
+
     <array name="BigGameTraps">
         <item id="type">"Character Trait"</item>
         <item id="name">"Big Game Traps"</item>
@@ -147,6 +159,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Cloud Jumper"</item>
         <item id="description">"Once per turn during its activation, this model may choose an ongoing-effect AOE within [4\"]. This model may be placed anywhere within the chosen ongoing-effect AOE."</item>
+    </array>
+
+    <array name="ControlStrings">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Control Strings"</item>
+        <item id="description">"At the start of each other friendly Guild model’s activation, this model may make a [2\"] Dodge."</item>
     </array>
 
     <array name="CounterCharge">
@@ -225,10 +243,22 @@
         <item id="description">"While within [4\"] of the named model, this model gains +1 DEF."</item>
     </array>
 
+    <array name="Determination">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Determination"</item>
+        <item id="description">"While engaged by [2] or more enemy models, this model gains [+1] DEF."</item>
+    </array>
+
     <array name="InSyncAvarisse">
         <item id="type">"Character Trait"</item>
         <item id="name">"In Sync [Avarisse]"</item>
         <item id="description">"While within [6\"] of the named friendly model, this model may spend the named friendly model\'s Influence during its activation."</item>
+    </array>
+
+    <array name="InanimateObject">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Inanimate Object"</item>
+        <item id="description">"This model does not have an activation. This model does not generate VP when it suffers the taken-out condition."</item>
     </array>
 
     <array name="DetachGreede">
@@ -307,6 +337,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Floored"</item>
         <item id="description">"When this model targets an enemy model that is suffering from the knocked-down condition with an Attack, this model gains [+2] TAC for the duration of the Attack."</item>
+    </array>
+
+    <array name="Foundation">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Foundation"</item>
+        <item id="description">"At the start of the game, after the kick-off has been resolved, before Influence is allocated, this model may make a Jog"</item>
     </array>
 
     <array name="Flying">
@@ -431,6 +467,12 @@
         <item id="description">"In addition to any successful Attack or Character Play, the target enemy model suffers a [1\"] Push directly away from this model. This model may then make a [1\"] Dodge directly towards the affected enemy model."</item>
     </array>
 
+    <array name="LashOut">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Lash Out"</item>
+        <item id="description">"When an enemy model causes damage to this model with an Attack, after the Attack is resolved the enemy model suffers [1] DMG."</item>
+    </array>
+
     <array name="Haemophilia">
         <item id="type">"Character Trait"</item>
         <item id="name">"Haemophilia [6\" Aura]"</item>
@@ -539,6 +581,12 @@
         <item id="description">"At the start of this model’s activation, the Controlling Player may place a [3\"] AOE within [8\"] of this model. This AOE may not be placed within [2\"] of another terrain piece. This AOE is forest terrain. This AOE is removed in the End Phase."</item>
     </array>
 
+    <array name="NeverSayDie">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Never Say Die"</item>
+        <item id="description">"At the end of this model\'s activation, this model recovers [1] HP for each enemy model within this model’s melee zone."</item>
+    </array>
+
     <array name="NoxiousDeath">
         <item id="type">"Character Trait"</item>
         <item id="name">"Noxious Death [3\" Pulse]"</item>
@@ -555,6 +603,12 @@
         <item id="type">"Character Trait"</item>
         <item id="name">"Football Dervish"</item>
         <item id="description">"When a friendly model receives a successful Pass from this model, the friendly model may immediately spend [1] MP to make a Pass that targets this model instead of making a Teamwork action."</item>
+    </array>
+
+    <array name="OneTwo">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"One, Two![Memory]"</item>
+        <item id="description">"When this model makes a Pass that targets the friendly named model, this model gains [+2/+2\"] KICK for the duration of the Pass. If the friendly named model makes a Teamwork action as a result of this Pass, it may spend [1] less MP to do so."</item>
     </array>
 
     <array name="Overheat">
@@ -673,6 +727,12 @@
         <item id="description">"At the start of this model\'s activation it may choose to gain [+2\"/+2\"] MOV. If it does so, it may use Ramming Speed without spending Influence but cannot make Attacks. Rollerball lasts until the end of the turn."</item>
     </array>
 
+    <array name="Rowdy">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Rowdy"</item>
+        <item id="description">"This model does not gain Ganging Up bonuses.This model does not suffer Crowding Out penalties."</item>
+    </array>
+
     <array name="RushKeeper">
         <item id="type">"Character Trait"</item>
         <item id="name">"Rush Keeper"</item>
@@ -763,6 +823,12 @@
         <item id="description">"This model spends [1] less MP to make Teamwork actions."</item>
     </array>
 
+    <array name="SixPack">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Six Pack"</item>
+        <item id="description">"This model begins the game with [6] beer-tokens. During its activation, this model may spend up to [3] Beer tokens. A Beer token can be spent to make an Attack without spending Influence, use a Character Play without spending Influence, or use a Heroic Play without spending Momentum."</item>
+    </array>
+
     <array name="SkilledWithinShadow">
         <item id="type">"Character Trait"</item>
         <item id="name">"Skilled Within Shadow"</item>
@@ -817,6 +883,12 @@
         <item id="description">"This model may make a [1\"] Dodge after causing damage to one or more enemy models."</item>
     </array>
 
+    <array name="Talisman">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Talisman"</item>
+        <item id="description">"Once per turn during this model\'s activation this model may use a Character Play without spending Influence."</item>
+    </array>
+
     <array name="TacticalAdviceFlask">
         <item id="type">"Character Trait"</item>
         <item id="name">"Tactical Advice [Flask]"</item>
@@ -858,11 +930,23 @@
         <item id="name">Thats Not The Ball...</item>
         <item id="description">An enemy model engaged by this model must pay [1] additional Influence to make a Kick.</item>
     </array>
-
     <array name="TheOwner">
         <item id="type">"Character Trait"</item>
         <item id="name">"The Owner [4\" Aura]"</item>
         <item id="description">"While within this aura friendly Guild models gain [+1] DMG to Character Plays that cause damage and Playbook damage results."</item>
+    </array>
+
+    <array name="Thought">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Thought[Memory]"</item>
+        <item id="description">"At the start of this model’s activation, if the friendly named model is suffering the taken-out condition, remove the taken-out condition from the friendly named model and place it within [2\"] of this model with full HP."</item>
+    </array>
+
+
+    <array name="TheOldWays">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"The Old Ways"</item>
+        <item id="description">"When this model inflicts the taken-out condition on an enemy model, this model gains The Owner for the remainder of the turn.(The Owner [4\" Aura]: While within this aura, friendly Guild models gain [+1] DMG to Character Plays that cause damage and Playbook damage results.)"</item>
     </array>
 
     <array name="ToughHide">
@@ -901,6 +985,12 @@
         <item id="description">"This model pays [1] less Influence to Charge when targeting an enemy model with the named Character Type."</item>
     </array>
 
+    <array name="VindictiveMale">
+        <item id="type">"Character Trait"</item>
+        <item id="name">"Vindictive [Male]"</item>
+        <item id="description">"This model pays [1] less Influence to Charge when targeting an enemy model with the named Character Type."</item>
+    </array>
+
     <array name="VolleyThreat">
         <item id="type">"Character Trait"</item>
         <item id="name">"Volley Threat"</item>
@@ -933,6 +1023,12 @@
         <item id="type">"Heroic Play"</item>
         <item id="name">"Coagulation [3\" Pulse]"</item>
         <item id="description">"Enemy models within the pulse suffering the poison condition additionally suffer the bleed condition."</item>
+    </array>
+
+    <array name="ComeOnThen">
+        <item id="type">"Heroic Play"</item>
+        <item id="name">"Come On Then!"</item>
+        <item id="description">"The next time this model is hit by an enemy Attack or Character Play that targets this model, except while making an Advance, the Attack or Character Play is ignored."</item>
     </array>
 
     <array name="CreationMainspring">
@@ -1098,6 +1194,12 @@
         <item id="description">"The next time this model inflicts the taken–out condition on an enemy [Human] model, the friendly team scores an additional [+2] VPs. In addition, the model which suffered the taken–out condition may not return to the Pitch in the next Maintenance Phase. "</item>
     </array>
 
+    <array name="CallOfTheSea">
+        <item id="type">"Legendary Play"</item>
+        <item id="name">"Call Of The Sea [4\" Pulse]"</item>
+        <item id="description">"This model suffers [1] DMG for each other model within this pulse. Enemy models within this pulse suffer a [2\"] Push. Other friendly models within this pulse may make a [2\"] Dodge."</item>
+    </array>
+
     <array name="CaughtInANet">
         <item id="type">"Legendary Play"</item>
         <item id="name">"Caught in a Net [8\" Pulse]"</item>
@@ -1163,6 +1265,8 @@
         <item id="name">"Rigor Mortis"</item>
         <item id="description">"The enemy team lose all current MP. The friendly team gains MP equal to the MP loss caused by this action. This Legendary Play does not last until the end of the turn."</item>
     </array>
+
+
 
     <array name="StrikeFromTheShadow">
         <item id="type">"Legendary Play"</item>
@@ -1629,6 +1733,18 @@
         <item id="opt">"Yes"</item>
     </array>
 
+    <array name="FishersReel">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Fisher\'s Reel"</item>
+        <item id="description">"Target other friendly model may make a [2\"] Dodge. This Character Play may only be used on each friendly model once per turn."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"4\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"No"</item>
+        <item id="opt">"No"</item>
+    </array>
+
 
     <array name="FlameJet">
         <item id="type">"Character Play"</item>
@@ -1666,7 +1782,17 @@
         <item id="opt">"Yes"</item>
     </array>
 
-
+    <array name="GetStuckIn">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Get Stuck In"</item>
+        <item id="description">"This model gains Rowdy. (This model does not gain Ganging Up bonuses. This model does not suffer Crowding Out penalties.)"</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"1"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"Yes"</item>
+        <item id="opt">"Yes"</item>
+    </array>
 
     <array name="GhostlyVisage">
         <item id="type">"Character Trait"</item>
@@ -1810,6 +1936,18 @@
         <item id="range">"6\""</item>
         <item id="zone">"-"</item>
         <item id="sustain">"Yes"</item>
+        <item id="opt">"Yes"</item>
+    </array>
+
+    <array name="ImOpen">
+        <item id="type">"Character Play"</item>
+        <item id="name">"I\'m Open!"</item>
+        <item id="description">"Target friendly model immediately makes a Pass, which targets this model, without spending Influence. "</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"6\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
         <item id="opt">"Yes"</item>
     </array>
 
@@ -2005,6 +2143,18 @@
         <item id="opt">"Yes"</item>
     </array>
 
+    <array name="None">
+        <item id="type">"Character Play"</item>
+        <item id="name">""</item>
+        <item id="description">""</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">""</item>
+        <item id="zone">""</item>
+        <item id="sustain">""</item>
+        <item id="opt">""</item>
+    </array>
+
     <array name="NoxiousBlast">
         <item id="type">"Character Play"</item>
         <item id="name">"Noxious Blast"</item>
@@ -2066,6 +2216,30 @@
         <item id="zone">"-"</item>
         <item id="sustain">"-"</item>
         <item id="opt">"Yes"</item>
+    </array>
+
+    <array name="PullingTheStrings">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Pulling The Strings"</item>
+        <item id="description">"Target friendly [Memory] model may make a Kick without spending Influence."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+        <item id="opt">"Yes"</item>
+    </array>
+
+    <array name="PuppetShow">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Puppet Show"</item>
+        <item id="description">"Target friendly [Memory] model may make an Attack without spending Influence, or make a [2\"] Dodge."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">8\""</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"-"</item>
+        <item id="opt">"-"</item>
     </array>
 
     <array name="QuickFoot">
@@ -2368,6 +2542,18 @@
         <item id="opt">"Yes"</item>
     </array>
 
+    <array name="TarPit">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Tar Pit"</item>
+        <item id="description">"Enemy models within the aura treat open-ground as rough-ground."</item>
+        <item id="cost">"1"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"S"</item>
+        <item id="zone">"3\" Aura"</item>
+        <item id="sustain">"Yes"</item>
+        <item id="opt">"Yes"</item>
+    </array>
+
     <array name="TetherBall">
         <item id="type">"Character Play"</item>
         <item id="name">"Tether Ball"</item>
@@ -2377,6 +2563,18 @@
         <item id="range">"6\""</item>
         <item id="zone">""</item>
         <item id="sustain">"-"</item>
+        <item id="opt">"Yes"</item>
+    </array>
+
+    <array name="SmashingFace">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Smashing Face"</item>
+        <item id="description">"All models within this model\'s melee zone suffer [2] DMG and the bleed condition."</item>
+        <item id="cost">"2"</item>
+        <item id="guild_ball_cost">""</item>
+        <item id="range">"S"</item>
+        <item id="zone">"-"</item>
+        <item id="sustain">"No"</item>
         <item id="opt">"Yes"</item>
     </array>
 
@@ -2558,6 +2756,18 @@
         <item id="zone">"-"</item>
         <item id="sustain">"-"</item>
         <item id="opt">"Yes"</item>
+    </array>
+
+    <array name="WhirlingChains">
+        <item id="type">"Character Play"</item>
+        <item id="name">"Whirling Chains"</item>
+        <item id="description">"Enemy models within this pulse suffer a [4\"] Push directly towards this model."</item>
+        <item id="cost">""</item>
+        <item id="guild_ball_cost">"2"</item>
+        <item id="range">"S"</item>
+        <item id="zone">"Pulse 4"</item>
+        <item id="sustain">"No"</item>
+        <item id="opt">"No"</item>
     </array>
 
 

@@ -15,8 +15,8 @@ android {
         applicationId 'com.langco.langbenj.guildball'
         minSdkVersion 16
         targetSdkVersion 23
-        versionName '6'
-        versionCode 6
+        versionName '9'
+        versionCode 9
     }
     buildTypes {
         release {

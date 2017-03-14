@@ -45,6 +45,7 @@
         <item id="player">"Friday"</item>
         <item id="player">"Hooper"</item>
         <item id="player">"Mash"</item>
+        <item id="player">"PintPot"</item>
         <item id="player">"Spigot"</item>
         <item id="player">"VetSpigot"</item>
         <item id="player">"Stave"</item>
@@ -67,6 +68,7 @@
         <item id="player">"Brisket"</item>
         <item id="player">"VetBrisket"</item>
         <item id="player">"Meathook"</item>
+        <item id="player">"VetOx"</item>
         <item id="player">"Shank"</item>
         <item id="player">"Boar"</item>
         <item id="player">"Tenderiser"</item>
@@ -106,6 +108,7 @@
         <item id="mascot">"Salt"</item>
         <item id="mascot">"Tentacles"</item>
         <item id="player">"Angel"</item>
+        <item id="player">"Hag"</item>
         <item id="player">"Siren"</item>
         <item id="player">"VetSiren"</item>
         <item id="player">"Kraken"</item>
@@ -146,6 +149,7 @@
         <item id="player">"Mallet"</item>
         <item id="player">"Brick"</item>
         <item id="player">"Flint"</item>
+        <item id="player">"Granite"</item>
         <item id="player">"Tower"</item>
         <item id="player">"Chisel"</item>
         <item id="player">"Avarisse"</item>
@@ -162,6 +166,8 @@
         <item id="captain">"Scalpel"</item>
         <item id="mascot">"Dirge"</item>
         <item id="mascot">"Vileswarm"</item>
+        <item id="player">"Brainpan"</item>
+        <item id="player">"Memory"</item>
         <item id="player">"Casket"</item>
         <item id="player">"Cosset"</item>
         <item id="player">"Graves"</item>
@@ -172,6 +178,7 @@
         <item id="player">"Avarisse"</item>
         <item id="player">"Greede"</item>
         <item id="player">"Fangtooth"</item>
+
         <item id="player">"Minx"</item>
         <item id="player">"Mist"</item>
         <item id="player">"Rage"</item>
